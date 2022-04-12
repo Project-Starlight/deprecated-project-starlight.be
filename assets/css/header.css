@@ -8,12 +8,13 @@ header h1{
 header h2{
     font-size: 1.5rem;
 }
-header div{
-    margin: 0 5rem 1rem 5rem;
+header .title{
+    padding: 1rem;
 }
 header nav{
     display: flex;
     justify-content: space-around;
+    margin-top: 1rem;
 }
 header nav span{
     background: black;
@@ -24,4 +25,16 @@ header nav span{
 }
 header nav span:hover{
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+}
+header .flex-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid white 0.1rem;
+}
+header #icons div{
+    display: inline-grid;
+}
+header i{
+    font-size: 2rem;
+    margin: 0.2rem;
 }
