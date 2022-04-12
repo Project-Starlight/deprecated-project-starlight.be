@@ -16,14 +16,15 @@ header nav{
     justify-content: space-around;
     margin-top: 1rem;
 }
-header nav span{
+header nav a{
+    text-decoration: none;
     background: black;
     color: white;
     padding: 0.7rem;
     border: solid white 0.1rem;
     border-radius:0.5rem;
 }
-header nav span:hover{
+header nav a:hover{
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 }
 header .flex-container{
@@ -37,4 +38,5 @@ header #icons div{
 header i{
     font-size: 2rem;
     margin: 0.2rem;
+    cursor: pointer;
 }
