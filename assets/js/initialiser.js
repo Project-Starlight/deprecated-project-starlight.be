@@ -16,9 +16,9 @@ function header_icon(e){
         window.open("https://www.facebook.com/");
     }
     else if(e.target.classList[1] === "fa-phone"){
-        window.location.href(`tel:${_local.tel}`);
+        window.location.href = `tel:${_local.tel}`;
     }
     else if(e.target.classList[1] === "fa-envelope"){
-        window.location.href(`mailto:${_local.email}`);
+        window.location.href = `mailto:${_local.email}`;
     }
 }
