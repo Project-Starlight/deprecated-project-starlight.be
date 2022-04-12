@@ -1,0 +1,25 @@
+header h1{
+    font-size: 5rem;
+}
+header h2{
+    font-size: 1.5rem;
+}
+header div{
+    margin: 0 5rem 1rem 5rem;
+
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+}
+header nav span{
+    background: black;
+    color: white;
+    padding: 0.5rem;
+    border: solid black 0.1rem;
+    border-radius:0.5rem;
+}
+header nav span:hover{
+    background: white;
+    color: black;
+}
