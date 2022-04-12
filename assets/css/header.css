@@ -23,6 +23,5 @@ header nav span{
     border-radius:0.5rem;
 }
 header nav span:hover{
-    background: white;
-    color: black;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 }
