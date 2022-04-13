@@ -8,6 +8,7 @@ function init(){
         document.querySelector("header #drop-down-arrow i").addEventListener('click',show_nav);
     }
 }
+
 function header_icon(e){
     e.preventDefault();
     if (e.target.classList[1] === "fa-instagram"){
@@ -23,6 +24,7 @@ function header_icon(e){
         window.location.href = `mailto:${_local.email}`;
     }
 }
+
 function show_nav(e){
     e.preventDefault();
     if (document.querySelector("header nav").className === "hidden"){
