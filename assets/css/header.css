@@ -1,42 +1,59 @@
-body{
+body {
     background: black;
     color: white;
 }
-header h1{
+
+header h1 {
     font-size: 5rem;
 }
-header h2{
+
+header h2 {
     font-size: 1.5rem;
 }
-header .title{
+
+header .title {
     padding: 1rem;
 }
-header nav{
+
+header nav {
     display: flex;
     justify-content: space-around;
     margin-top: 1rem;
 }
-header nav a{
+
+header nav a {
     text-decoration: none;
     background: black;
     color: white;
     padding: 0.7rem;
     border: solid white 0.1rem;
-    border-radius:0.5rem;
+    border-radius: 0.5rem;
 }
-header nav a:hover{
+
+header nav a:hover {
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 }
-header .flex-container{
+
+header .flex-container {
     display: flex;
     justify-content: space-between;
     border-bottom: solid white 0.1rem;
 }
-header #icons div{
+
+header #icons div {
     display: inline-grid;
 }
-header i{
+
+header #icons i {
     font-size: 2rem;
     margin: 0.2rem;
     cursor: pointer;
+}
+
+header #drop-down-arrow {
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 1s;
 }
