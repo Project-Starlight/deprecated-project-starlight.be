@@ -25,6 +25,9 @@ function header_icon(e){
     }
 }
 window.onscroll = function (e) {
+    if(window.scrollY === 0){
+        hide_nav(e);
+    }
     if(window.scrollY >= 10) {
         show_nav(e);
     }
