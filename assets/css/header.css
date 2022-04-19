@@ -51,10 +51,17 @@ header #icons i {
     cursor: pointer;
 }
 
+header #icons i:hover {
+    text-shadow: 0 0 7px #fff;
+}
+
 header #drop-down-arrow {
     margin-top: 0.2rem;
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
     transition: transform 500ms;
+}
+header h1:hover{
+    text-shadow: 0 0 7px #fff;
 }
