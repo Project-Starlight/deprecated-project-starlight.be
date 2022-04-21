@@ -31,34 +31,3 @@ function header_icon(e){
             break;
     }
 }
-
-/*
-window.onscroll = function (e) {
-    if(window.scrollY === 0){
-        hide_nav(e);
-    }
-    if(window.scrollY >= 10) {
-        show_nav(e);
-    }
-}
-
-function switch_nav(e){
-    e.preventDefault();
-    if (document.querySelector("header nav").className === "hidden"){
-        show_nav(e);
-    } else {
-        hide_nav(e);
-    }
-}
-function show_nav(e){
-    e.preventDefault();
-    document.querySelector("header nav").className = "";
-    document.querySelector("header #drop-down-arrow").style.transform = "rotate(180deg)";
-}
-function hide_nav(e){
-    e.preventDefault();
-    document.querySelector("header nav").className = "hidden";
-    document.querySelector("header #drop-down-arrow").style.transform = "rotate(0deg)";
-}
-
- */

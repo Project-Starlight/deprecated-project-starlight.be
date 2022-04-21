@@ -1,8 +1,3 @@
-body {
-    background: black;
-    color: white;
-}
-
 header h1 {
     font-size: 5rem;
     transition: text-shadow 400ms;
@@ -20,14 +15,7 @@ header h2 {
 header .title {
     padding: 1rem;
 }
-/*
-header nav {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-}
-*/
+
 header nav a {
     font-size: 1.3rem;
     text-decoration: none;
@@ -41,13 +29,7 @@ header nav a:hover {
     text-shadow: 0 0 7px #fff;
     border-bottom: solid 0.1rem #fff;
 }
-/*
-header .flex-container {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid white 0.1rem;
-}
-*/
+
 header #icons div {
     display: inline-grid;
 }
@@ -70,9 +52,6 @@ header #drop-down-arrow {
     cursor: pointer;
     transition: transform 500ms;
 }
-
-/*new nav bar css*/
-
 
 header .flex-container{
     display: flex;
