@@ -30,7 +30,12 @@ function navigateFromPricingToContact(e){
 }
 
 function navigateToDifferentHtmlPage(htmlPage) {
-    window.location.href = `${htmlPage}`;
+    if (document.querySelector('#index')){
+        window.location.href = `Pages/${htmlPage}`;
+    }else {
+        window.location.href = `${htmlPage}`;
+    }
+
 }
 
 function header_icon(e){
