@@ -1,7 +1,5 @@
 main{
     width: 80%;
-    display: grid;
-    grid-template-columns: 50% 50%;
 }
 main h1{
     font-size: 3em;
@@ -9,6 +7,14 @@ main h1{
 }
 img{
     width: 40em;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 .row1{
     height: 30em;
@@ -20,19 +26,27 @@ img{
     grid-row-end: 0;
 }
 #imageRow1{
+    margin-left: auto;
     padding-top: 4em;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-row-start: 0;
+    grid-column-end: 1;
+    grid-row-end: 1;
 }
 .row2{
     height: 30em;
 }
 #textRow2{
-    grid-column-start: 2;
+    text-align: right;
+    grid-column-start: 1;
     grid-row-start: 1;
+    grid-column-end: 1;
+    grid-row-end: 1;
 }
 #imageRow2{
     padding-top: 4em;
     grid-column-start: 0;
     grid-row-start: 1;
+    grid-column-end: 1;
+    grid-row-end: 1;
 }
