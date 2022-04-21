@@ -1,3 +1,6 @@
+header{
+    padding-bottom: 2em;
+}
 header h1 {
     font-size: 5rem;
     transition: text-shadow 400ms;
