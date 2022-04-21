@@ -3,9 +3,8 @@
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){
-    if (document.querySelector("#index")){
+    if (document.querySelector("header")){
         document.querySelector("header #icons").addEventListener('click',header_icon);
-        document.querySelector("header #drop-down-arrow i").addEventListener('click',switch_nav);
         document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("index.html")});
     }
 }
