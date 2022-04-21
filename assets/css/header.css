@@ -16,6 +16,13 @@ header .title {
     padding: 1rem;
 }
 
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
 header nav a {
     font-size: 1.3rem;
     text-decoration: none;
@@ -45,24 +52,11 @@ header #icons i:hover {
     text-shadow: 0 0 7px #fff;
 }
 
-header #drop-down-arrow {
-    margin-top: 0.2rem;
-    font-size: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 500ms;
-}
-
 header .flex-container{
     display: flex;
     justify-content: space-between;
 }
-header nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex: 1;
-}
+
 header #icons{
     align-self: center;
 }
