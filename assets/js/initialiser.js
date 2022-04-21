@@ -12,10 +12,10 @@ function init(){
 function header_icon(e){
     e.preventDefault();
     if (e.target.classList[1] === "fa-instagram"){
-        window.open("https://www.instagram.com/");
+        window.open(_local.instagramURL);
     }
     else if(e.target.classList[1] === "fa-facebook-f"){
-        window.open("https://www.facebook.com/");
+        window.open(_local.facebookURL);
     }
     else if(e.target.classList[1] === "fa-phone"){
         window.location.href = `tel:${_local.tel}`;
