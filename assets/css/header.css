@@ -1,0 +1,62 @@
+header h1 {
+    font-size: 5rem;
+    transition: text-shadow 400ms;
+}
+
+header h1:hover{
+    text-shadow: 0 0 7px #fff;
+    cursor: default;
+}
+
+header h2 {
+    font-size: 1.5rem;
+}
+
+header .title {
+    padding: 1rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+}
+
+header nav a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 0.7rem;
+    transition: text-shadow 400ms;
+}
+
+header nav a:hover {
+    text-shadow: 0 0 7px #fff;
+    border-bottom: solid 0.1rem #fff;
+}
+
+header #icons div {
+    display: inline-grid;
+}
+
+header #icons i {
+    font-size: 2rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    transition: text-shadow 400ms;
+}
+
+header #icons i:hover {
+    text-shadow: 0 0 7px #fff;
+}
+
+header .flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+header #icons{
+    align-self: center;
+}
