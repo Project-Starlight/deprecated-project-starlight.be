@@ -1,5 +1,5 @@
 "use strict";
-const _local = {tel: '0497659529', email: 'michiel.stragier@gmail.com'}
+
 document.addEventListener('DOMContentLoaded',init);
 
 function init(){

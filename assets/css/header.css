@@ -5,6 +5,12 @@ body {
 
 header h1 {
     font-size: 5rem;
+    transition: text-shadow 400ms;
+}
+
+header h1:hover{
+    text-shadow: 0 0 7px #fff;
+    cursor: default;
 }
 
 header h2 {
@@ -29,10 +35,11 @@ header nav a {
     padding: 0.7rem;
     border: solid white 0.1rem;
     border-radius: 0.5rem;
+    transition: text-shadow 400ms;
 }
 
 header nav a:hover {
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+    text-shadow: 0 0 7px #fff
 }
 
 header .flex-container {
@@ -62,6 +69,4 @@ header #drop-down-arrow {
     cursor: pointer;
     transition: transform 500ms;
 }
-header h1:hover{
-    text-shadow: 0 0 7px #fff;
-}
+
