@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',init);
 function init(){
     if (document.querySelector("header")){
         document.querySelector("header #icons").addEventListener('click',header_icon);
-        document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("index.html")});
+        document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("../index.html")});
     }
     if (document.querySelector("#prijs-pagina")){
         document.querySelectorAll("#prijs-pagina main div div").forEach((Element)=> {
@@ -14,7 +14,7 @@ function init(){
     }
     if (document.querySelector("#contactUs")){
         if(loadFromStorage("selectedPriceCategory")){
-            document.querySelectorAll("form option").forEach((Element)=>{
+            document.querySelectorAll("#pricingOption option").forEach((Element)=>{
                 if (loadFromStorage("selectedPriceCategory") === Element.value){
                     Element.selected = "selected";
             }});
@@ -32,7 +32,7 @@ function navigateFromPricingToContact(e){
 function navigateToDifferentHtmlPage(htmlPage) {
     if (document.querySelector('#index')){
         window.location.href = `Pages/${htmlPage}`;
-    }else {
+    } else {
         window.location.href = `${htmlPage}`;
     }
 
