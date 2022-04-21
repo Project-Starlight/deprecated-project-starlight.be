@@ -26,12 +26,12 @@ function init(){
 function navigateFromPricingToContact(e){
     e.preventDefault();
     saveToStorage("selectedPriceCategory", e.target.closest("div").id);
-    navigateToDifferentHtmlPage("ContactUs.html");
+    navigateToDifferentHtmlPage("contactUs.html");
 }
 
 function navigateToDifferentHtmlPage(htmlPage) {
     if (document.querySelector('#index')){
-        window.location.href = `Pages/${htmlPage}`;
+        window.location.href = `pages/${htmlPage}`;
     } else {
         window.location.href = `${htmlPage}`;
     }
