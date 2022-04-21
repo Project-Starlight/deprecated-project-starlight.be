@@ -18,9 +18,13 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 15rem;
-    border: solid #fff 0.1rem;
     border-radius: 1rem;
     height: 20rem;
+}
+#prijs-pagina main div div:hover{
+    background-image: url("../media/starrySky.png");
+    background-size: cover;
+    cursor: pointer;
 }
 
 #prijs-pagina main h2{

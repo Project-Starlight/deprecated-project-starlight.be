@@ -16,9 +16,10 @@
 
     <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
     <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
     <script src="../assets/js/initialiser.js"></script>
 </head>
-<body>
+<body id="contactUs">
 <header>
     <div class="flex-container title">
         <div>
@@ -45,5 +46,16 @@
         </div>
     </div>
 </header>
+<main>
+    <form action="#">
+        <label for="pricingOption"></label>
+        <select name="pricingOption" id="pricingOption">
+            <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
+            <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
+            <option value="grote-sterrenhemel">grote sterrenhemel</option>
+            <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
+        </select>
+    </form>
+</main>
 </body>
 </html>
