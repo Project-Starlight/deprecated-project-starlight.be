@@ -32,6 +32,7 @@ function header_icon(e){
     }
 }
 
+/*
 window.onscroll = function (e) {
     if(window.scrollY === 0){
         hide_nav(e);
@@ -59,3 +60,5 @@ function hide_nav(e){
     document.querySelector("header nav").className = "hidden";
     document.querySelector("header #drop-down-arrow").style.transform = "rotate(0deg)";
 }
+
+ */
