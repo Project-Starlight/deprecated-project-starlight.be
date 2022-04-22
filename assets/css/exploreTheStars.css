@@ -9,10 +9,10 @@ img{
     width: 40em;
 }
 
-.parent {
+.grid1{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -20,6 +20,7 @@ img{
     height: 30em;
 }
 #textRow1{
+    text-align: center;
     grid-column-start: 0;
     grid-row-start: 0;
     grid-column-end: 0;
@@ -37,7 +38,7 @@ img{
     height: 30em;
 }
 #textRow2{
-    text-align: right;
+    text-align: center;
     grid-column-start: 1;
     grid-row-start: 1;
     grid-column-end: 1;
@@ -49,4 +50,10 @@ img{
     grid-row-start: 1;
     grid-column-end: 1;
     grid-row-end: 1;
+}
+#features{
+    text-align: center;
+}
+#features h1{
+    padding-top: 0;
 }
