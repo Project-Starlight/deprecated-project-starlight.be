@@ -54,6 +54,22 @@ img{
 #features{
     text-align: center;
 }
+#features .flex-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4em;
+    flex-wrap: wrap;
+}
+.flex-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 15rem;
+    border-radius: 1rem;
+}
 #features h1{
     padding-top: 0;
+}
+#features div div img{
+    width: 50%;
 }
