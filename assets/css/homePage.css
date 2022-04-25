@@ -1,4 +1,8 @@
-main{
+#index main{
     width: 50rem;
     margin: auto;
+}
+
+#index nav a:nth-child(1){
+    border-bottom: solid #fff 0.1rem;
 }

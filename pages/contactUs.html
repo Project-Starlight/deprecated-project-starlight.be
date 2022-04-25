@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="authors" content="Michiel Stragier & Arne Vanroose">
+    <title>StarLight</title>
+
+    <!-- favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/homePage.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+
+    <!-- js -->
+
+    <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
+    <script src="../assets/js/initialiser.js"></script>
+</head>
+<body id="contactUs">
+<header>
+    <div id="title">
+        <h1>Starlight</h1>
+        <h2>By Michiel & Arne</h2>
+    </div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="exploreTheStars.html">Explore the stars</a>
+        <a href="pricing.html">Prijzen</a>
+        <a href="whoAreWe.html">Wie zijn we?</a>
+        <a href="contactUs.html">Contact us</a>
+    </nav>
+    <div id="icons">
+        <div>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+    </div>
+</header>
+<main>
+    <form action="#">
+        <label for="pricingOption"></label>
+        <select name="pricingOption" id="pricingOption">
+            <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
+            <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
+            <option value="grote-sterrenhemel">grote sterrenhemel</option>
+            <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
+        </select>
+    </form>
+</main>
+</body>
+</html>

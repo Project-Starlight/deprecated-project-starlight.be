@@ -2,3 +2,7 @@ body,html {
     background: black;
     color: white;
 }
+
+.hidden{
+    display: none;
+}

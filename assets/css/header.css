@@ -1,3 +1,17 @@
+header{
+    padding-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+header #icons{
+    text-align: right;
+}
+
+header #title, header #icons{
+    width: 18rem;
+}
+
 header h1 {
     font-size: 5rem;
     transition: text-shadow 400ms;
@@ -10,10 +24,6 @@ header h1:hover{
 
 header h2 {
     font-size: 1.5rem;
-}
-
-header .title {
-    padding: 1rem;
 }
 
 header nav{
@@ -46,15 +56,11 @@ header #icons i {
     margin: 0.2rem;
     cursor: pointer;
     transition: text-shadow 400ms;
+    text-align: center;
 }
 
 header #icons i:hover {
     text-shadow: 0 0 7px #fff;
-}
-
-header .flex-container{
-    display: flex;
-    justify-content: space-between;
 }
 
 header #icons{
