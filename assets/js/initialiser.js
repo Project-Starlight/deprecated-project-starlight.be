@@ -5,12 +5,37 @@ document.addEventListener('DOMContentLoaded',init);
 function init(){
     if (document.querySelector("header")){
         document.querySelector("header #icons").addEventListener('click',header_icon);
-        document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("index.html")});
+        document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("../index.html")});
+    }
+    if (document.querySelector("#prijs-pagina")){
+        document.querySelectorAll("#prijs-pagina main div div").forEach((Element)=> {
+            Element.addEventListener('click',navigateFromPricingToContact)
+        });
+    }
+    if (document.querySelector("#contactUs")){
+        if(loadFromStorage("selectedPriceCategory")){
+            document.querySelectorAll("#pricingOption option").forEach((Element)=>{
+                if (loadFromStorage("selectedPriceCategory") === Element.value){
+                    Element.selected = "selected";
+            }});
+
+        }
     }
 }
 
+function navigateFromPricingToContact(e){
+    e.preventDefault();
+    saveToStorage("selectedPriceCategory", e.target.closest("div").id);
+    navigateToDifferentHtmlPage("contactUs.html");
+}
+
 function navigateToDifferentHtmlPage(htmlPage) {
-    window.location.href = `${htmlPage}`;
+    if (document.querySelector('#index')){
+        window.location.href = `pages/${htmlPage}`;
+    } else {
+        window.location.href = `${htmlPage}`;
+    }
+
 }
 
 function header_icon(e){
