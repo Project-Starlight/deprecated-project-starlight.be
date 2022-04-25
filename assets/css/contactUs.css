@@ -1,0 +1,27 @@
+#contactUs header nav a:nth-child(5){
+    border-bottom: solid #fff 0.1rem;
+}
+#contactUs main .flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem 0;
+}
+#begin p{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+#begin button{
+    margin-top: 2rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    transition: box-shadow 400ms;
+}
+#begin button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px #fff;
+}

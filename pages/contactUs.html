@@ -22,12 +22,14 @@
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/homePage.css">
     <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/contactUs.css">
 
     <!-- js -->
 
     <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
+    <script src="../assets/js/render/render-form.js"></script>
     <script src="../assets/js/initialiser.js"></script>
 </head>
 <body id="contactUs">
@@ -56,31 +58,52 @@
 </header>
 <main>
     <form action="#">
-        <p>Algemene info:</p>
-        <label for="voornaam">Voornaam</label>
-        <input type="text" name="voornaam" id="voornaam">
-        <label for="achternaam">Achternaam</label>
-        <input type="text" name="achternaam" id="achternaam">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <label for="telefoon">Telefoon</label>
-        <input type="tel" name="telefoon" id="telefoon">
-        <label for="bericht">Bericht</label>
-        <input type="text" name="bericht" id="bericht">
-        <label for="pricingOption"></label>
-        <select name="pricingOption" id="pricingOption">
-            <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
-            <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
-            <option value="grote-sterrenhemel">grote sterrenhemel</option>
-            <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
-        </select>
-        <p>Informatie auto:</p>
-        <label for="merk">Merk</label>
-        <input type="text" name="merk" id="merk">
-        <label for="model">Model</label>
-        <input type="text" name="model" id="model">
-        <label for="jaar">Jaar</label>
-        <input type="number" name="jaar" id="jaar">
+        <div id="begin">
+            <div class="flex-container">
+                <p>Ben je geïntresseerd?</p>
+                <p>Heb je ergens een vraag over?</p>
+                <p>Contacteer ons zeker, wij zullen zo snel mogelijk reageren.</p>
+                <button name="interested">Contact Us!</button>
+            </div>
+        </div>
+        <div id="algemene-informatie" class="hidden">
+            <h3>Algemene info:</h3>
+            <label for="voornaam">Voornaam</label>
+            <input type="text" placeholder="voornaam" name="voornaam" id="voornaam">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" placeholder="achternaam" name="achternaam" id="achternaam">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="telefoon">Telefoon</label>
+            <input type="tel" name="telefoon" id="telefoon">
+            <button type="button" name="terug">Terug</button>
+            <button type="button" name="volgende">Volgende</button>
+        </div>
+        <div id="product-informatie" class="hidden">
+            <h3>Informatie product:</h3>
+            <label for="merk">Merk</label>
+            <input type="text" name="merk" id="merk">
+            <label for="model">Model</label>
+            <input type="text" name="model" id="model">
+            <label for="jaar">Jaar</label>
+            <input type="number" name="jaar" id="jaar">
+            <label for="bericht">Bericht</label>
+            <input type="text" name="bericht" id="bericht">
+            <label for="pricingOption">In welke optie bent u geïnteresseerd?</label>
+            <select name="pricingOption" id="pricingOption">
+                <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
+                <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
+                <option value="grote-sterrenhemel">grote sterrenhemel</option>
+                <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
+            </select>
+            <button type="button" name="terug">Terug</button>
+            <button type="button" name="volgende">Volgende</button>
+        </div>
+        <div id="final-check" class="hidden">
+            <button type="button" name="terug">Terug</button>
+            <label for="submit"></label>
+            <input type="submit" name="submit" id="submit">
+        </div>
     </form>
 </main>
 </body>
