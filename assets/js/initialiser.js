@@ -8,6 +8,7 @@ function init(){
         document.querySelector("header h1").addEventListener('click',()=>{navigateToDifferentHtmlPage("../index.html")});
     }
     if (document.querySelector("#prijs-pagina")){
+        renderPrice();
         document.querySelectorAll("#prijs-pagina main div div").forEach((Element)=> {
             Element.addEventListener('click',navigateFromPricingToContact)
         });
@@ -18,7 +19,6 @@ function init(){
                 if (loadFromStorage("selectedPriceCategory") === Element.value){
                     Element.selected = "selected";
             }});
-
         }
     }
 }
