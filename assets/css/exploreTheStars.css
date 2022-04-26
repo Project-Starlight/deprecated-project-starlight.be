@@ -1,15 +1,20 @@
 main{
-    width: 80%;
+    background-image: url("../media/starrySky.png");
+    background-size: 30%;
 }
 main h1{
     font-size: 3em;
-    padding-top: 4em;
+    margin-top: 4em;
 }
 img{
     width: 40em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .grid1{
+    width: 80%;
+    margin: auto;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(1, 1fr);
@@ -52,7 +57,12 @@ img{
     grid-row-end: 1;
 }
 #features{
+    background-color: black;
+    width: 80%;
+    margin: auto;
     text-align: center;
+    box-shadow: 0 0 4px #fff;
+    border-radius: 1rem;
 }
 #features .flex-container{
     display: flex;
@@ -64,12 +74,18 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 15rem;
+    max-width: 20rem;
     border-radius: 1rem;
 }
 #features h1{
-    padding-top: 0;
+    margin-top: 0;
+    font-size: 4em;
+    padding-top: 1em;
+}
+#features p{
+    font-size: 1.5em;
+    padding-top: 1rem;
 }
 #features div div img{
-    width: 50%;
+    width: 100%;
 }
