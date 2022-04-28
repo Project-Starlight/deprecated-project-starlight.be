@@ -1,3 +1,9 @@
+html,body{
+    height: 100%;
+}
+#contactUs .hidden{
+    display: none;
+}
 #contactUs header nav a:nth-child(5){
     border-bottom: solid #fff 0.1rem;
 }
@@ -8,11 +14,16 @@
     align-items: center;
     margin: 10rem 0;
 }
-#begin p{
+#contactUs form h3{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.begin p{
     font-size: 2rem;
     margin: 1rem 0;
 }
-#begin button{
+
+.begin button{
     margin-top: 2rem;
     background-color: black;
     border-radius: 0.5rem;
@@ -21,7 +32,26 @@
     font-size: 1.5rem;
     transition: box-shadow 400ms;
 }
-#begin button:hover{
+
+.begin button:hover{
     cursor: pointer;
     box-shadow: 0 0 5px #fff;
+}
+.algemene-informatie .flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.algemene-informatie .main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.algemene-informatie .main-content .block{
+    display: block;
+    margin: 1rem 0;
+}
+.algemene-informatie .navigatie-buttons{
+    display: flex;
+    justify-content: space-around;
 }

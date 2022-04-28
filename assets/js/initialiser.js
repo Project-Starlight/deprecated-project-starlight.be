@@ -20,11 +20,12 @@ function init(){
                     Element.selected = "selected";
             }});
         }
-        document.querySelector("#begin button").addEventListener("click",(e)=>{navigateWithHidden("#begin","#algemene-informatie",e)});
-        document.querySelector("#algemene-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden("#algemene-informatie","#begin",e)});
-        document.querySelector("#algemene-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden("#algemene-informatie","#product-informatie",e)});
-        document.querySelector("#product-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden("#product-informatie","#algemene-informatie",e)});
-        document.querySelector("#product-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden("#product-informatie","#final-check",e)});
+        document.querySelector(".begin button").addEventListener("click",(e)=>{navigateWithHidden(".begin",".algemene-informatie",e)});
+        document.querySelector(".algemene-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".algemene-informatie",".begin",e)});
+        document.querySelector(".algemene-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden(".algemene-informatie",".product-informatie",e)});
+        document.querySelector(".product-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".product-informatie",".algemene-informatie",e)});
+        document.querySelector(".product-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden(".product-informatie",".final-check",e)});
+        document.querySelector(".final-check button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".final-check",".product-informatie",e)})
     }
 
 }
