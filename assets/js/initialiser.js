@@ -20,14 +20,50 @@ function init(){
                     Element.selected = "selected";
             }});
         }
-        document.querySelector(".begin button").addEventListener("click",(e)=>{navigateWithHidden(".begin",".algemene-informatie",e)});
-        document.querySelector(".algemene-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".algemene-informatie",".begin",e)});
-        document.querySelector(".algemene-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden(".algemene-informatie",".product-informatie",e)});
-        document.querySelector(".product-informatie button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".product-informatie",".algemene-informatie",e)});
-        document.querySelector(".product-informatie button[name='volgende']").addEventListener("click",(e)=>{navigateWithHidden(".product-informatie",".final-check",e)});
-        document.querySelector(".final-check button[name='terug']").addEventListener("click",(e)=>{navigateWithHidden(".final-check",".product-informatie",e)})
+        document.querySelector(".begin button").addEventListener("click",(e)=>{
+            navigateWithHidden(".begin",".algemene-informatie",e)
+        });
+        document.querySelector(".algemene-informatie button[name='terug']").addEventListener("click",(e)=>{
+            navigateWithHidden(".algemene-informatie",".begin",e)
+        });
+        document.querySelector(".algemene-informatie button[name='volgende']").addEventListener("click",(e)=>{
+            navigateWithHidden(".algemene-informatie",".product-informatie",e)
+        });
+        document.querySelector(".product-informatie button[name='terug']").addEventListener("click",(e)=>{
+            navigateWithHidden(".product-informatie",".algemene-informatie",e)
+        });
+        document.querySelector(".product-informatie button[name='volgende']").addEventListener("click",(e)=>{
+            navigateWithHidden(".product-informatie",".bericht",e)
+        });
+        document.querySelector(".bericht button[name='terug']").addEventListener("click",(e)=>{
+            navigateWithHidden(".bericht",".product-informatie",e)
+        });
+        document.querySelector(".bericht button[name='volgende']").addEventListener("click",(e)=>{
+            navigateWithHidden(".bericht",".final-check",e);
+            showFinalCheck(e);
+        });
+        document.querySelector(".final-check button[name='terug']").addEventListener("click",(e)=>{
+            navigateWithHidden(".final-check",".bericht",e)
+        });
+        document.querySelector(".final-check input[name='verstuur']").addEventListener("click",(e)=>{
+            postContactForm(e)
+        });
     }
 
+}
+
+function showFinalCheck(e){
+    const html =
+        `<p>${document.querySelector(".algemene-informatie input[name='voornaam']").value}</p>
+                    <p>${document.querySelector(".algemene-informatie input[name='achternaam']").value}</p>
+                    <p>${document.querySelector(".algemene-informatie input[name='email']").value}</p>
+                    <p>${document.querySelector(".algemene-informatie input[name='telefoon']").value}</p>
+                    <p>${document.querySelector(".product-informatie input[name='merk']").value}</p>
+                    <p>${document.querySelector(".product-informatie input[name='model']").value}</p>
+                    <p>${document.querySelector(".product-informatie input[name='jaar']").value}</p>
+                    <p>${document.querySelector(".product-informatie select").value}</p>
+                    <p>${document.querySelector(".bericht textarea").value}</p>`
+    document.querySelector(".final-check div div:last-child").innerHTML = html;
 }
 
 function navigateFromPricingToContact(e){

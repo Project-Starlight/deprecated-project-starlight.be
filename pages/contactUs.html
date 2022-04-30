@@ -30,6 +30,7 @@
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
     <script src="../assets/js/render/render-form.js"></script>
+    <script src="../assets/js/api/post-contact-form.js"></script>
     <script src="../assets/js/initialiser.js"></script>
 </head>
 <body id="contactUs">
@@ -66,65 +67,85 @@
                 <button name="interested">Contact Us!</button>
             </div>
         </div>
-        <div class="algemene-informatie hidden">
-            <div class="flex-container">
-                <h3>Algemene info:</h3>
-                <div class="main-content">
-                    <div class="block">
-                        <label for="voornaam">Voornaam</label>
-                        <input type="text" placeholder="voornaam" name="voornaam" id="voornaam">
-                    </div>
-                    <div class="block">
-                        <label for="achternaam">Achternaam</label>
-                        <input type="text" placeholder="achternaam" name="achternaam" id="achternaam">
-                    </div>
-                    <div class="block">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="block">
-                        <label for="telefoon">Telefoon</label>
-                        <input type="tel" name="telefoon" id="telefoon">
-                    </div>
-                </div>
-                <div class="navigatie-buttons">
-                    <button type="button" name="terug">Terug</button>
-                    <button type="button" name="volgende">Volgende</button>
-                </div>
-            </div>
-        </div>
-        <div class="product-informatie hidden">
-            <h3>Informatie product:</h3>
+        <div class="algemene-informatie hidden flex-container">
+            <h3>Algemene info:</h3>
             <div class="main-content">
-                <label for="merk">Merk</label>
-                <input type="text" name="merk" id="merk">
-
-                <label for="model">Model</label>
-                <input type="text" name="model" id="model">
-
-                <label for="jaar">Jaar</label>
-                <input type="number" name="jaar" id="jaar">
-
-                <label for="bericht">Bericht</label>
-                <input type="text" name="bericht" id="bericht">
-
-                <label for="pricingOption">In welke optie bent u geïnteresseerd?</label>
-                <select name="pricingOption" id="pricingOption">
-                    <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
-                    <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
-                    <option value="grote-sterrenhemel">grote sterrenhemel</option>
-                    <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
-                </select>
+                <div class="flex-container">
+                    <label for="voornaam">Voornaam: </label>
+                    <label for="achternaam">Achternaam: </label>
+                    <label for="email">Email: </label>
+                    <label for="telefoon">Telefoon: </label>
+                </div>
+                <div class="flex-container">
+                    <input required type="text" placeholder="Jeff" name="voornaam" id="voornaam">
+                    <input required type="text" placeholder="Bezos" name="achternaam" id="achternaam">
+                    <input required type="email" name="email" id="email" placeholder="example@mail.com">
+                    <input required type="tel" name="telefoon" id="telefoon" placeholder="0489887881">
+                </div>
             </div>
             <div class="navigatie-buttons">
                 <button type="button" name="terug">Terug</button>
                 <button type="button" name="volgende">Volgende</button>
             </div>
         </div>
+        <div class="product-informatie hidden">
+            <h3>Informatie auto:</h3>
+            <div class="main-content">
+                <div class="flex-container">
+                    <label for="merk">Merk:</label>
+                    <label for="model">Model:</label>
+                    <label for="jaar">Jaar:</label>
+                    <label for="pricingOption">Optie:</label>
+                </div>
+                <div class="flex-container">
+                    <input type="text" name="merk" id="merk">
+                    <input type="text" name="model" id="model">
+                    <input type="number" name="jaar" id="jaar">
+                    <select name="pricingOption" id="pricingOption">
+                        <option value="kies-optie">Kies optie</option>
+                        <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
+                        <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
+                        <option value="grote-sterrenhemel">grote sterrenhemel</option>
+                        <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <button type="button" name="volgende">Volgende</button>
+            </div>
+        </div>
+        <div class="bericht hidden">
+            <label for="bericht">Bericht</label>
+            <textarea name="bericht" id="bericht"></textarea>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <button type="button" name="volgende">Volgende</button>
+            </div>
+        </div>
         <div class="final-check hidden">
-            <button type="button" name="terug">Terug</button>
-            <label for="submit"></label>
-            <input type="submit" name="submit" id="submit">
+            <div id="info">
+                <div>
+                    <p>Voornaam:</p>
+                    <p>Achternaam:</p>
+                    <p>Email:</p>
+                    <p>Telefoon:</p>
+                    <p>Merk:</p>
+                    <p>Model:</p>
+                    <p>Jaar:</p>
+                    <p>Product optie:</p>
+                    <p>Bericht:</p>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <label for="submit"></label>
+                <input type="submit" name="verstuur" id="submit" placeholder="hallo">
+
+            </div>
         </div>
     </form>
 </main>
