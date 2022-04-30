@@ -1,3 +1,5 @@
+"use strict";
+
 function postContactForm(e){
     e.preventDefault();
     let body =
