@@ -14,5 +14,6 @@ function postContactForm(e){
         "prijsoptie": document.querySelector(".product-informatie select").value,
         "bericht": document.querySelector(".bericht textarea").value
     }
-    console.log(body);
+    fetchFromServer("https://api.stragier-michiel.be/api/message","POST", body)
+        .catch(errorHandler);
 }
