@@ -6,5 +6,5 @@ function generateVisualAPIErrorInConsole(){
 
 function errorHandler(error){
     console.error(error);
-    document.querySelector(_config.errorHandlerSelector).innerText = 'Something went wrong :(';
+    document.querySelector(".error").innerText = 'Something went wrong :(' + 'status: ' + error.status;
 }
