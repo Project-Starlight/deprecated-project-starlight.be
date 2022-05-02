@@ -1,4 +1,4 @@
-
+"use strict"
 
 function navigateWithHidden(queryToBeHidden,queryToBeShown,e){
     e.preventDefault();
