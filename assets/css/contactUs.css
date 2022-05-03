@@ -173,3 +173,19 @@ body, html {
     font-size: 1.5rem;
     height: auto;
 }
+#contactUs .form-error h3{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.form-error ul{
+    text-align: center;
+}
+.form-error ul li{
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.form-error ul i{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
