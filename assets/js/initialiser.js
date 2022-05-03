@@ -47,8 +47,12 @@ function init(){
         });
         document.querySelector(".final-check input[name='verstuur']").addEventListener("click",(e)=>{
             if (!checkRequirements(e)){
+                navigateWithHidden(".final-check",".form-succes",e);
                 postContactForm(e);
             }
+        });
+        document.querySelector(".form-error ul").addEventListener("click",(e)=>{
+           navigateWithHidden(".form-error",".algemene-informatie",e);
         });
     }
 

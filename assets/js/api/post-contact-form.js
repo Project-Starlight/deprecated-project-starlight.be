@@ -44,14 +44,11 @@ function checkRequirements(e) {
     }
     let requiredFormFieldsThatArentFilledIn = [];
     for (let formField in form) {
-        console.log(form[formField]);
         if (!form[formField]) {
-            console.log(formField)
             requiredFormFieldsThatArentFilledIn.push(`${formField}`);
         }
     }
-    console.log(requiredFormFieldsThatArentFilledIn)
-    if (requiredFormFieldsThatArentFilledIn) {
+    if (requiredFormFieldsThatArentFilledIn.length > 0) {
         showFormError(requiredFormFieldsThatArentFilledIn,e);
         return true;
     } else {
@@ -63,8 +60,6 @@ function showFormError(requiredFormFieldsThatArentFilledIn,e) {
     document.querySelector(".form-error ul").innerHTML = "";
     requiredFormFieldsThatArentFilledIn.forEach(function (field) {
         document.querySelector(".form-error ul").insertAdjacentHTML("beforeend", `<li>${field}<i class="fa-solid fa-pencil"></i></li>`);
-
     })
     navigateWithHidden(".final-check",".form-error",e);
 }
-
