@@ -46,7 +46,9 @@ function init(){
             navigateWithHidden(".final-check",".bericht",e)
         });
         document.querySelector(".final-check input[name='verstuur']").addEventListener("click",(e)=>{
-            postContactForm(e)
+            if (!checkRequirements(e)){
+                postContactForm(e);
+            }
         });
     }
 
