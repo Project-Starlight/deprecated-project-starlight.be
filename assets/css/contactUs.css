@@ -189,3 +189,6 @@ body, html {
     font-size: 1.3rem;
     margin-left: 1rem;
 }
+.form-error ul li:hover{
+    text-shadow: 0 0 5px white;
+}
