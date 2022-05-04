@@ -33,14 +33,15 @@ body, html {
     background-color: black;
     border-radius: 0.5rem;
     color: #fff;
+    border: solid white 0.1rem;
     padding: 0.5rem;
     font-size: 1.5rem;
-    transition: box-shadow 400ms;
+    transition: text-shadow 400ms;
 }
 
 .begin button:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px #fff;
 }
 
 .algemene-informatie h3, .product-informatie h3 {
@@ -89,6 +90,7 @@ body, html {
     color: white;
     background-color: black;
     padding: 0.5rem;
+    border: solid white 0.1rem;
     border-radius: 0.5rem;
     transition: text-shadow 450ms;
 }

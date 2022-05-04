@@ -14,14 +14,16 @@ function postContactForm(e) {
             "prijsoptie": getValueForm(".product-informatie select"),
             "bericht": getValueForm(".bericht textarea")
         }
+    console.log(body);
     fetchFromServer("https://api.stragier-michiel.be/api/message", "POST", body)
         .catch(errorHandler)
 }
 
 function getValueForm(formSelector, number = false) {
     const $selectorValue = document.querySelector(`${formSelector}`).value;
-
-    if ($selectorValue) {
+    if ($selectorValue === "kies-optie"){
+        return "/";
+    } else if ($selectorValue) {
         if (number) {
             return parseInt($selectorValue)
         } else {
@@ -29,9 +31,9 @@ function getValueForm(formSelector, number = false) {
         }
     } else {
         if (number) {
-            return 1;
+            return 9999;
         } else {
-            return "NO INPUT FROM USER";
+            return "/";
         }
     }
 }
