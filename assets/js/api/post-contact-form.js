@@ -16,12 +16,15 @@ function postContactForm(e) {
         }
     console.log(body);
     fetchFromServer("https://api.stragier-michiel.be/api/message", "POST", body)
+        .then(() => {
+            navigateWithHidden(".final-check", ".form-succes", e);
+        })
         .catch(errorHandler)
 }
 
 function getValueForm(formSelector, number = false) {
     const $selectorValue = document.querySelector(`${formSelector}`).value;
-    if ($selectorValue === "kies-optie"){
+    if ($selectorValue === "kies-optie") {
         return "/";
     } else if ($selectorValue) {
         if (number) {
@@ -51,17 +54,9 @@ function checkRequirements(e) {
         }
     }
     if (requiredFormFieldsThatArentFilledIn.length > 0) {
-        showFormError(requiredFormFieldsThatArentFilledIn,e);
+        showFormError(requiredFormFieldsThatArentFilledIn, e);
         return true;
     } else {
         return false;
     }
-}
-
-function showFormError(requiredFormFieldsThatArentFilledIn,e) {
-    document.querySelector(".form-error ul").innerHTML = "";
-    requiredFormFieldsThatArentFilledIn.forEach(function (field) {
-        document.querySelector(".form-error ul").insertAdjacentHTML("beforeend", `<li>${field}<i class="fa-solid fa-pencil"></i></li>`);
-    })
-    navigateWithHidden(".final-check",".form-error",e);
 }

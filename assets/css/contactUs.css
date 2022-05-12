@@ -182,6 +182,9 @@ body, html {
 .form-error ul{
     text-align: center;
 }
+.form-error ul p{
+    display: inline;
+}
 .form-error ul li{
     margin-bottom: 1rem;
     cursor: pointer;
@@ -193,4 +196,15 @@ body, html {
 }
 .form-error ul li:hover{
     text-shadow: 0 0 5px white;
+}
+.error{
+    text-align: center;
+}
+.error h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.error p{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
