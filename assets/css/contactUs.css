@@ -170,10 +170,22 @@ body, html {
     font-size: 2rem;
     margin-bottom: 1rem;
     height: 2rem;
+    transition: text-shadow 450ms;
 }
+.final-check #info li:hover{
+    cursor: pointer;
+    text-shadow: 0 0 5px white;
+}
+
 .final-check #info li.no-input{
     color: gray;
+    transition: color 450ms;
 }
+
+.final-check #info li.no-input:hover{
+    color: white;
+}
+
 .final-check #info .Bericht{
     font-size: 1.5rem;
     height: auto;

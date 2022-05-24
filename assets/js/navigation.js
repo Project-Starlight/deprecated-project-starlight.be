@@ -21,6 +21,18 @@ function navigateToDifferentHtmlPage(htmlPage) {
 
 }
 
+function navigateFinalCheckLi(className,e){
+    if (className.contains("Voornaam")||className.contains("Achternaam")||className.contains("Email")||className.contains("Telefoon")){
+        navigateWithHidden(".final-check",".algemene-informatie",e);
+    }
+    if (className.contains("Merk")||className.contains("Model")||className.contains("Jaar")||className.contains("Optie")){
+        navigateWithHidden(".final-check",".product-informatie",e);
+    }
+    if (className.contains("Bericht")){
+        navigateWithHidden(".final-check",".bericht",e);
+    }
+}
+
 function header_icon(e){
     e.preventDefault();
     switch (e.target.classList[1]){

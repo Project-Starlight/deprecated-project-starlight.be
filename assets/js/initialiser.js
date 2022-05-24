@@ -15,25 +15,31 @@ function init() {
 
 }
 
-function headerInitializer(){
+function headerInitializer() {
     document.querySelector("header #icons").addEventListener('click', header_icon);
     document.querySelector("header h1").addEventListener('click', () => {
         navigateToDifferentHtmlPage("../index.html")
     });
 }
 
-function prijsPaginaInitializer(){
+function prijsPaginaInitializer() {
     renderPrice();
     document.querySelectorAll("#prijs-pagina main div div").forEach((Element) => {
         Element.addEventListener('click', navigateFromPricingToContact)
     });
 }
 
-/*function finalCheckClicker() {
-    document.querySelector()
-}*/
+function finalCheckClicker() {
+    document.querySelectorAll(".final-check li").forEach(li => {
+        li.addEventListener("click", (e) => {
+            let className = e.target.classList;
+            className.remove("no-input");
+            navigateFinalCheckLi(className,e);
+        })
+    })
+}
 
-function contactUsPageInitializer(){
+function contactUsPageInitializer() {
     if (loadFromStorage("selectedPriceCategory")) {
         document.querySelectorAll("#pricingOption option").forEach((Element) => {
             if (loadFromStorage("selectedPriceCategory") === Element.value) {
@@ -70,17 +76,16 @@ function contactUsPageInitializer(){
     });
     document.querySelector(".bericht button[name='volgende']").addEventListener("click", (e) => {
         const requirements = checkRequirements();
-        if (requirements != null){
-            showNotEverythingFilledInFormError(requirements,e);
+        if (requirements != null) {
+            showNotEverythingFilledInFormError(requirements, e);
         } else {
             showFinalCheck(e);
             navigateWithHidden(".bericht", ".final-check", e);
+            finalCheckClicker();
         }
     });
 
     /* Show final check */
-
-    //finalCheckClicker();
 
     document.querySelector(".final-check button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".final-check", ".bericht", e)
@@ -99,7 +104,7 @@ function contactUsPageInitializer(){
 
     /* Show message that everything went well and is send to the server */
 
-    document.querySelector(".form-succes button").addEventListener("click",(e)=>{
+    document.querySelector(".form-succes button").addEventListener("click", (e) => {
         navigateToDifferentHtmlPage("../index.html");
     });
 }
