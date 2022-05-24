@@ -171,7 +171,7 @@ body, html {
     margin-bottom: 1rem;
     height: 2rem;
 }
-.final-check #info div:last-child p:last-child{
+.final-check #info div:last-child .Bericht{
     font-size: 1.5rem;
     height: auto;
 }
@@ -207,4 +207,26 @@ body, html {
 .error p{
     font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+.form-succes{
+    text-align: center;
+}
+.form-succes h3, .form-succes p{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.form-succes button {
+    margin-top: 2rem;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: #fff;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    transition: text-shadow 400ms;
+}
+
+.form-succes button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
 }
