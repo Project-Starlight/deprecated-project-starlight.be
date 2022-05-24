@@ -15,24 +15,27 @@ function showFinalCheck(e) {
     let htmlTitle = ``;
     let htmlTxt = ``;
     for (let selectorsKey in selectors) {
-        if (getValue(selectors[selectorsKey]) !== "kies-optie" && getValue(selectors[selectorsKey])){
             htmlTitle += `<p>${selectorsKey}</p>`;
-            htmlTxt += `<p class="${selectorsKey}">${getValue(selectors[selectorsKey])}</p>`;
-        }
+            htmlTxt += `<p class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</p>`;
     }
 
     document.querySelector(".final-check div div:first-child").innerHTML = htmlTitle;
     document.querySelector(".final-check div div:last-child").innerHTML = htmlTxt;
+    console.log(document.querySelector(".final-check div div:last-child"));
 }
 
-function showFormError(requiredFormFieldsThatArentFilledIn, e) {
+function refactorBericht(str){
+    return str.replace(/\n/g, "<br />");
+}
+
+function showNotEverythingFilledInFormError(requiredFormFieldsThatArentFilledIn, e) {
     document.querySelector(".form-error ul").innerHTML = "";
     requiredFormFieldsThatArentFilledIn.forEach(function (field) {
         document.querySelector(".form-error ul").insertAdjacentHTML("beforeend", `<li class="${field}"><p>${field}</p><i class="fa-solid fa-pencil"></i></li>`);
     })
-    navigateWithHidden(".final-check", ".form-error", e);
+    navigateWithHidden(".bericht", ".form-error", e);
 }
 
-function getValue(selector) {
-    return document.querySelector(`${selector}`).value;
+function getRefactorValue(selector) {
+    return refactorBericht(document.querySelector(`${selector}`).value);
 }

@@ -65,8 +65,13 @@ function contactUsPageInitializer(){
         navigateWithHidden(".bericht", ".product-informatie", e)
     });
     document.querySelector(".bericht button[name='volgende']").addEventListener("click", (e) => {
-        navigateWithHidden(".bericht", ".final-check", e);
-        showFinalCheck(e);
+        const requirements = checkRequirements();
+        if (requirements != null){
+            showNotEverythingFilledInFormError(requirements,e);
+        } else {
+            showFinalCheck(e);
+            navigateWithHidden(".bericht", ".final-check", e);
+        }
     });
 
     /* Show final check */
@@ -74,20 +79,19 @@ function contactUsPageInitializer(){
     document.querySelector(".final-check button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".final-check", ".bericht", e)
     });
+
     document.querySelector(".final-check input[name='verstuur']").addEventListener("click", (e) => {
-        if (!checkRequirements(e)) {
-            postContactForm(e);
-        }
+        postContactForm(e);
     });
 
-    /**/
+    /* Show error if something bad happend with the server side*/
 
     document.querySelector(".form-error ul").addEventListener("click", (e) => {
         navigateWithHidden(".form-error", ".algemene-informatie", e);
         document.querySelector(`.algemene-informatie input[id="${e.target.closest("li").className}"]`).focus();
     });
 
-    /**/
+    /* Show message that everything went well and is send to the server */
 
     document.querySelector(".form-succes button").addEventListener("click",(e)=>{
         navigateToDifferentHtmlPage("../index.html");

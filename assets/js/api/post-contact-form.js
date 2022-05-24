@@ -14,7 +14,6 @@ function postContactForm(e) {
             "prijsoptie": getValueForm(".product-informatie select"),
             "bericht": getValueForm(".bericht textarea")
         }
-    console.log(body);
     fetchFromServer("https://api.stragier-michiel.be/api/message", "POST", body)
         .then(() => {
             navigateWithHidden(".final-check", ".form-succes", e);
@@ -41,7 +40,7 @@ function getValueForm(formSelector, number = false) {
     }
 }
 
-function checkRequirements(e) {
+function checkRequirements() {
     const form = {
         voornaam: document.querySelector(".algemene-informatie input[name='voornaam']").value,
         achternaam: document.querySelector(".algemene-informatie input[name='achternaam']").value,
@@ -54,9 +53,8 @@ function checkRequirements(e) {
         }
     }
     if (requiredFormFieldsThatArentFilledIn.length > 0) {
-        showFormError(requiredFormFieldsThatArentFilledIn, e);
-        return true;
+        return requiredFormFieldsThatArentFilledIn;
     } else {
-        return false;
+        return null;
     }
 }
