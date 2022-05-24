@@ -29,6 +29,10 @@ function prijsPaginaInitializer(){
     });
 }
 
+/*function finalCheckClicker() {
+    document.querySelector()
+}*/
+
 function contactUsPageInitializer(){
     if (loadFromStorage("selectedPriceCategory")) {
         document.querySelectorAll("#pricingOption option").forEach((Element) => {
@@ -75,6 +79,8 @@ function contactUsPageInitializer(){
     });
 
     /* Show final check */
+
+    //finalCheckClicker();
 
     document.querySelector(".final-check button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".final-check", ".bericht", e)

@@ -15,16 +15,33 @@ function showFinalCheck(e) {
     let htmlTitle = ``;
     let htmlTxt = ``;
     for (let selectorsKey in selectors) {
-            htmlTitle += `<p>${selectorsKey}</p>`;
-            htmlTxt += `<p class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</p>`;
+            htmlTitle += getValueListItemFinalCheck(selectorsKey,selectors,true);
+            htmlTxt += getValueListItemFinalCheck(selectorsKey,selectors);
     }
 
-    document.querySelector(".final-check div div:first-child").innerHTML = htmlTitle;
-    document.querySelector(".final-check div div:last-child").innerHTML = htmlTxt;
+    document.querySelector(".final-check div ul:first-child").innerHTML = htmlTitle;
+    document.querySelector(".final-check div ul:last-child").innerHTML = htmlTxt;
     console.log(document.querySelector(".final-check div div:last-child"));
 }
 
+function getValueListItemFinalCheck(selectorsKey, selectors,key = false){
+    if (getRefactorValue(selectors[selectorsKey]) === "/"){
+        if (key){
+            return `<li class="no-input">${selectorsKey}</li>`;
+        }
+        return `<li class="${selectorsKey} no-input">${getRefactorValue(selectors[selectorsKey])}</li>`;
+    } else {
+        if (key){
+            return `<li>${selectorsKey}</li>`;
+        }
+        return `<li class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</li>`;
+    }
+}
+
 function refactorBericht(str){
+    if (str === "" || str === "kies-optie"){
+        return "/"
+    }
     return str.replace(/\n/g, "<br />");
 }
 
