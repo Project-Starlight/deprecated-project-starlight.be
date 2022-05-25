@@ -29,16 +29,6 @@ function prijsPaginaInitializer() {
     });
 }
 
-function finalCheckClicker() {
-    document.querySelectorAll(".final-check li").forEach(li => {
-        li.addEventListener("click", (e) => {
-            let className = e.target.classList;
-            className.remove("no-input");
-            navigateFinalCheckLi(className,e);
-        })
-    })
-}
-
 function contactUsPageInitializer() {
     if (loadFromStorage("selectedPriceCategory")) {
         document.querySelectorAll("#pricingOption option").forEach((Element) => {
@@ -56,6 +46,7 @@ function contactUsPageInitializer() {
     document.querySelector(".algemene-informatie button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".algemene-informatie", ".begin", e)
     });
+
     document.querySelector(".algemene-informatie button[name='volgende']").addEventListener("click", (e) => {
         navigateWithHidden(".algemene-informatie", ".product-informatie", e)
     });
@@ -65,6 +56,7 @@ function contactUsPageInitializer() {
     document.querySelector(".product-informatie button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".product-informatie", ".algemene-informatie", e)
     });
+
     document.querySelector(".product-informatie button[name='volgende']").addEventListener("click", (e) => {
         navigateWithHidden(".product-informatie", ".bericht", e)
     });
@@ -74,6 +66,7 @@ function contactUsPageInitializer() {
     document.querySelector(".bericht button[name='terug']").addEventListener("click", (e) => {
         navigateWithHidden(".bericht", ".product-informatie", e)
     });
+
     document.querySelector(".bericht button[name='volgende']").addEventListener("click", (e) => {
         const requirements = checkRequirements();
         if (requirements != null) {
@@ -109,3 +102,12 @@ function contactUsPageInitializer() {
     });
 }
 
+function finalCheckClicker() {
+    document.querySelectorAll(".final-check li").forEach(li => {
+        li.addEventListener("click", (e) => {
+            let className = e.target.classList;
+            className.remove("no-input");
+            navigateFinalCheckLi(className,e);
+        })
+    })
+}
