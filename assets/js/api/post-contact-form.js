@@ -14,7 +14,7 @@ function postContactForm(e) {
             "prijsoptie": getValueForm(".product-informatie select"),
             "bericht": getValueForm(".bericht textarea")
         }
-    fetchFromServer("https://api.stragier-michiel.be/api/message", "POST", body)
+    fetchFromServer(_config.apiURL + "/message", "POST", body)
         .then(() => {
             navigateWithHidden(".final-check", ".form-succes", e);
         })

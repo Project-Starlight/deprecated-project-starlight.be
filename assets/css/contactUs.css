@@ -1,5 +1,11 @@
 body, html {
+    display: flex;
+    flex-flow: column;
+}
+
+#contactUs form,main{
     height: 100%;
+
 }
 
 #contactUs .hidden {
@@ -15,17 +21,30 @@ body, html {
     text-align: center;
 }
 
+#contactUs header {
+    flex: 0 1 auto;
+}
+
+.begin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .begin p {
     font-size: 2rem;
     margin: 1rem 0;
+    text-align: center;
+    height: 100%;
 }
 
 .begin .flex-container {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10rem 0;
 }
 
 .begin button {
@@ -85,7 +104,7 @@ body, html {
     width: 20rem;
 }
 
-.algemene-informatie .navigatie-buttons button, .product-informatie .navigatie-buttons button,.bericht .navigatie-buttons button,.final-check .navigatie-buttons button, .final-check .navigatie-buttons input{
+.algemene-informatie .navigatie-buttons button, .product-informatie .navigatie-buttons button, .bericht .navigatie-buttons button, .final-check .navigatie-buttons button, .final-check .navigatie-buttons input {
     font-size: 1.5rem;
     color: white;
     background-color: black;
@@ -95,13 +114,13 @@ body, html {
     transition: text-shadow 450ms;
 }
 
-.algemene-informatie .navigatie-buttons button:hover, .product-informatie .navigatie-buttons button:hover, .bericht .navigatie-buttons button:hover, .final-check .navigatie-buttons button:hover, .final-check .navigatie-buttons input:hover{
+.algemene-informatie .navigatie-buttons button:hover, .product-informatie .navigatie-buttons button:hover, .bericht .navigatie-buttons button:hover, .final-check .navigatie-buttons button:hover, .final-check .navigatie-buttons input:hover {
     text-shadow: 0 0 5px white;
     cursor: pointer;
 }
 
 .algemene-informatie .navigatie-buttons, .product-informatie .navigatie-buttons {
-    margin: 10rem 10rem 0 10rem;
+    margin: 4rem 10rem 0 10rem;
     display: flex;
     justify-content: space-between;
 }
@@ -130,7 +149,7 @@ body, html {
     -moz-appearance: textfield;
 }
 
-.bericht{
+.bericht {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,84 +171,101 @@ body, html {
     height: 10rem;
     padding: 0.6rem;
 }
-.bericht .navigatie-buttons{
+
+.bericht .navigatie-buttons {
     margin-top: 5rem;
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
-.final-check #info, .final-check .navigatie-buttons{
+
+.final-check #info, .final-check .navigatie-buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 3rem;
 }
-.final-check #info ul{
+
+.final-check #info ul {
     max-width: 25rem;
 }
-.final-check #info li{
+
+.final-check #info li {
     font-size: 2rem;
     margin-bottom: 1rem;
     height: 2rem;
     transition: text-shadow 450ms;
 }
-.final-check #info li:hover{
+
+.final-check #info li:hover {
     cursor: pointer;
     text-shadow: 0 0 5px white;
 }
 
-.final-check #info li.no-input{
+.final-check #info li.no-input {
     color: gray;
     transition: color 450ms;
 }
 
-.final-check #info li.no-input:hover{
+.final-check #info li.no-input:hover {
     color: white;
 }
 
-.final-check #info .Bericht{
+.final-check #info .Bericht {
     font-size: 1.5rem;
     height: auto;
 }
-#contactUs .form-error h3{
+
+.form-error h3 {
     font-size: 3rem;
     margin-bottom: 3rem;
 }
-.form-error ul{
+
+.form-error ul {
     text-align: center;
 }
-.form-error ul p{
+
+.form-error ul p {
     display: inline;
 }
-.form-error ul li{
+
+.form-error ul li {
     margin-bottom: 1rem;
     cursor: pointer;
     font-size: 2.5rem;
 }
-.form-error ul i{
+
+.form-error ul i {
     font-size: 1.3rem;
     margin-left: 1rem;
 }
-.form-error ul li:hover{
+
+.form-error ul li:hover {
     text-shadow: 0 0 5px white;
 }
-.error{
+
+.error {
     text-align: center;
 }
-.error h2{
+
+.error h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
-.error p{
+
+.error p {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-.form-succes{
+
+.form-succes {
     text-align: center;
 }
-.form-succes h3, .form-succes p{
+
+.form-succes h3, .form-succes p {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 .form-succes button {
     margin-top: 2rem;
     background-color: black;
@@ -244,4 +280,25 @@ body, html {
 .form-succes button:hover {
     cursor: pointer;
     text-shadow: 0 0 5px #fff;
+}
+
+@media only screen and (max-width: 900px) {
+    header nav, header #icons{
+        display: none;
+    }
+    .begin p{
+        font-size: 1.5rem;
+    }
+    #contactUs .algemene-informatie h3{
+        font-size: 3rem;
+    }
+    .algemene-informatie .main-content div:first-child{
+        display: none;
+    }
+    .algemene-informatie .navigatie-buttons{
+        margin: 2rem 1rem 0 1rem;
+    }
+    body{
+        background-color: white;
+    }
 }
