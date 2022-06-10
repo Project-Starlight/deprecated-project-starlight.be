@@ -16,7 +16,7 @@ function postContactForm(e) {
         }
     fetchFromServer(_config.apiURL + "/message", "POST", body)
         .then(() => {
-            navigateWithHidden(".final-check", ".form-succes", e);
+            navigateWithHidden("form", ".form-succes", e);
         })
         .catch(errorHandler)
 }

@@ -29,12 +29,12 @@ function getValueListItemFinalCheck(selectorsKey, selectors,key = false){
         if (key){
             return `<li class="${selectorsKey} no-input">${selectorsKey}</li>`;
         }
-        return `<li class="${selectorsKey} no-input">${getRefactorValue(selectors[selectorsKey])}</li>`;
+        return `<li class="final-check-labels">${selectorsKey}:</li><li class="${selectorsKey} no-input">${getRefactorValue(selectors[selectorsKey])}</li>`;
     } else {
         if (key){
             return `<li class="${selectorsKey}">${selectorsKey}</li>`;
         }
-        return `<li class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</li>`;
+        return `<li class="final-check-labels">${selectorsKey}:</li><li class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</li>`;
     }
 }
 

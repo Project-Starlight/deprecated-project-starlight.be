@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="authors" content="Michiel Stragier & Arne Vanroose">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <title>StarLight</title>
 
     <!-- favicon -->
@@ -74,7 +76,7 @@
         <div class="algemene-informatie hidden flex-container">
             <h3>Algemene info:</h3>
             <div class="main-content">
-                <div class="flex-container">
+                <div class="flex-container labels">
                     <label for="voornaam">Voornaam*:</label>
                     <label for="achternaam">Achternaam*:</label>
                     <label for="email">Email*:</label>
@@ -95,7 +97,7 @@
         <div class="product-informatie hidden">
             <h3>Informatie auto:</h3>
             <div class="main-content">
-                <div class="flex-container">
+                <div class="flex-container labels">
                     <label for="merk">Merk:</label>
                     <label for="model">Model:</label>
                     <label for="jaar">Jaar:</label>
@@ -135,10 +137,9 @@
         </div>
         <div class="final-check hidden">
             <div id="info">
-                <ul>
+                <ul class="final-check-title">
                 </ul>
-                <ul>
-
+                <ul class="final-check-input">
                 </ul>
             </div>
             <div class="navigatie-buttons">
@@ -148,11 +149,13 @@
             </div>
         </div>
     </form>
-    <div class="form-succes hidden">
-        <h3>Uw verzoek is verzonden!</h3>
-        <p>U zou een bevestiging mail moeten ontvangen hebben.</p>
-        <p>Wij doen ons best om zo snel mogelijk op uw verzoek reageren.</p>
-        <button type="button" name="terug-naar-home">Home</button>
+    <div class="flex-container">
+        <div class="form-succes hidden">
+            <h3>Uw verzoek is verzonden!</h3>
+            <p>U zou een bevestiging mail moeten ontvangen hebben.</p>
+            <p>Wij doen ons best om zo snel mogelijk met u contact op te nemen.</p>
+            <button type="button" name="terug-naar-home">Home</button>
+        </div>
     </div>
     <div class="error">
 
