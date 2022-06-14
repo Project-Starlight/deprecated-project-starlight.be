@@ -65,13 +65,10 @@ header #icons i:hover {
 header #icons{
     align-self: center;
 }
-
+header .smaller-format{
+    display: none;
+}
 @media only screen and (max-width: 900px){
-
-    header nav, header #icons {
-        display: none;
-    }
-
     header nav, header #icons {
         display: none;
     }
