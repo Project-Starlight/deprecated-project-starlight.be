@@ -24,7 +24,7 @@ function postContactForm(e) {
 function getValueForm(formSelector, number = false) {
     const $selectorValue = document.querySelector(`${formSelector}`).value;
     if ($selectorValue === "kies-optie") {
-        return "/";
+        return null;
     } else if ($selectorValue) {
         if (number) {
             return parseInt($selectorValue)
@@ -32,11 +32,7 @@ function getValueForm(formSelector, number = false) {
             return $selectorValue;
         }
     } else {
-        if (number) {
-            return 9999;
-        } else {
-            return "/";
-        }
+        return null;
     }
 }
 
