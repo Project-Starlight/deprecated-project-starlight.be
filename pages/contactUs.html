@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="authors" content="Michiel Stragier & Arne Vanroose">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <title>StarLight</title>
 
@@ -45,7 +45,17 @@
         <h1>Starlight</h1>
         <h2>By Michiel & Arne</h2>
     </div>
-    <nav>
+    <div class="smaller-format">
+        <i class="fa-solid fa-angle-down smaller-format-arrow"></i>
+        <nav aria-label="smaller-format-main-menu" id="smaller-format-nav" class="hidden">
+            <a href="../index.html">Home</a>
+            <a href="exploreTheStars.html">Explore the stars</a>
+            <a href="pricing.html">Prijzen</a>
+            <a href="whoAreWe.html">Wie zijn we?</a>
+            <a href="contactUs.html">Contact us</a>
+        </nav>
+    </div>
+    <nav aria-label="main-menu">
         <a href="../index.html">Home</a>
         <a href="exploreTheStars.html">Explore the stars</a>
         <a href="pricing.html">Prijzen</a>
@@ -65,15 +75,15 @@
 </header>
 <main>
     <form action="#">
-        <div class="begin">
+        <section class="begin">
             <div class="flex-container">
                 <p>Ben je geïntresseerd?</p>
                 <p>Heb je ergens een vraag over?</p>
                 <p>Contacteer ons zeker, wij zullen zo snel mogelijk reageren.</p>
                 <button name="interested">Contact Us!</button>
             </div>
-        </div>
-        <div class="algemene-informatie hidden flex-container">
+        </section>
+        <section class="algemene-informatie hidden flex-container">
             <h3>Algemene info:</h3>
             <div class="main-content">
                 <div class="flex-container labels">
@@ -93,8 +103,8 @@
                 <button type="button" name="terug">Terug</button>
                 <button type="button" name="volgende">Volgende</button>
             </div>
-        </div>
-        <div class="product-informatie hidden">
+        </section>
+        <section class="product-informatie hidden">
             <h3>Informatie auto:</h3>
             <div class="main-content">
                 <div class="flex-container labels">
@@ -120,22 +130,22 @@
                 <button type="button" name="terug">Terug</button>
                 <button type="button" name="volgende">Volgende</button>
             </div>
-        </div>
-        <div class="bericht hidden">
+        </section>
+        <section class="bericht hidden">
             <label for="bericht">Bericht</label>
             <textarea name="bericht" id="bericht"></textarea>
             <div class="navigatie-buttons">
                 <button type="button" name="terug">Terug</button>
                 <button type="button" name="volgende">Volgende</button>
             </div>
-        </div>
-        <div class="form-error hidden">
+        </section>
+        <section class="form-error hidden">
             <h3>Gelieve deze velden in te vullen:</h3>
             <ul>
 
             </ul>
-        </div>
-        <div class="final-check hidden">
+        </section>
+        <section class="final-check hidden">
             <div id="info">
                 <ul class="final-check-title">
                 </ul>
@@ -147,16 +157,16 @@
                 <label for="submit"></label>
                 <input type="submit" name="verstuur" id="submit" value="Verstuur">
             </div>
-        </div>
+        </section>
     </form>
-    <div class="flex-container">
+    <section class="flex-container">
         <div class="form-succes hidden">
             <h3>Uw verzoek is verzonden!</h3>
             <p>U zou een bevestiging mail moeten ontvangen hebben.</p>
             <p>Wij doen ons best om zo snel mogelijk met u contact op te nemen.</p>
             <button type="button" name="terug-naar-home">Home</button>
         </div>
-    </div>
+    </section>
     <div class="error">
 
     </div>

@@ -24,14 +24,14 @@ function showFinalCheck(e) {
     console.log(document.querySelector(".final-check div div:last-child"));
 }
 
-function getValueListItemFinalCheck(selectorsKey, selectors,key = false){
+function getValueListItemFinalCheck(selectorsKey, selectors,title = false){
     if (getRefactorValue(selectors[selectorsKey]) === "/"){
-        if (key){
+        if (title){
             return `<li class="${selectorsKey} no-input">${selectorsKey}</li>`;
         }
         return `<li class="final-check-labels">${selectorsKey}:</li><li class="${selectorsKey} no-input">${getRefactorValue(selectors[selectorsKey])}</li>`;
     } else {
-        if (key){
+        if (title){
             return `<li class="${selectorsKey}">${selectorsKey}</li>`;
         }
         return `<li class="final-check-labels">${selectorsKey}:</li><li class="${selectorsKey}">${getRefactorValue(selectors[selectorsKey])}</li>`;

@@ -100,6 +100,32 @@ function contactUsPageInitializer() {
     document.querySelector(".form-succes button").addEventListener("click", (e) => {
         navigateToDifferentHtmlPage("../index.html");
     });
+
+    /* Make smaller format more responsive*/
+
+    document.querySelector(".smaller-format-arrow").addEventListener("click", (e) => {
+        navigateArrowForSmallerFormat(e);
+    })
+}
+
+function navigateArrowForSmallerFormat(e) {
+    e.preventDefault();
+    const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
+    const $smallerFormatArrow = document.querySelector(".smaller-format i");
+    const $aInSmallerNav = document.querySelectorAll(".smaller-format a");
+    if ($smallerFormatNavClassList.contains("hidden")) {
+        $smallerFormatNavClassList.remove("hidden");
+        $smallerFormatArrow.classList.add("clicked");
+        $aInSmallerNav.forEach(element =>{
+            element.classList.add("clicked");
+        });
+    } else {
+        $smallerFormatArrow.classList.remove("clicked");
+        $aInSmallerNav.forEach(element =>{
+            element.classList.remove("clicked");
+        });
+        $smallerFormatNavClassList.add("hidden");
+    }
 }
 
 function finalCheckClicker() {
@@ -107,7 +133,7 @@ function finalCheckClicker() {
         li.addEventListener("click", (e) => {
             let className = e.target.classList;
             className.remove("no-input");
-            navigateFinalCheckLi(className,e);
+            navigateFinalCheckLi(className, e);
         })
     })
 }
