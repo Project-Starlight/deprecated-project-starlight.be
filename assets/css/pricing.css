@@ -1,4 +1,8 @@
-#prijs-pagina header a:nth-child(3){
+#prijs-pagina .hidden{
+    display: none;
+}
+
+header a:nth-child(3){
     border-bottom: solid 0.1rem #fff;
 }
 
