@@ -1,10 +1,6 @@
 #index .hidden{
     display: none;
 }
-#index main{
-    width: 50rem;
-    margin: auto;
-}
 
 nav a:nth-child(1){
     border-bottom: solid #fff 0.1rem;
