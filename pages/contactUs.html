@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="authors" content="Michiel Stragier & Arne Vanroose">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
     <title>StarLight</title>
 
     <!-- favicon -->
@@ -15,19 +17,25 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-
     <!-- css -->
 
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/homePage.css">
     <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/contactUs.css">
 
     <!-- js -->
 
     <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
+    <script src="../assets/js/render/render-form.js"></script>
+    <script src="../assets/js/api/post-contact-form.js"></script>
+    <script src="../assets/js/helper.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/data-connector/api-communication-abstractor.js"></script>
+    <script src="../assets/js/data-connector/error-handler.js"></script>
     <script src="../assets/js/initialiser.js"></script>
 </head>
 <body id="contactUs">
@@ -36,7 +44,23 @@
         <h1>Starlight</h1>
         <h2>By Michiel & Arne</h2>
     </div>
-    <nav>
+    <div class="smaller-format">
+        <i class="fa-solid fa-angle-down smaller-format-arrow"></i>
+        <nav aria-label="smaller-format-main-menu" id="smaller-format-nav" class="hidden">
+            <a href="../index.html">Home</a>
+            <a href="exploreTheStars.html">Explore the stars</a>
+            <a href="pricing.html">Prijzen</a>
+            <a href="whoAreWe.html">Wie zijn we?</a>
+            <a href="contactUs.html">Contact us</a>
+            <div id="smaller-format-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </nav>
+    </div>
+    <nav aria-label="main-menu">
         <a href="../index.html">Home</a>
         <a href="exploreTheStars.html">Explore the stars</a>
         <a href="pricing.html">Prijzen</a>
@@ -56,14 +80,104 @@
 </header>
 <main>
     <form action="#">
-        <label for="pricingOption"></label>
-        <select name="pricingOption" id="pricingOption">
-            <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
-            <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
-            <option value="grote-sterrenhemel">grote sterrenhemel</option>
-            <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
-        </select>
+        <section class="begin">
+            <div class="flex-container">
+                <p>Ben je geïntresseerd?</p>
+                <p>Heb je ergens een vraag over?</p>
+                <p>Contacteer ons zeker, wij zullen zo snel mogelijk reageren.</p>
+                <button name="interested">Contact Us!</button>
+            </div>
+        </section>
+        <section class="algemene-informatie hidden flex-container">
+            <h3>Algemene info:</h3>
+            <div class="main-content">
+                <div class="flex-container labels">
+                    <label for="voornaam">Voornaam*:</label>
+                    <label for="achternaam">Achternaam*:</label>
+                    <label for="email">Email*:</label>
+                    <label for="telefoon">Telefoon:</label>
+                </div>
+                <div class="flex-container">
+                    <input required type="text" placeholder="Michiel" name="voornaam" id="voornaam">
+                    <input required type="text" placeholder="Stragier" name="achternaam" id="achternaam">
+                    <input required type="email" name="email" id="email" placeholder="example@mail.com">
+                    <input required type="tel" name="telefoon" id="telefoon" placeholder="+3289887881">
+                </div>
+            </div>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <button type="button" name="volgende">Volgende</button>
+            </div>
+        </section>
+        <section class="product-informatie hidden">
+            <h3>Informatie auto:</h3>
+            <div class="main-content">
+                <div class="flex-container labels">
+                    <label for="merk">Merk:</label>
+                    <label for="model">Model:</label>
+                    <label for="jaar">Jaar:</label>
+                    <label for="pricingOption">Optie:</label>
+                </div>
+                <div class="flex-container">
+                    <input type="text" name="merk" id="merk" placeholder="Toyota">
+                    <input type="text" name="model" id="model" placeholder="Corolla">
+                    <input type="number" name="jaar" id="jaar" placeholder="2005">
+                    <select name="pricingOption" id="pricingOption">
+                        <option value="kies-optie">Kies optie</option>
+                        <option value="kleine-sterrenhemel">kleine sterrenhemel</option>
+                        <option value="gemiddelde-sterrenhemel">gemiddelde sterrenhemel</option>
+                        <option value="grote-sterrenhemel">grote sterrenhemel</option>
+                        <option value="exclusieve-sterrenhemel">exclusieve-sterrenhemel</option>
+                    </select>
+                </div>
+            </div>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <button type="button" name="volgende">Volgende</button>
+            </div>
+        </section>
+        <section class="bericht hidden">
+            <label for="bericht">Bericht</label>
+            <textarea name="bericht" id="bericht"></textarea>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <button type="button" name="volgende">Volgende</button>
+            </div>
+        </section>
+        <section class="form-error hidden">
+            <h3>Gelieve deze velden in te vullen:</h3>
+            <ul>
+
+            </ul>
+        </section>
+        <section class="final-check hidden">
+            <div id="info">
+                <ul class="final-check-title">
+                </ul>
+                <ul class="final-check-input">
+                </ul>
+            </div>
+            <div class="navigatie-buttons">
+                <button type="button" name="terug">Terug</button>
+                <label for="submit"></label>
+                <input type="submit" name="verstuur" id="submit" value="Verstuur">
+            </div>
+        </section>
     </form>
+    <section class="flex-container">
+        <div class="form-succes hidden">
+            <h3>Uw verzoek is verzonden!</h3>
+            <p>U zou een bevestiging mail moeten ontvangen hebben.</p>
+            <p>Wij doen ons best om zo snel mogelijk met u contact op te nemen.</p>
+            <button type="button" name="terug-naar-home">Home</button>
+        </div>
+    </section>
+    <div class="error">
+
+    </div>
 </main>
+<footer>
+
+</footer>
 </body>
 </html>

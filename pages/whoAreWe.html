@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="authors" content="Michiel Stragier & Arne Vanroose">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
     <title>StarLight</title>
 
     <!-- favicon -->
@@ -19,8 +21,8 @@
 
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/homePage.css">
     <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/whoAreWe.css">
 
     <!-- js -->
 
@@ -29,12 +31,28 @@
     <script src="../assets/js/initialiser.js"></script>
 </head>
 <body>
-<header>
+<header id="who-are-we">
     <div id="title">
         <h1>Starlight</h1>
         <h2>By Michiel & Arne</h2>
     </div>
-    <nav>
+    <div class="smaller-format">
+        <i class="fa-solid fa-angle-down smaller-format-arrow"></i>
+        <nav aria-label="smaller-format-main-menu" id="smaller-format-nav" class="hidden">
+            <a href="../index.html">Home</a>
+            <a href="exploreTheStars.html">Explore the stars</a>
+            <a href="pricing.html">Prijzen</a>
+            <a href="whoAreWe.html">Wie zijn we?</a>
+            <a href="contactUs.html">Contact us</a>
+            <div id="smaller-format-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+        </nav>
+    </div>
+    <nav aria-label="main-menu">
         <a href="../index.html">Home</a>
         <a href="exploreTheStars.html">Explore the stars</a>
         <a href="pricing.html">Prijzen</a>
