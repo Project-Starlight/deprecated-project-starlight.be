@@ -106,19 +106,6 @@ function contactUsPageInitializer() {
     });
 }
 
-function navigateArrowForSmallerFormat(e) {
-    e.preventDefault();
-    const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
-    const $smallerFormatArrow = document.querySelector(".smaller-format i");
-    if ($smallerFormatNavClassList.contains("hidden")) {
-        $smallerFormatNavClassList.remove("hidden");
-        $smallerFormatArrow.classList.add("clicked");
-    } else {
-        $smallerFormatArrow.classList.remove("clicked");
-        $smallerFormatNavClassList.add("hidden");
-    }
-}
-
 function finalCheckClicker() {
     document.querySelectorAll(".final-check li").forEach(li => {
         li.addEventListener("click", (e) => {
