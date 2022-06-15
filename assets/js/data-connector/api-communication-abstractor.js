@@ -1,28 +1,31 @@
 "use strict";
 
-function fetchFromServer(path, httpVerb, requestBody){
-    const options = constructOptions(httpVerb, requestBody);
-
-    return fetch(`${path}`, options)
-        .then((response) => {
-            if (!response.ok) {
-                generateVisualAPIErrorInConsole();
-                throw response;
+function fetchFromServer(url, httpVerb, requestBody){
+    const options = buildOptions(httpVerb, requestBody);
+    return fetch(url, options)
+        .then(res => res.json())
+        .then(json => {
+            if ("errors" in json) { //make sure you also use "errors" in laravel
+                throw json;
+            } else {
+                return json;
             }
-            return response.json();
-        })
-        .then((jsonresponsetoparse) => {
-            return jsonresponsetoparse;
         });
 }
 
-function constructOptions(httpVerb, requestBody){
-    const options= {};
-    options.method = httpVerb;
-    options.headers = {};
-    options.headers["Content-Type"] = "application/json";
-    // Don't forget to add data to the body when needed
-    options.body = JSON.stringify(requestBody);
-    return options;
-}
+    function buildOptions(method, body) {
+        const options = {};
+
+        options.method = method;
+        options.headers = {
+            "Content-Type": "application/json"
+        };
+
+        if (body) {
+            options.body = JSON.stringify(body);
+        }
+
+        return options;
+    }
+
 

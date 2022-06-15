@@ -259,7 +259,14 @@ header nav a:nth-child(5) {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
-
+.error h3{
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.error ul{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
 .form-succes {
     text-align: center;
 }

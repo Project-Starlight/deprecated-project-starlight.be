@@ -21,6 +21,19 @@ function navigateToDifferentHtmlPage(htmlPage) {
 
 }
 
+function navigateArrowForSmallerFormat(e) {
+    e.preventDefault();
+    const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
+    const $smallerFormatArrow = document.querySelector(".smaller-format i");
+    if ($smallerFormatNavClassList.contains("hidden")) {
+        $smallerFormatNavClassList.remove("hidden");
+        $smallerFormatArrow.classList.add("clicked");
+    } else {
+        $smallerFormatArrow.classList.remove("clicked");
+        $smallerFormatNavClassList.add("hidden");
+    }
+}
+
 function navigateFinalCheckLi(className,e){
     if (className.contains("Voornaam")||className.contains("Achternaam")||className.contains("Email")||className.contains("Telefoon")){
         navigateWithHidden(".final-check",".algemene-informatie",e);

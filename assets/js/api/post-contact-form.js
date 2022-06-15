@@ -18,7 +18,7 @@ function postContactForm(e) {
         .then(() => {
             navigateWithHidden("form", ".form-succes", e);
         })
-        .catch(errorHandler)
+        .catch(error => {errorHandler(error)})
 }
 
 function getValueForm(formSelector, number = false) {
