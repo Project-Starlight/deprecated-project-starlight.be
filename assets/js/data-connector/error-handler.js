@@ -4,7 +4,7 @@ function errorHandler(err) {
     const errors = err.errors
     let errorHtml = ``;
     let html = `<h2>Er is iets misgelopen met de api!</h2>
-                    <p>We raden u aan om ons te contacteren op een ander manier:</p>
+                    <p>We raden u aan om ons te contacteren op een andere manier:</p>
                     <p>email: ${_local.email}</p>
                     <p>telefonisch: ${_local.tel}</p>
                     <h3>Error(s) server:</h3>`
