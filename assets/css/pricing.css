@@ -19,6 +19,7 @@ header a:nth-child(3){
 }
 
 #prijs-pagina main div div{
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,6 +28,21 @@ header a:nth-child(3){
     height: 20rem;
     padding: 1rem;
 }
+@media (pointer:coarse){
+    #prijs-pagina main div div{
+        background-image: url("../media/starrySky.png");
+        background-size: cover;
+        box-shadow: 0 0 4px #fff;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #prijs-pagina main div div{
+        background-image: url("../media/starrySky.png");
+        background-size: cover;
+        box-shadow: 0 0 4px #fff;
+    }
+}
+
 #prijs-pagina main div div:hover{
     background-image: url("../media/starrySky.png");
     background-size: cover;
