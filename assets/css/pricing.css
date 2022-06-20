@@ -17,9 +17,11 @@ header a:nth-child(3){
     margin-top: 3rem;
     flex-wrap: wrap;
 }
+
 #prijs-pagina p:first-of-type{
     margin-top: 1rem;
 }
+
 #prijs-pagina main div div{
     margin: 2rem;
     display: flex;
@@ -37,6 +39,7 @@ header a:nth-child(3){
     align-items: center;
     margin-bottom: 2rem;
 }
+
 #prijs-pagina button{
     background-color: black;
     border-radius: 0.5rem;
@@ -44,11 +47,13 @@ header a:nth-child(3){
     padding: 0.5rem;
     font-size: 1.5rem;
 }
+
 #prijs-pagina button a{
     color: white;
     text-decoration: none;
     transition: text-shadow 400ms;
 }
+
 #prijs-pagina button a:hover{
     cursor: pointer;
     text-shadow: 0 0 5px #fff;
