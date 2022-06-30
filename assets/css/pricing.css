@@ -46,6 +46,7 @@ header a:nth-child(3){
     border: solid white 0.1rem;
     padding: 0.5rem;
     font-size: 1.5rem;
+    margin: 2rem 0;
 }
 
 #prijs-pagina button a{
