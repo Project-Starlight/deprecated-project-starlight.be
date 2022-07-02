@@ -1,13 +1,14 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
 }
-header #icons{
+
+header #icons {
     text-align: right;
 }
 
-header #title{
+header #title {
     width: 18rem;
 }
 
@@ -16,7 +17,7 @@ header h1 {
     transition: text-shadow 400ms;
 }
 
-header h1:hover{
+header h1:hover {
     text-shadow: 0 0 7px #fff;
     cursor: default;
 }
@@ -25,7 +26,7 @@ header h2 {
     font-size: 1.5rem;
 }
 
-header nav{
+header nav[aria-label="main-menu"] {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -62,14 +63,16 @@ header #icons i:hover {
     text-shadow: 0 0 7px #fff;
 }
 
-header #icons{
+header #icons {
     align-self: center;
 }
-header .smaller-format{
+
+header .hidden {
     display: none;
 }
-@media only screen and (max-width: 900px){
-    header nav, header #icons {
+
+@media only screen and (max-width: 900px) {
+    header nav[aria-label="main-menu"], header #icons {
         display: none;
     }
 
@@ -92,12 +95,12 @@ header .smaller-format{
         transition: transform 1s;
     }
 
-    header .smaller-format i.clicked{
+    header .smaller-format i.up {
         transform: rotate(180deg);
     }
 
-    header #smaller-format-nav {
-        display: block;
+    header .smaller-format i.down {
+        transform: rotate(0deg);
     }
 
     header #smaller-format-nav a:nth-child(1) {
@@ -119,10 +122,16 @@ header .smaller-format{
     header #smaller-format-nav a:nth-child(5) {
         animation: navigationArrow 2500ms;
     }
-    header #smaller-format-icons{
+
+    header #smaller-format-icons {
         animation: navigationArrow 3000ms;
     }
-    header #smaller-format-icons i{
+
+    header #smaller-format-nav.hidden {
+        display: none;
+    }
+
+    header #smaller-format-icons i {
         margin: 1rem 0.5rem;
         font-size: 2rem;
     }
@@ -134,12 +143,10 @@ header .smaller-format{
 
     @keyframes navigationArrow {
         0% {
-            display: none;
             opacity: 0;
             transform: translateY(-15px);
         }
         100% {
-            display: block;
             opacity: 100%;
             transform: translateY(0);
         }

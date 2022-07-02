@@ -16,8 +16,12 @@ function init() {
 }
 
 function headerInitializer() {
-    document.querySelector("header #icons").addEventListener('click', e=>{header_icon(e)});
-    document.querySelector("header #smaller-format-icons").addEventListener('click',e=>{header_icon(e)});
+    document.querySelector("header #icons").addEventListener('click', e => {
+        header_icon(e)
+    });
+    document.querySelector("header #smaller-format-icons").addEventListener('click', e => {
+        header_icon(e)
+    });
     document.querySelector("header h1").addEventListener('click', () => {
         navigateToDifferentHtmlPage("../index.html")
     });
@@ -99,9 +103,9 @@ function contactUsPageInitializer() {
         document.querySelector(`.algemene-informatie input[id="${e.target.closest("li").className}"]`).focus();
     });
 
-    /* Show message that everything went well and is send to the server */
+    /* Show message that everything went well and is sent to the server */
 
-    document.querySelector(".form-succes button").addEventListener("click", (e) => {
+    document.querySelector(".form-succes button").addEventListener("click", () => {
         navigateToDifferentHtmlPage("../index.html");
     });
 }
