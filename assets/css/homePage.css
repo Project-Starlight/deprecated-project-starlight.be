@@ -1,7 +1,66 @@
+html,body{
+    height: 100%;
+}
+
 .hidden{
     display: none;
 }
 
 nav a:nth-child(1){
     border-bottom: solid #fff 0.1rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 5rem;
+}
+h2{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+section:first-of-type{
+    height: 70vh;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100vh;
+}
+
+section h3{
+    font-size: 2rem;
+    text-align: center;
+}
+section p{
+    font-size: 1.2rem;
+}
+section div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+section figure{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section figure img{
+    width: 100%;
+}
+section .button{
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+section .button:hover{
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
 }
