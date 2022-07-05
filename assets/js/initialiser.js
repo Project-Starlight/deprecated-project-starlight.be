@@ -6,6 +6,9 @@ function init() {
     if (document.querySelector("header")) {
         headerInitializer();
     }
+    if (document.querySelector("#index")) {
+        indexInitializer();
+    }
     if (document.querySelector("#prijs-pagina")) {
         prijsPaginaInitializer();
     }
@@ -13,6 +16,14 @@ function init() {
         contactUsPageInitializer()
     }
 
+}
+
+function indexInitializer() {
+    document.querySelectorAll("#index .button").forEach((Element) => {
+        Element.addEventListener('click', (e) => {
+            navigateHomePageButtons(e);
+        });
+    });
 }
 
 function headerInitializer() {

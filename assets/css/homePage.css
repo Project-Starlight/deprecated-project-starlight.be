@@ -44,7 +44,6 @@ section h3{
 section p{
     font-size: 2rem;
 }
-
 section .button{
     align-self: center;
     color: white;
@@ -54,7 +53,7 @@ section .button{
     padding: 0.5rem;
     font-size: 1.5rem;
     margin: 2rem 0;
-    width: 12rem;
+    width: inherit;
 }
 section .button:hover{
     cursor: pointer;

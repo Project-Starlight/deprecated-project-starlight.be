@@ -81,3 +81,8 @@ function header_icon(e) {
             break;
     }
 }
+
+function navigateHomePageButtons(e){
+    const target = e.target.dataset.navigate + ".html";
+    navigateToDifferentHtmlPage(target);
+}
