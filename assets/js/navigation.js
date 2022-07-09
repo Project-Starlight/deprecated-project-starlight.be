@@ -67,16 +67,16 @@ function navigateFinalCheckLi(className, e) {
 function header_icon(e) {
     e.preventDefault();
     switch (e.target.classList[1]) {
-        case "fa-instagram":
+        case "instagram":
             window.open(_local.instagramURL);
             break;
-        case "fa-facebook-f":
+        case "facebook":
             window.open(_local.facebookURL);
             break;
-        case "fa-phone":
+        case "phone":
             window.location.href = `tel:${_local.tel}`;
             break;
-        case "fa-envelope":
+        case "mail":
             window.location.href = `mailto:${_local.email}`;
             break;
     }

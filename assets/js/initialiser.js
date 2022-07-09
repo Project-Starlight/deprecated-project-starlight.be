@@ -30,13 +30,13 @@ function indexInitializer() {
 
 function headerInitializer() {
     document.querySelector("header #icons").addEventListener('click', e => {
-        header_icon(e)
+        header_icon(e);
     });
     document.querySelector("header #smaller-format-icons").addEventListener('click', e => {
-        header_icon(e)
+        header_icon(e);
     });
     document.querySelector("header h1").addEventListener('click', () => {
-        navigateToDifferentHtmlPage("../index.html")
+        navigateToDifferentHtmlPage("../index.html");
     });
     document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
         navigateArrowForSmallerFormat(e);
