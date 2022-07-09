@@ -93,17 +93,20 @@ header .hidden {
         text-align: center;
     }
 
-    header .smaller-format i {
+    header .smaller-format svg {
         cursor: pointer;
         margin: 1rem 0;
+        fill: white;
+        width: 1.5rem;
+        height: 1.5rem;
         transition: transform 1s;
     }
 
-    header .smaller-format i.up {
+    header .smaller-format svg.up {
         transform: rotate(180deg);
     }
 
-    header .smaller-format i.down {
+    header .smaller-format svg.down {
         transform: rotate(0deg);
     }
 
@@ -136,7 +139,8 @@ header .hidden {
     }
     header #smaller-format-icons svg{
         margin: 1rem 0.5rem;
-        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
         fill: white;
     }
     header #smaller-format-icons i {

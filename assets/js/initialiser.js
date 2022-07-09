@@ -38,7 +38,7 @@ function headerInitializer() {
     document.querySelector("header h1").addEventListener('click', () => {
         navigateToDifferentHtmlPage("../index.html")
     });
-    document.querySelector(".smaller-format-arrow").addEventListener("click", (e) => {
+    document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
         navigateArrowForSmallerFormat(e);
     })
 }
