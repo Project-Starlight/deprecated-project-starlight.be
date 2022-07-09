@@ -1,50 +1,73 @@
-html,body{
+html, body {
     height: 100%;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-nav a:nth-child(1){
+nav a:nth-child(1) {
     border-bottom: solid #fff 0.1rem;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 5rem;
 }
-h2{
+
+h2 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
 }
-section:first-of-type{
+
+section:first-of-type {
     height: 70vh;
 }
-section{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    height: 100vh;
+
+section:first-of-type.animate .informatie {
+    animation: left-to-right 1s;
 }
-section .informatie-links{
+
+section:first-of-type.animate figure {
+    animation: right-to-left 1s;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section .informatie {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
     text-align: center;
 }
-
-section h3{
+.left-to-right-animation{
+    animation: left-to-right 2s;
+}
+.right-to-left-animation{
+    animation: right-to-left 2s;
+}
+section h3 {
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-section p{
+
+section p {
     font-size: 2rem;
 }
-section .button{
+
+section .button {
     align-self: center;
     color: white;
     background-color: black;
@@ -55,16 +78,41 @@ section .button{
     margin: 2rem 0;
     width: inherit;
 }
-section .button:hover{
+
+section .button:hover {
     cursor: pointer;
     text-shadow: 0 0 5px #fff;
 }
-section figure{
+
+section figure {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section figure img{
+
+section figure img {
     width: 100%;
+}
+
+@keyframes left-to-right {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        opacity: 0.5;
+        transform: translateX(+50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

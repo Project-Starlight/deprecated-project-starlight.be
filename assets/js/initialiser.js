@@ -2,23 +2,31 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+function animateHomepage() {
+    classHelper("#index section:first-of-type","animate",false);
+}
+
 function init() {
     if (document.querySelector("header")) {
         headerInitializer();
     }
     if (document.querySelector("#index")) {
         indexInitializer();
+        window.addEventListener('load',()=>{
+            animateHomepage();
+        })
     }
     if (document.querySelector("#prijs-pagina")) {
         prijsPaginaInitializer();
     }
     if (document.querySelector("#contactUs")) {
-        contactUsPageInitializer()
+        contactUsPageInitializer();
     }
 
 }
 
 function indexInitializer() {
+    animateSectionWhenInViewport();
     document.querySelectorAll("#index .button").forEach((Element) => {
         Element.addEventListener('click', (e) => {
             navigateHomePageButtons(e);
