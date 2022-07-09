@@ -27,13 +27,6 @@ section:first-of-type {
     height: 70vh;
 }
 
-section:first-of-type.animate .informatie {
-    animation: left-to-right 1s;
-}
-
-section:first-of-type.animate figure {
-    animation: right-to-left 1s;
-}
 section{
     height: 100vh;
     display: flex;

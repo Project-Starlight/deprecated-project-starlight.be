@@ -4,10 +4,6 @@ header {
     margin: 1rem;
 }
 
-header #icons {
-    text-align: right;
-}
-
 header #title {
     width: 18rem;
 }
@@ -46,11 +42,19 @@ header nav a:hover {
     text-shadow: 0 0 7px #fff;
     border-bottom: solid 0.1rem #fff;
 }
-
+header #icons {
+    text-align: right;
+}
 header #icons div {
     display: inline-grid;
 }
-
+header #icons img{
+    font-size: 2rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    transition: text-shadow 400ms;
+    text-align: center;
+}
 header #icons i {
     font-size: 2rem;
     margin: 0.2rem;
@@ -130,7 +134,11 @@ header .hidden {
     header #smaller-format-nav.hidden {
         display: none;
     }
-
+    header #smaller-format-icons svg{
+        margin: 1rem 0.5rem;
+        font-size: 2rem;
+        fill: white;
+    }
     header #smaller-format-icons i {
         margin: 1rem 0.5rem;
         font-size: 2rem;
