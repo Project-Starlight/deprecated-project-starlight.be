@@ -4,10 +4,6 @@ header {
     margin: 1rem;
 }
 
-header #icons {
-    text-align: right;
-}
-
 header #title {
     width: 18rem;
 }
@@ -46,21 +42,24 @@ header nav a:hover {
     text-shadow: 0 0 7px #fff;
     border-bottom: solid 0.1rem #fff;
 }
-
+header #icons {
+    text-align: right;
+}
 header #icons div {
     display: inline-grid;
 }
-
-header #icons i {
-    font-size: 2rem;
+header #icons svg{
+    fill: white;
+    width: 2rem;
+    height: 2rem;
     margin: 0.2rem;
     cursor: pointer;
     transition: text-shadow 400ms;
     text-align: center;
 }
 
-header #icons i:hover {
-    text-shadow: 0 0 7px #fff;
+header #icons svg:hover {
+    filter: drop-shadow(0 0 7px #fff);
 }
 
 header #icons {
@@ -89,17 +88,20 @@ header .hidden {
         text-align: center;
     }
 
-    header .smaller-format i {
+    header .smaller-format svg {
         cursor: pointer;
         margin: 1rem 0;
+        fill: white;
+        width: 1.5rem;
+        height: 1.5rem;
         transition: transform 1s;
     }
 
-    header .smaller-format i.up {
+    header .smaller-format svg.up {
         transform: rotate(180deg);
     }
 
-    header .smaller-format i.down {
+    header .smaller-format svg.down {
         transform: rotate(0deg);
     }
 
@@ -130,10 +132,11 @@ header .hidden {
     header #smaller-format-nav.hidden {
         display: none;
     }
-
-    header #smaller-format-icons i {
+    header #smaller-format-icons svg{
         margin: 1rem 0.5rem;
-        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        fill: white;
     }
 
     header #smaller-format-nav a {

@@ -1,7 +1,111 @@
-.hidden{
+html, body {
+    height: 100%;
+}
+
+.hidden {
     display: none;
 }
 
-nav a:nth-child(1){
+nav a:nth-child(1) {
     border-bottom: solid #fff 0.1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+section:first-of-type {
+    height: 70vh;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section .informatie {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+.left-to-right-animation{
+    animation: left-to-right 2s;
+}
+.right-to-left-animation{
+    animation: right-to-left 2s;
+}
+section h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+section p {
+    font-size: 2rem;
+}
+
+section .button {
+    align-self: center;
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    width: inherit;
+}
+
+section .button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
+}
+
+section figure {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section figure img {
+    width: 100%;
+}
+
+@keyframes left-to-right {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        opacity: 0.5;
+        transform: translateX(+50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

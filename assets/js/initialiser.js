@@ -6,26 +6,39 @@ function init() {
     if (document.querySelector("header")) {
         headerInitializer();
     }
+    if (document.querySelector("#index")) {
+        indexInitializer();
+    }
     if (document.querySelector("#prijs-pagina")) {
         prijsPaginaInitializer();
     }
     if (document.querySelector("#contactUs")) {
-        contactUsPageInitializer()
+        contactUsPageInitializer();
     }
 
 }
 
+function indexInitializer() {
+    animateSectionWhenInViewport();
+    document.querySelectorAll("#index .button")
+        .forEach((Element) => {
+        Element.addEventListener('click', (e) => {
+            navigateHomePageButtons(e);
+        });
+    });
+}
+
 function headerInitializer() {
     document.querySelector("header #icons").addEventListener('click', e => {
-        header_icon(e)
+        header_icon(e);
     });
     document.querySelector("header #smaller-format-icons").addEventListener('click', e => {
-        header_icon(e)
+        header_icon(e);
     });
     document.querySelector("header h1").addEventListener('click', () => {
-        navigateToDifferentHtmlPage("../index.html")
+        navigateToDifferentHtmlPage("../index.html");
     });
-    document.querySelector(".smaller-format-arrow").addEventListener("click", (e) => {
+    document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
         navigateArrowForSmallerFormat(e);
     })
 }

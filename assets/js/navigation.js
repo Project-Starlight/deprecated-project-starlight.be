@@ -24,7 +24,7 @@ function navigateToDifferentHtmlPage(htmlPage) {
 function navigateArrowForSmallerFormat(e) {
     e.preventDefault();
     const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
-    const $smallerFormatArrowClassList = document.querySelector(".smaller-format i").classList;
+    const $smallerFormatArrowClassList = document.querySelector(".smaller-format svg").classList;
     switchHidden($smallerFormatNavClassList);
     switchDirectionArrow($smallerFormatArrowClassList)
 }
@@ -67,17 +67,22 @@ function navigateFinalCheckLi(className, e) {
 function header_icon(e) {
     e.preventDefault();
     switch (e.target.classList[1]) {
-        case "fa-instagram":
+        case "instagram":
             window.open(_local.instagramURL);
             break;
-        case "fa-facebook-f":
+        case "facebook":
             window.open(_local.facebookURL);
             break;
-        case "fa-phone":
+        case "phone":
             window.location.href = `tel:${_local.tel}`;
             break;
-        case "fa-envelope":
+        case "mail":
             window.location.href = `mailto:${_local.email}`;
             break;
     }
+}
+
+function navigateHomePageButtons(e){
+    const target = e.target.dataset.navigate + ".html";
+    navigateToDifferentHtmlPage(target);
 }
