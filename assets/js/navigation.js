@@ -66,7 +66,7 @@ function navigateFinalCheckLi(className, e) {
 
 function header_icon(e) {
     e.preventDefault();
-    switch (e.target.classList[1]) {
+    switch (e.target.closest("svg").classList[0]) {
         case "instagram":
             window.open(_local.instagramURL);
             break;
