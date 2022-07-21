@@ -1,3 +1,7 @@
+#explore-the-stars .hidden{
+    display: none;
+}
+
 main{
     background-image: url("../media/starrySky.png");
     background-size: 30%;
