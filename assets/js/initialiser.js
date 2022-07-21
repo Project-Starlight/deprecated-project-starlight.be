@@ -2,7 +2,17 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+function placeholderInitializer() {
+    document.querySelector("#icons").addEventListener('click', e => {
+        console.log(e)
+        header_icon(e);
+    });
+}
+
 function init() {
+    if (document.querySelector("#placeholder")){
+        placeholderInitializer();
+    }
     if (document.querySelector("header")) {
         headerInitializer();
     }
@@ -36,7 +46,7 @@ function headerInitializer() {
         header_icon(e);
     });
     document.querySelector("header h1").addEventListener('click', () => {
-        navigateToDifferentHtmlPage("../index.html");
+        navigateToDifferentHtmlPage("../index-2.html");
     });
     document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
         navigateArrowForSmallerFormat(e);
@@ -119,7 +129,7 @@ function contactUsPageInitializer() {
     /* Show message that everything went well and is sent to the server */
 
     document.querySelector(".form-succes button").addEventListener("click", () => {
-        navigateToDifferentHtmlPage("../index.html");
+        navigateToDifferentHtmlPage("../index-2.html");
     });
 }
 
