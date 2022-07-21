@@ -20,7 +20,7 @@ main {
 
 h2 {
     font-size: 3.5rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 section:first-of-type {
@@ -28,7 +28,7 @@ section:first-of-type {
 }
 
 section{
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +88,20 @@ section figure img {
     width: 100%;
 }
 
+@media only screen and (max-width: 1400px) {
+
+    section#kleuren{
+        height: 40vh;
+    }
+
+    section{
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+}
 @keyframes left-to-right {
     0% {
         opacity: 0.5;
