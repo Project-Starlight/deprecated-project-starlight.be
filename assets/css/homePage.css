@@ -88,6 +88,20 @@ section figure img {
     width: 100%;
 }
 
+@media only screen and (max-width: 1400px) {
+
+    section#kleuren{
+        height: 40vh;
+    }
+
+    section{
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+}
 @keyframes left-to-right {
     0% {
         opacity: 0.5;
