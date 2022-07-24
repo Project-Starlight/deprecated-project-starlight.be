@@ -9,6 +9,10 @@ function placeholderInitializer() {
     });
 }
 
+function exploreTheStarsInitializer() {
+
+}
+
 function init() {
     if (document.querySelector("#placeholder")){
         placeholderInitializer();
@@ -24,6 +28,9 @@ function init() {
     }
     if (document.querySelector("#contactUs")) {
         contactUsPageInitializer();
+    }
+    if (document.querySelector("#explore-the-stars")) {
+        exploreTheStarsInitializer();
     }
 
 }
