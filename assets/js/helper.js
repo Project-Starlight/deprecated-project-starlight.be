@@ -1,13 +1,5 @@
 "use strict";
 
-function classHelper(query, className, remove = false) {
-    if (remove) {
-        document.querySelector(query).classList.remove(className);
-    } else {
-        document.querySelector(query).classList.add(className);
-    }
-}
-
 function addAnimationClasses(entry) {
     const target = entry.target;
     const informatieClassList = target.querySelector(".informatie").classList;
