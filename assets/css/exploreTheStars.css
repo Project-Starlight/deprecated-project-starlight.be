@@ -95,12 +95,33 @@ img{
 */
 
 
+p {
+    font-size: 2rem;
+}
+.textAndPhoto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+img{
+    width: 50em;
+    height: auto;
+}
+
+img:first-of-type{
+    margin-bottom: 5em;
+}
+
+.textAndPhoto p{
+    margin-top: 5em;
+    grid-column-start: 0;
+    text-align: center;
+}
+
 .slides{
     position: relative;
     width: 50vw;
     max-height: 50vh;
 }
-
 .slide img{
     width: 100%;
     height: auto;
@@ -108,12 +129,10 @@ img{
 .non-active {
     display: none;
 }
-
 .slideshow-buttons {
     display: flex;
     justify-content: space-around;
 }
-
 .slideshow-buttons button {
     width: 2rem;
     height: 2rem;
@@ -150,7 +169,6 @@ img{
 .slides button svg{
     fill: white;
 }
-
 .left{
     position: absolute;
     top: 50%;
