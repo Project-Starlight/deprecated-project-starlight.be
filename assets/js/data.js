@@ -2,7 +2,7 @@
 
 const _local = {
     tel: '0497659529',
-    email: 'michiel.stragier@gmail.com',
+    email: 'info@project-starlight.be',
     instagramURL: "https://www.instagram.com/project_starlight_official/",
     facebookURL: "https://www.facebook.com/"
 }
@@ -25,5 +25,5 @@ const _serviceOptions = {
     }
 }
 const _config = {
-    apiURL: "https://api.stragier-michiel.be/api"
+    apiURL: "https://api.project-starlight.be/api"
 }

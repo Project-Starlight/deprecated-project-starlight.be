@@ -23,9 +23,11 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/homePage.css">
     <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/betaPopup.css">
 
     <!-- js -->
 
+    <script src="assets/js/data-connector/local-storage-abstractor.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
     <script src="assets/js/data.js"></script>
@@ -34,6 +36,13 @@
 
 </head>
 <body id="index">
+<div class="popup hidden">
+    <div class="popup-content">
+        <h2>Disclaimer:</h2>
+        <p>De website is nog in beta versie. Hierdoor kunnen bepaalde features nog niet geïmplementeerd zijn of niet soepel lopen!</p>
+        <button>Doorgaan</button>
+    </div>
+</div>
 <header>
     <div id="title">
         <h1>Starlight</h1>
@@ -112,7 +121,7 @@
                 <button data-navigate="contactUs" class="button">Contacteer ons</button>
             </div>
             <figure>
-                <img src="../../sandbox/slideShow/pictures/ceiling5.png" alt="" title="">
+                <img src="assets/media/StockPhotos/ceiling5.png" alt="" title="">
             </figure>
         </div>
     </section>
@@ -139,7 +148,7 @@
                 <button data-navigate="contactUs" class="button">Contacteer ons</button>
             </div>
             <figure>
-                <img src="../../sandbox/slideShow/pictures/ceiling5.png" alt="" title="">
+                <img src="assets/media/StockPhotos/ceiling5.png" alt="" title="">
             </figure>
         </div>
     </section>

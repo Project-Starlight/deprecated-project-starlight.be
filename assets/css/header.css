@@ -6,6 +6,7 @@ header {
 
 header #title {
     width: 18rem;
+    align-self: center;
 }
 
 header h1 {
@@ -33,7 +34,7 @@ header nav[aria-label="main-menu"] {
 header nav a {
     font-size: 1.3rem;
     text-decoration: none;
-    background: black;
+    background: transparent;
     color: white;
     padding: 0.7rem;
     transition: text-shadow 400ms;

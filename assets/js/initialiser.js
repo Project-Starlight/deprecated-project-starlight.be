@@ -2,6 +2,27 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+function init() {
+    if (document.querySelector("#placeholder")){
+        placeholderInitializer();
+    }
+    if (document.querySelector("header")) {
+        headerInitializer();
+    }
+    if (document.querySelector("#index")) {
+        indexInitializer();
+    }
+    if (document.querySelector("#prijs-pagina")) {
+        prijsPaginaInitializer();
+    }
+    if (document.querySelector("#contactUs")) {
+        contactUsPageInitializer();
+    }
+    if (document.querySelector("#explore-the-stars")) {
+        exploreTheStarsInitializer();
+    }
+}
+
 function placeholderInitializer() {
     document.querySelector("#icons").addEventListener('click', e => {
         header_icon(e);
@@ -82,29 +103,24 @@ function showImage(newActiveImageNumber,slideShow){
     //selectSlideshowButtons();
 }
 
-function init() {
-    if (document.querySelector("#placeholder")){
-        placeholderInitializer();
-    }
-    if (document.querySelector("header")) {
-        headerInitializer();
-    }
-    if (document.querySelector("#index")) {
-        indexInitializer();
-    }
-    if (document.querySelector("#prijs-pagina")) {
-        prijsPaginaInitializer();
-    }
-    if (document.querySelector("#contactUs")) {
-        contactUsPageInitializer();
-    }
-    if (document.querySelector("#explore-the-stars")) {
-        exploreTheStarsInitializer();
-    }
+function removeDisclaimerPopup() {
+    document.querySelector("body").classList.remove("stop-scrolling");
+    document.querySelector(".popup").classList.add("hidden");
+    saveToStorage("popup",true);
+}
 
+function popup() {
+    if (localStorage.key("popup") === null){
+        document.querySelector("body").classList.add("stop-scrolling");
+        document.querySelector(".popup").classList.remove("hidden");
+    } else {
+        removeDisclaimerPopup();
+    }
+    document.querySelector(".popup-content button").addEventListener("click",removeDisclaimerPopup);
 }
 
 function indexInitializer() {
+    popup();
     animateSectionWhenInViewport();
     document.querySelectorAll("#index .button")
         .forEach((Element) => {
