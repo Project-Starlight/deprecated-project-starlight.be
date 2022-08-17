@@ -5,7 +5,17 @@ body,html {
     color: white;
     height: 100%;
 }
-
 .hidden{
     display: none;
+}
+.smaller-format {
+    display: none;
+}
+@media only screen and (max-width: 900px){
+    .smaller-format{
+        display: block;
+    }
+    .bigger-format{
+        display: none;
+    }
 }

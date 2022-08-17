@@ -36,7 +36,7 @@ h3 {
     border-radius: 1rem;
     filter: drop-shadow(0 0 5px white);
 }
-/*
+
 p {
     font-size: 2rem;
 }
@@ -58,7 +58,7 @@ img:first-of-type{
     grid-column-start: 0;
     text-align: center;
 }
-*/
+
 .slides{
     position: relative;
     width: 50vw;

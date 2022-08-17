@@ -3,7 +3,9 @@ header {
     justify-content: space-between;
     margin: 1rem;
 }
-
+header .smaller-format{
+    display: none;
+}
 header #title {
     width: 18rem;
     align-self: center;
@@ -22,6 +24,7 @@ header h1:hover {
 header h2:first-of-type {
     font-size: 1.5rem;
     margin: 0;
+    text-align: left;
 }
 
 header nav[aria-label="main-menu"] {

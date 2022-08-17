@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+    console.table({height: `${window.innerHeight}`,width: `${window.innerWidth}`});
     if (document.querySelector("#placeholder")){
         placeholderInitializer();
     }
@@ -138,7 +139,7 @@ function headerInitializer() {
         header_icon(e);
     });
     document.querySelector("header h1").addEventListener('click', () => {
-        navigateToDifferentHtmlPage("../index-2.html");
+        navigateToDifferentHtmlPage("../index.html");
     });
     document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
         navigateArrowForSmallerFormat(e);
@@ -221,7 +222,7 @@ function contactUsPageInitializer() {
     /* Show message that everything went well and is sent to the server */
 
     document.querySelector(".form-succes button").addEventListener("click", () => {
-        navigateToDifferentHtmlPage("../index-2.html");
+        navigateToDifferentHtmlPage("../index.html");
     });
 }
 
