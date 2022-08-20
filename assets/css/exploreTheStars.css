@@ -3,9 +3,9 @@
 }
 
 html, body {
-            background-image: url("../media/starrySky.png");
-            background-size: 30%;
-        }
+    background-image: url("../media/starrySky.png");
+    background-size: 30%;
+}
 
 h2, h3 {
     text-align: center;
@@ -40,31 +40,33 @@ h3 {
 p {
     font-size: 2rem;
 }
-.textAndPhoto{
+
+.textAndPhoto {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-img{
+
+img {
     width: 50em;
     height: auto;
 }
 
-img:first-of-type{
+img:first-of-type {
     margin-bottom: 5em;
 }
 
-.textAndPhoto p{
+.textAndPhoto p {
     margin-top: 5em;
     grid-column-start: 0;
     text-align: center;
 }
 
-.slides{
+.slides {
     position: relative;
     width: 50vw;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: auto;
 }
@@ -72,10 +74,12 @@ img:first-of-type{
 .non-active {
     display: none;
 }
+
 .slideshow-buttons {
     display: flex;
     justify-content: space-around;
 }
+
 .slideshow-buttons button {
     width: 2rem;
     height: 2rem;
@@ -118,7 +122,7 @@ img:first-of-type{
     fill: white;
 }
 
-.left{
+.left {
     position: absolute;
     top: 50%;
     left: 10px;

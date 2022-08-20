@@ -1,21 +1,29 @@
-body,html {
+body, html {
     background-color: black;
     background-image: url("../media/starrySky.png");
     background-size: 30%;
     color: white;
     height: 100%;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
+
 .smaller-format {
     display: none;
 }
-@media only screen and (max-width: 900px){
-    .smaller-format{
+
+header nav[aria-label="main-menu"] a[href="#"] {
+    border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+    .smaller-format {
         display: block;
     }
-    .bigger-format{
+
+    .bigger-format {
         display: none;
     }
 }
