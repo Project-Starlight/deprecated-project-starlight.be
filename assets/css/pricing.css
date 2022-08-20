@@ -2,10 +2,6 @@
     display: none;
 }
 
-header a:nth-child(3) {
-    border-bottom: solid 0.1rem #fff;
-}
-
 #prijs-pagina main h1 {
     text-align: center;
     font-size: 3rem;
@@ -18,24 +14,28 @@ header a:nth-child(3) {
 }
 
 #prijs-pagina #page-title p {
-    margin-top: 1rem;
     text-align: center;
     font-family: sans-serif;
     font-size: 1.1rem;
+    margin: 1rem 3rem 0 3rem;
 }
-#prijs-pagina main .outer-wrapper{
+
+#prijs-pagina main .outer-wrapper {
     margin: 5rem 5rem 8rem 5rem;
 }
-#prijs-pagina main .outer-wrapper.extra-opties{
+
+#prijs-pagina main .outer-wrapper.extra-opties {
     margin: 5rem 5rem 0 5rem;
 }
-#prijs-pagina main .outer-wrapper h2.container-title{
+
+#prijs-pagina main .outer-wrapper h2.container-title {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     padding-bottom: 2rem;
 }
+
 #prijs-pagina main div .container {
     display: flex;
     flex-direction: column;
@@ -103,4 +103,18 @@ header a:nth-child(3) {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    #prijs-pagina main .outer-wrapper.basis-opties {
+        margin-bottom: 0;
+    }
+
+    #prijs-pagina main .outer-wrapper.extra-opties {
+        margin-top: 0;
+    }
+
+    #prijs-pagina main .outer-wrapper h2.container-title {
+        padding-bottom: 4rem;
+    }
 }
