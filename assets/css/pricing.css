@@ -33,7 +33,7 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
 }
 
 #prijs-pagina main div .container {
@@ -78,14 +78,14 @@
 
 #prijs-pagina main div .container {
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 50px #fff;
     margin-bottom: 4rem;
 }
 
 #prijs-pagina main div .container:hover {
     background-color: rgba(0, 0, 0, 1);
     cursor: pointer;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 20px #fff;
 }
 
 #prijs-pagina main .container h2 {
