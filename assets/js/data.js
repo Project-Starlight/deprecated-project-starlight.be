@@ -1,7 +1,7 @@
 "use strict";
 
 const _local = {
-    tel: '0497659529',
+    tel: '0473294283',
     email: 'info@project-starlight.be',
     instagramURL: "https://www.instagram.com/project_starlight_official/",
     facebookURL: "https://www.facebook.com/"

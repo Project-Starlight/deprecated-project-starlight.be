@@ -3,9 +3,11 @@ header {
     justify-content: space-between;
     margin: 1rem;
 }
-header .smaller-format{
+
+header .smaller-format {
     display: none;
 }
+
 header #title {
     width: 18rem;
     align-self: center;
@@ -47,13 +49,16 @@ header nav a:hover {
     text-shadow: 0 0 7px #fff;
     border-bottom: solid 0.1rem #fff;
 }
+
 header #icons {
     text-align: right;
 }
+
 header #icons div {
     display: inline-grid;
 }
-header #icons svg{
+
+header #icons svg {
     fill: white;
     width: 2rem;
     height: 2rem;
@@ -73,6 +78,20 @@ header #icons {
 
 header .hidden {
     display: none;
+}
+
+#disclaimer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#disclaimer p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -137,7 +156,8 @@ header .hidden {
     header #smaller-format-nav.hidden {
         display: none;
     }
-    header #smaller-format-icons svg{
+
+    header #smaller-format-icons svg {
         margin: 1rem 0.5rem;
         width: 2rem;
         height: 2rem;

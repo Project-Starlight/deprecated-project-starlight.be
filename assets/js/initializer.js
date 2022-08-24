@@ -137,7 +137,7 @@ function removeDisclaimerPopup() {
 }
 
 function popup() {
-    if (localStorage.key("popup") === null) {
+    if (localStorage.key("popup") === null || loadFromStorage("popup") === false) {
         document.querySelector("body").classList.add("stop-scrolling");
         document.querySelector(".popup").classList.remove("hidden");
     } else {
