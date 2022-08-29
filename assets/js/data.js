@@ -6,36 +6,88 @@ const _local = {
     instagramURL: "https://www.instagram.com/project_starlight_official/",
     facebookURL: "https://www.facebook.com/"
 }
-const _serviceOptions = {
-    smallOption: {
-        prijs: '€500',
-        hoeveelheidSterren: 550
-    },
-    mediumOption: {
-        prijs: '€600',
-        hoeveelheidSterren: 900
-    },
-    bigOption: {
-        prijs: '€700',
-        hoeveelheidSterren: 1100
-    },
-    exclusiveOption: {
-        prijs: "Prijs op aanvraag",
-        hoeveelheidSterren: '1100+'
-    },
-    extraOptions: {
-        meteorietenregen: {
-            prijs: "+€100 op de basis configuratie"
-        },
-        tweeKleuren:{
-            prijs:"+€50 op de basis configuratie"
-        },
-        logo:{
-            prijs: "Prijs op aanvraag"
+const discountData = {
+    sortOfMultipleDiscountChoices: ["sum", "multiply"],
+    sortOfMultipleDiscount: "multiply",
+    basicOptions: {
+        allOptions: {
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 10,
+            digitDiscount: 50
+        }, smallOption: {
+            defaultPrice: 500,
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 10,
+            digitDiscount: 20
+        }, mediumOption: {
+            defaultPrice: 600,
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 10,
+            digitDiscount: 60
+        }, largeOption: {
+            defaultPrice: 700,
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 10,
+            digitDiscount: 100
         }
-
+    }, extraOptions: {
+        allOptions: {
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 10,
+            digitDiscount: 50
+        }, meteorietenregen: {
+            defaultPrice: 100,
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "gratis",
+            percentage: 10,
+            digitDiscount: 20,
+        }, tweeKleuren: {
+            defaultPrice: 50,
+            active: false,
+            kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
+            kindOfDiscount: "percentage",
+            percentage: 0,
+            digitDiscount: 10,
+        }
     }
 }
+
+const pricesAfterDiscount = {
+    smallOption: {
+        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.smallOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.smallOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.smallOption))
+    },
+    mediumOption: {
+        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.mediumOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.mediumOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.mediumOption))
+    },
+    largeOption: {
+        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.largeOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.largeOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.largeOption))
+    },meteorietenregen: {
+        price: getOptionPrice(discountData.extraOptions, discountData.extraOptions.meteorietenregen),
+        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.extraOptions.meteorietenregen.defaultPrice,getOptionPrice(discountData.extraOptions, discountData.extraOptions.meteorietenregen))
+    },tweeKleuren: {
+        price: getOptionPrice(discountData.extraOptions, discountData.extraOptions.tweeKleuren),
+        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.extraOptions.tweeKleuren.defaultPrice, getOptionPrice(discountData.extraOptions, discountData.extraOptions.tweeKleuren))
+    }, logo:{
+        price: "Prijs op aanvraag"
+    }, exclusiveOption:{
+        price: "Prijs op aanvraag"
+    }
+}
+
 const _config = {
     apiURL: "https://api.project-starlight.be/api"
 }
