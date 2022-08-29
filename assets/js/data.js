@@ -54,9 +54,9 @@ const discountData = {
             digitDiscount: 20,
         }, tweeKleuren: {
             defaultPrice: 50,
-            active: false,
+            active: true,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
-            kindOfDiscount: "percentage",
+            kindOfDiscount: "gratis",
             percentage: 0,
             digitDiscount: 10,
         }
