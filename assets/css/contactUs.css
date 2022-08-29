@@ -126,12 +126,13 @@ header nav a:nth-child(5) {
 
 .product-informatie select {
     flex: 1;
-    background-color: black;
+    background-color: transparent;
     color: white;
     font-size: 1.5rem;
     border: none;
     border-bottom: solid white 0.1rem;
     border-radius: 0.1rem;
+    margin-bottom: 1rem;
 }
 
 .product-informatie label {
