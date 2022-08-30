@@ -6,7 +6,12 @@ const _local = {
     instagramURL: "https://www.instagram.com/project_starlight_official/",
     facebookURL: "https://www.facebook.com/"
 }
-const discountData = {
+
+const _config = {
+    apiURL: "https://api.project-starlight.be/api"
+}
+
+const _discountData = {
     sortOfMultipleDiscountChoices: ["sum", "multiply"],
     sortOfMultipleDiscount: "multiply",
     basicOptions: {
@@ -63,31 +68,27 @@ const discountData = {
     }
 }
 
-const pricesAfterDiscount = {
+const _pricesAfterDiscount = {
     smallOption: {
-        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.smallOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.smallOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.smallOption))
+        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.smallOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.smallOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.smallOption))
     },
     mediumOption: {
-        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.mediumOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.mediumOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.mediumOption))
+        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.mediumOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.mediumOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.mediumOption))
     },
     largeOption: {
-        price: getOptionPrice(discountData.basicOptions, discountData.basicOptions.largeOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.basicOptions.largeOption.defaultPrice, getOptionPrice(discountData.basicOptions, discountData.basicOptions.largeOption))
+        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.largeOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.largeOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.largeOption))
     },meteorietenregen: {
-        price: getOptionPrice(discountData.extraOptions, discountData.extraOptions.meteorietenregen),
-        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.extraOptions.meteorietenregen.defaultPrice,getOptionPrice(discountData.extraOptions, discountData.extraOptions.meteorietenregen))
+        price: getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.meteorietenregen),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.extraOptions.meteorietenregen.defaultPrice,getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.meteorietenregen))
     },tweeKleuren: {
-        price: getOptionPrice(discountData.extraOptions, discountData.extraOptions.tweeKleuren),
-        totalPercentageDiscount: determineTotalPercentageDiscount(discountData.extraOptions.tweeKleuren.defaultPrice, getOptionPrice(discountData.extraOptions, discountData.extraOptions.tweeKleuren))
+        price: getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.tweeKleuren),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.extraOptions.tweeKleuren.defaultPrice, getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.tweeKleuren))
     }, logo:{
         price: "Prijs op aanvraag"
     }, exclusiveOption:{
         price: "Prijs op aanvraag"
     }
-}
-
-const _config = {
-    apiURL: "https://api.project-starlight.be/api"
 }
