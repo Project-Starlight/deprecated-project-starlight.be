@@ -87,6 +87,7 @@ header nav a:nth-child(5) {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 23rem;
 }
 
 .algemene-informatie .main-content .flex-container:last-child input, .product-informatie .main-content .flex-container:last-child input {
@@ -100,7 +101,6 @@ header nav a:nth-child(5) {
     border-bottom: solid white 0.1rem;
     border-radius: 0.1rem;
     font-size: 1.5rem;
-    width: 20rem;
 }
 
 .algemene-informatie .navigatie-buttons button, .product-informatie .navigatie-buttons button, .bericht .navigatie-buttons button, .final-check .navigatie-buttons button, .final-check .navigatie-buttons input {
@@ -134,7 +134,9 @@ header nav a:nth-child(5) {
     border-radius: 0.1rem;
     margin-bottom: 1rem;
 }
-
+.product-informatie option{
+    background-color: transparent;
+}
 .product-informatie label {
     width: 20rem;
 }
@@ -147,6 +149,57 @@ header nav a:nth-child(5) {
 
 .product-informatie input[type=number] {
     -moz-appearance: textfield;
+}
+
+.form-control {
+    font-family: system-ui, sans-serif;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1em auto;
+    align-self: center;
+}
+
+.product-informatie input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    font: inherit;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border: 0.15rem solid white;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+}
+
+.product-informatie input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    background-color: white;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: 0 0 15px white;
+}
+
+input[type="checkbox"]:disabled {
+    --form-control-color: #959495;
+
+    color: #959495;
+    cursor: not-allowed;
 }
 
 .bericht {
@@ -301,7 +354,16 @@ header nav a:nth-child(5) {
     .begin p {
         font-size: 1.5rem;
     }
+    .smaller-format{
+        display: block;
+    }
+    .form-control{
+        display: flex;
 
+    }
+    .form-control label{
+        font-size: 2rem;
+    }
     #contactUs .algemene-informatie h3, #contactUs .product-informatie h3 {
         font-size: 3rem;
     }
