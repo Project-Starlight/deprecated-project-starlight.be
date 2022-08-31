@@ -61,7 +61,42 @@ header nav a:nth-child(5) {
     cursor: pointer;
     text-shadow: 0 0 5px #fff;
 }
-
+.begin button[name="formulier"]{
+    margin-right: 0.5rem;
+}
+.begin button[name="contactgegevens"]{
+    margin-left: 0.5rem;
+}
+.begin .buttons{
+    display: flex;
+}
+.contactgegevens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.contactgegevens .gegevens{
+    display: flex;
+    margin-bottom: 1rem;
+}
+.contactgegevens svg{
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+.contactgegevens svg:hover{
+    filter: drop-shadow(0 0 7px #fff);
+    cursor: pointer;
+}
+.contactgegevens p{
+    font-size: 2rem;
+}
+.contactgegevens .outer-wrapper-button{
+    display: flex;
+    justify-content: center;
+}
 .algemene-informatie h3, .product-informatie h3 {
     margin-bottom: 2rem;
 }
@@ -103,7 +138,7 @@ header nav a:nth-child(5) {
     font-size: 1.5rem;
 }
 
-.algemene-informatie .navigatie-buttons button, .product-informatie .navigatie-buttons button, .bericht .navigatie-buttons button, .final-check .navigatie-buttons button, .final-check .navigatie-buttons input {
+.algemene-informatie .navigatie-buttons button, .product-informatie .navigatie-buttons button, .bericht .navigatie-buttons button, .final-check .navigatie-buttons button, .final-check .navigatie-buttons input, .contactgegevens button {
     font-size: 1.5rem;
     color: white;
     background-color: black;
@@ -113,7 +148,7 @@ header nav a:nth-child(5) {
     transition: text-shadow 450ms;
 }
 
-.algemene-informatie .navigatie-buttons button:hover, .product-informatie .navigatie-buttons button:hover, .bericht .navigatie-buttons button:hover, .final-check .navigatie-buttons button:hover, .final-check .navigatie-buttons input:hover {
+.algemene-informatie .navigatie-buttons button:hover, .product-informatie .navigatie-buttons button:hover, .bericht .navigatie-buttons button:hover, .final-check .navigatie-buttons button:hover, .final-check .navigatie-buttons input:hover,.contactgegevens button:hover {
     text-shadow: 0 0 5px white;
     cursor: pointer;
 }
@@ -170,7 +205,6 @@ header nav a:nth-child(5) {
     height: 3rem;
     border: 0.15rem solid white;
     border-radius: 0.15em;
-    transform: translateY(-0.075em);
 
     display: grid;
     place-content: center;
@@ -359,10 +393,22 @@ input[type="checkbox"]:disabled {
     }
     .form-control{
         display: flex;
-
+        justify-content: space-between;
+        width: 100%;
     }
     .form-control label{
         font-size: 2rem;
+    }
+    .product-informatie .form-control label{
+        margin: 0;
+    }
+    .product-informatie .main-content .flex-container input[type="checkbox"] {
+        width: 2rem;
+        height: 2rem;
+        flex: 0;
+    }
+    input[type="checkbox"]:checked::before {
+        transform: scale(1);
     }
     #contactUs .algemene-informatie h3, #contactUs .product-informatie h3 {
         font-size: 3rem;

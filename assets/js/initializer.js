@@ -38,7 +38,6 @@ function navigateArrowForFaqPage(e) {
     e.preventDefault();
     const $faqArrowClassList = e.target.closest("svg").classList;
     switchDirectionArrow($faqArrowClassList);
-    console.log(e.target);
     switchHiddenFaqAnswer(e.target.closest(".outer-wrapper").querySelector(".antwoord").classList);
 }
 
@@ -179,6 +178,13 @@ function prijsPaginaInitializer() {
     });
 }
 
+function showContactGegevensContactUsPage() {
+    document.querySelector(".contactgegevens .volledige-email p").innerHTML = `${_local.email}`;
+    document.querySelector(".contactgegevens .volledige-telefoonnummer p").innerHTML = `${_local.tel}`;
+    document.querySelector(".contactgegevens .instagram p").innerHTML = `${_local.instagram}`;
+    document.querySelector(".contactgegevens .facebook p").innerHTML =`${_local.facebook}`;
+}
+
 function contactUsPageInitializer() {
     if (loadFromStorage("selectedPriceCategory")) {
         document.querySelectorAll("#pricingOption option").forEach((Element) => {
@@ -187,8 +193,35 @@ function contactUsPageInitializer() {
             }
         });
     }
-    document.querySelector(".begin button").addEventListener("click", (e) => {
+    showContactGegevensContactUsPage();
+    document.querySelectorAll(".contactgegevens svg").forEach((query)=>{
+        query.addEventListener("click",(e)=>{
+            header_icon(e);
+        });
+    })
+    if (window.innerWidth <= 900){
+        document.querySelector("input[name='voornaam']#voornaam").setAttribute("placeholder","voornaam*");
+        document.querySelector("input[name='achternaam']#achternaam").setAttribute("placeholder","achternaam*");
+        document.querySelector("input[name='email']#email").setAttribute("placeholder","email*");
+        document.querySelector("input[name='telefoon']#telefoon").setAttribute("placeholder","telefoon");
+        document.querySelector("input[name='merk']#merk").setAttribute('placeholder', 'merk');
+        document.querySelector("input[name='model']#model").setAttribute('placeholder','model');
+        document.querySelector("input[name='jaar']#jaar").setAttribute('placeholder','jaar');
+    }
+    /* Begin navigatie*/
+
+    document.querySelector(".begin button[name='formulier']").addEventListener("click", (e) => {
         navigateWithHidden(".begin", ".algemene-informatie", e)
+    });
+
+    document.querySelector(".begin button[name='contactgegevens']").addEventListener("click",(e)=>{
+        navigateWithHidden(".begin",".contactgegevens",e);
+    });
+
+    /* Contactgegevens navigatie */
+
+    document.querySelector(".contactgegevens button[name='terug']").addEventListener("click",(e)=>{
+       navigateWithHidden(".contactgegevens",".begin",e);
     });
 
     /* Algemene informatie navigatie */
