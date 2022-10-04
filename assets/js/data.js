@@ -38,7 +38,7 @@ const _discountData = {
             percentage: 10,
             digitDiscount: 60
         }, largeOption: {
-            defaultPrice: 700,
+            defaultPrice: 800,
             active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "percentage",
@@ -53,7 +53,7 @@ const _discountData = {
             percentage: 10,
             digitDiscount: 50
         }, meteorietenregen: {
-            defaultPrice: 100,
+            defaultPrice: 150,
             active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "gratis",
@@ -61,7 +61,7 @@ const _discountData = {
             digitDiscount: 20,
         }, tweeKleuren: {
             defaultPrice: 50,
-            active: true,
+            active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "gratis",
             percentage: 0,

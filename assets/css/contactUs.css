@@ -194,7 +194,7 @@ header nav a:nth-child(5) {
     align-self: center;
 }
 
-.product-informatie input[type="checkbox"] {
+input[type="checkbox"] {
     -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
@@ -210,7 +210,7 @@ header nav a:nth-child(5) {
     place-content: center;
 }
 
-.product-informatie input[type="checkbox"]::before {
+input[type="checkbox"]::before {
     content: "";
     width: 0.65em;
     height: 0.65em;
@@ -230,12 +230,24 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:disabled {
-    --form-control-color: #959495;
-
     color: #959495;
-    cursor: not-allowed;
+    border: 0.15rem solid gray;
+    width: 2rem;
+    height: 2rem;
 }
-
+input[type="checkbox"]:disabled::before{
+    background-color: gray;
+}
+input[type="checkbox"]:disabled:checked{
+    color: white;
+    border: 0.15rem solid white;
+}
+input[type="checkbox"]:disabled:checked::before{
+    background-color: white;
+}
+input[type="checkbox"]:disabled:hover{
+    box-shadow: 0 0 5px white;
+}
 .bericht {
     display: flex;
     flex-direction: column;
@@ -325,11 +337,15 @@ input[type="checkbox"]:disabled {
     font-size: 2.5rem;
 }
 
-.form-error ul i {
-    font-size: 1.3rem;
+.form-error ul svg {
+    width: 1.5rem;
+    height: auto;
     margin-left: 1rem;
+    fill: white;
 }
-
+.form-error ul svg:hover{
+    filter: drop-shadow(0 0 5px white);
+}
 .form-error ul li:hover {
     text-shadow: 0 0 5px white;
 }
