@@ -6,12 +6,6 @@ function navigateWithHidden(queryToBeHidden, queryToBeShown, e) {
     document.querySelector(queryToBeShown).classList.remove("hidden");
 }
 
-function navigateFromPricingToContact(e) {
-    e.preventDefault();
-    saveToStorage("selectedPriceCategory", e.target.closest("div").id);
-    navigateToDifferentHtmlPage("contactUs.html");
-}
-
 function navigateToDifferentHtmlPage(htmlPage) {
     if (document.querySelector('#index')) {
         window.location.href = `pages/${htmlPage}`;
@@ -50,36 +44,6 @@ function switchDirectionArrow(arrowSelectorClassList){
         arrowSelectorClassList.add("up");
     }
     
-}
-
-function navigateFinalCheckLi(className, e) {
-    if (className.contains("Voornaam") || className.contains("Achternaam") || className.contains("Email") || className.contains("Telefoon")) {
-        navigateWithHidden(".final-check", ".algemene-informatie", e);
-    }
-    if (className.contains("Merk") || className.contains("Model") || className.contains("Jaar") || className.contains("Optie")) {
-        navigateWithHidden(".final-check", ".product-informatie", e);
-    }
-    if (className.contains("Bericht")) {
-        navigateWithHidden(".final-check", ".bericht", e);
-    }
-}
-
-function header_icon(e) {
-    e.preventDefault();
-    switch (e.target.closest("svg").classList[0]) {
-        case "instagram":
-            window.open(_contactAndSocialMedia.instagramURL);
-            break;
-        case "facebook":
-            window.open(_contactAndSocialMedia.facebookURL);
-            break;
-        case "phone":
-            window.location.href = `tel:${_contactAndSocialMedia.tel}`;
-            break;
-        case "mail":
-            window.location.href = `mailto:${_contactAndSocialMedia.email}`;
-            break;
-    }
 }
 
 function navigateHomePageButtons(e){
