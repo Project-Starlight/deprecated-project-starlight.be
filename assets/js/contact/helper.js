@@ -1,4 +1,19 @@
 "use strict";
+function showConfiguration(){
+    const configuratie = loadFromStorage("configuratie");
+    if (configuratie === null){
+        showNoConfigurationYet();
+    } else {
+        const $configuratieDiv = document.querySelector("#configuratie-div").classList
+        if ($configuratieDiv.contains("hidden")){
+            $configuratieDiv.remove("hidden");
+        }
+        document.querySelector("#no-configuratie-li button").innerHTML = "Configureer configuratie!";
+        document.querySelector("#totaal-prijs").innerHTML = prettyPrice(getTotalPrice());
+        document.querySelector("fieldset.contact-form-fieldset#configuratie #insert-chosen-options")
+            .innerHTML = getConfigurationHtml(configuratie);
+    }
+}
 
 function showContactGegevensContactUsPage() {
     document.querySelector("#contactgegevens .volledige-email p").innerHTML = `${_contactAndSocialMedia.email}`;
@@ -18,16 +33,10 @@ function addClassForBarAnimation(selectors,direction){
 }
 
 function showNoConfigurationYet() {
+    const $configuratieDiv = document.querySelector("#configuratie-div").classList
+    if (!$configuratieDiv.contains("hidden")){
+        $configuratieDiv.add("hidden");
+    }
     //TODO: Show screen when there is no configuration yet
 }
 
-function showConfiguration(){
-    const configuratie = loadFromStorage("configuratie");
-    if (configuratie === null){
-        showNoConfigurationYet();
-    } else {
-        document.querySelector("#no-configuratie-li").innerHTML = "";
-        document.querySelector("fieldset.contact-form-fieldset#configuratie #insert-chosen-options")
-            .innerHTML = getConfigurationHtml(configuratie);
-    }
-}

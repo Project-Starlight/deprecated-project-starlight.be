@@ -128,7 +128,24 @@ section#configuratie #configuratie-flex-container li {
     margin: 0.5rem 0;
     text-align: left;
 }
-
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+button.button{
+    color: white;
+    background-color: black;
+    border-radius: 0.5rem;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+    transition: text-shadow 400ms;
+}
+button.button:hover{
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
+}
 @media only screen and (max-width: 500px) {
     #configuratie-div{
         transform: scale(90%);

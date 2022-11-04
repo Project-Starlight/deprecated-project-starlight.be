@@ -5,7 +5,10 @@ function navigateWithHidden(queryToBeHidden, queryToBeShown, e) {
     document.querySelector(queryToBeHidden).classList.add("hidden");
     document.querySelector(queryToBeShown).classList.remove("hidden");
 }
-
+function navigateWithHiddenWithoutEvent(queryToBeHidden, queryToBeShown) {
+    document.querySelector(queryToBeHidden).classList.add("hidden");
+    document.querySelector(queryToBeShown).classList.remove("hidden");
+}
 function navigateToDifferentHtmlPage(htmlPage) {
     if (document.querySelector('#index')) {
         window.location.href = `pages/${htmlPage}`;

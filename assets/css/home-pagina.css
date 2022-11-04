@@ -67,6 +67,7 @@ html, body {
         font-size: 1.5rem;
         margin: 2rem 0;
         width: inherit;
+        transition: text-shadow 400ms;
     }
 
     section .button:hover {
@@ -87,17 +88,6 @@ html, body {
         border-radius: 1rem;
     }
 }
-/*@media only screen and (max-width: 1400px) {
-
-    section#kleuren{
-        height: 40vh;
-    }
-
-    section{
-        height: 40vh;
-    }
-}
-*/
 
 @media only screen and (max-width: 900px) {
     section{

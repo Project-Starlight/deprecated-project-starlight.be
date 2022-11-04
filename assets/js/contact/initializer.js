@@ -1,4 +1,8 @@
 "use strict";
+if (loadFromStorage("queryToBeShown") !== null){
+    navigateWithHiddenWithoutEvent("#onze-gegevens",loadFromStorage("queryToBeShown"));
+    showConfiguration();
+}
 document.querySelector("#onze-gegevens button[name='contactgegevens']")
     .addEventListener("click", (e) => {
         showContactGegevensContactUsPage();
@@ -37,7 +41,8 @@ document.querySelector("#auto-gegevens button[name='volgende']")
     });
 document.querySelector("#configuratie #no-configuratie-li button[name='configuratie']")
     .addEventListener("click", (e) => {
-        //TODO: configuratie samenstellen
+        saveToStorage("byContactButton",true);
+        navigateToDifferentHtmlPage("prijzen.html");
     });
 document.querySelector("#configuratie button[name='terug']")
     .addEventListener("click", (e) => {

@@ -12,7 +12,8 @@ function renderPrices() {
 }
 
 function getTotalPrice() {
-    const selectedItems = getSelectedItemsObject();
+    let selectedItems = getSelectedItemsObject();
+    if (selectedItems.sterrenhemel === null) selectedItems = loadFromStorage("configuratie");
     let totalPrice = 0;
     let tweeKleurenPrijs;
     let meteorietenregenPrijs;
