@@ -170,7 +170,8 @@ header nav a:nth-child(5) {
     margin-bottom: 1rem;
 }
 .product-informatie option{
-    background-color: transparent;
+    background: rgb(255,255,255);
+    color: black;
 }
 .product-informatie label {
     width: 20rem;
@@ -468,4 +469,10 @@ input[type="checkbox"]:disabled:hover{
         height: fit-content;
         word-break: break-all;
     }
+
+    #info .final-check-input li.Meteorietenregen,#info .final-check-input li.Tweekleuren,#info .final-check-input li.Logo {
+        display: flex;
+        justify-content: center;
+    }
 }
+

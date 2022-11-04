@@ -1,6 +1,6 @@
 "use strict";
 
-const _local = {
+const _contactAndSocialMedia = {
     tel: '0473294283',
     email: 'info@project-starlight.be',
     instagram: 'project_starlight_official',
@@ -13,7 +13,7 @@ const _config = {
     apiURL: "https://api.project-starlight.be/api"
 }
 
-const _discountData = {
+const _priceConfig = {
     sortOfMultipleDiscountChoices: ["sum", "multiply"],
     sortOfMultipleDiscount: "multiply",
     basicOptions: {
@@ -24,21 +24,21 @@ const _discountData = {
             percentage: 10,
             digitDiscount: 50
         }, smallOption: {
-            defaultPrice: 500,
+            defaultPrice: 450,
             active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "percentage",
             percentage: 10,
             digitDiscount: 20
         }, mediumOption: {
-            defaultPrice: 600,
+            defaultPrice: 550,
             active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "percentage",
             percentage: 10,
             digitDiscount: 60
         }, largeOption: {
-            defaultPrice: 800,
+            defaultPrice: 650,
             active: false,
             kindOfDiscountOptions: ["percentage", "gratis", "digitDiscount"],
             kindOfDiscount: "percentage",
@@ -72,22 +72,22 @@ const _discountData = {
 
 const _pricesAfterDiscount = {
     smallOption: {
-        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.smallOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.smallOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.smallOption))
+        price: getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.smallOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_priceConfig.basicOptions.smallOption.defaultPrice, getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.smallOption))
     },
     mediumOption: {
-        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.mediumOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.mediumOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.mediumOption))
+        price: getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.mediumOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_priceConfig.basicOptions.mediumOption.defaultPrice, getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.mediumOption))
     },
     largeOption: {
-        price: getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.largeOption),
-        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.basicOptions.largeOption.defaultPrice, getOptionPrice(_discountData.basicOptions, _discountData.basicOptions.largeOption))
+        price: getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.largeOption),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_priceConfig.basicOptions.largeOption.defaultPrice, getOptionPrice(_priceConfig.basicOptions, _priceConfig.basicOptions.largeOption))
     },meteorietenregen: {
-        price: getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.meteorietenregen),
-        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.extraOptions.meteorietenregen.defaultPrice,getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.meteorietenregen))
+        price: getOptionPrice(_priceConfig.extraOptions, _priceConfig.extraOptions.meteorietenregen),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_priceConfig.extraOptions.meteorietenregen.defaultPrice,getOptionPrice(_priceConfig.extraOptions, _priceConfig.extraOptions.meteorietenregen))
     },tweeKleuren: {
-        price: getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.tweeKleuren),
-        totalPercentageDiscount: determineTotalPercentageDiscount(_discountData.extraOptions.tweeKleuren.defaultPrice, getOptionPrice(_discountData.extraOptions, _discountData.extraOptions.tweeKleuren))
+        price: getOptionPrice(_priceConfig.extraOptions, _priceConfig.extraOptions.tweeKleuren),
+        totalPercentageDiscount: determineTotalPercentageDiscount(_priceConfig.extraOptions.tweeKleuren.defaultPrice, getOptionPrice(_priceConfig.extraOptions, _priceConfig.extraOptions.tweeKleuren))
     }, logo:{
         price: "Prijs op aanvraag"
     }, exclusiveOption:{

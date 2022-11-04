@@ -1,13 +1,5 @@
 "use strict";
-function prettyPrice(price,extraOption = false) {
-    if (price === "gratis"){
-        return "gratis";
-    } else if(!extraOption) {
-        return `€${price}`;
-    } else if(extraOption){
-        return `+€${price}`;
-    }
-}
+
 function renderPrice(){
     document.querySelector("#prijs-pagina #kleine-sterrenhemel h3").innerHTML = prettyPrice(_pricesAfterDiscount.smallOption.price);
     document.querySelector("#prijs-pagina #gemiddelde-sterrenhemel h3").innerHTML = prettyPrice(_pricesAfterDiscount.mediumOption.price);

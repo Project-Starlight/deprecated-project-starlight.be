@@ -5,8 +5,8 @@ function errorHandler(err) {
     let errorHtml = ``;
     let html = `<h2>Er is iets misgelopen met de api!</h2>
                     <p>We raden u aan om ons te contacteren op een andere manier:</p>
-                    <p>email: ${_local.email}</p>
-                    <p>telefonisch: ${_local.tel}</p>
+                    <p>email: ${_contactAndSocialMedia.email}</p>
+                    <p>telefonisch: ${_contactAndSocialMedia.tel}</p>
                     <h3>Error(s) server:</h3>`
     for (const field in errors) {
         for (const error of errors[field]) {

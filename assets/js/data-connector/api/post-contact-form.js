@@ -17,7 +17,6 @@ function postContactForm(e) {
             "meteorietenregen": getValueForm(".product-informatie input[name='meteorietenregen']",false,true),
             "logo": getValueForm(".product-informatie input[name='logo']",false,true)
         }
-        console.table(body);
     fetchFromServer(_config.apiURL + "/message", "POST", body)
         .then(() => {
             navigateWithHidden("form", ".form-succes", e);

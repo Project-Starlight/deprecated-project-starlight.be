@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="authors" content="Michiel Stragier & Arne Vanroose">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <title>StarLight</title>
+    <title>Project StarLight - Prijzen</title>
 
     <!-- favicon -->
 
@@ -18,28 +18,28 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- css -->
-
+    <link rel="stylesheet" href="../assets/css/disclaimer.css">
     <link rel="stylesheet" href="../assets/css/general/reset.css">
     <link rel="stylesheet" href="../assets/css/general/header.css">
     <link rel="stylesheet" href="../assets/css/general/general.css">
-    <link rel="stylesheet" href="../assets/css/exploreTheStars.css">
-
+    <link rel="stylesheet" href="../assets/css/prijzen.css">
     <!-- js -->
-
-    <script src="https://kit.fontawesome.com/6c50305fa0.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
+    <script src="../assets/js/data/pricingCalculations.js"></script>
     <script src="../assets/js/data/data.js"></script>
-    <script src="../assets/js/general/navigation.js"></script>
-    <script src="../assets/js/general/initializer.js"></script>
+    <script src="../assets/js/prijzen/ConfiguratieHelperClass.js"></script>
+    <script src="../assets/js/prijzen/helper.js"></script>
+    <script src="../assets/js/prijzen/render/render-prices.js"></script>
+    <script src="../assets/js/prijzen/initializer.js" defer></script>
 </head>
-<body id="explore-the-stars">
+<body id="prijzen">
 <div id="disclaimer"><p>Disclaimer: De website is nog in development. Er kunnen zich nog bugs bevinden!</p></div>
-
 <header>
     <div id="title">
         <h1>Starlight</h1>
         <h2>By Michiel & Arne</h2>
     </div>
-    <div class="smaller-format">
+    <div class="smaller-format hidden">
         <svg class="down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
             <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
             <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
@@ -72,8 +72,8 @@
     </div>
     <nav aria-label="main-menu">
         <a href="../index.html">Home</a>
-        <a href="#">Explore the stars</a>
-        <a href="pricing.html">Prijzen</a>
+        <a href="exploreTheStars.html">Explore the stars</a>
+        <a href="#">Prijzen</a>
         <a href="faq.html">FAQ</a>
         <a href="contactUs.html">Contact us</a>
     </nav>
@@ -100,109 +100,75 @@
         </div>
     </div>
 </header>
-
 <main>
-    <h2>Project Toyota Corolla</h2>
-    <p>
-        In onderstaande foto's is een project te zien waar 550 sterren geïnstalleerd zijn in een Toyota Corolla.
-    </p>
-    <img src="../assets/media/StockPhotos/ceiling5.png" alt="Afbeelding Corolla">
-    <div class="textAndPhoto">
-        <p>
-            Dit is een mixed sterrenhemel wat wil zeggen dat de sterren een licht verschil in grote hebben. Ook zijn ze
-            in kleur, snelheid en animatie aan te passen.
-        </p>
-        <img src="../assets/media/StockPhotos/RollsRoyceStarCeiling.jpg">
-    </div>
-        <div id="features">
-            <h1>Extra opties</h1>
-            <div class="flex-container">
-                <div id="meteoor">
-                    <p>Meteoren kunnen verwerkt worden in de sterrenhemel.</p>
-                    <img src="../assets/media/StockPhotos/MeteorInStarCeiling2.jpg" alt="Meteoor">
-                </div>
-                <div id="extraTwinkle">
-                    <p>Door het gebruik van een speciale driver kan er gezorgd worden voor extra twinkle effect.</p>
-                    <img src="../assets/media/StockPhotos/MeteorInStarCeiling2.jpg" alt="Meteoor">
+    <section id="sterrenhemel">
+        <h2>Sterrenhemel</h2>
+        <p>Selecteer hier uw gewenste sterrenhemel!</p>
+        <div class="flex-container">
+            <div class="sterrenhemel-box" id="kleine-sterrenhemel" aria-disabled="true">
+                <h3>Kleine sterrenhemel:</h3>
+                <p>Een kleine sterrenhemel wordt aanbevolen voor kleinere auto's of auto's met zonnedak zoals: Toyota
+                    Corolla, Opel Corsa...</p>
+                <p class="prijs">Vanaf: <span></span></p>
+            </div>
+            <div class="sterrenhemel-box" id="gemiddelde-sterrenhemel" aria-disabled="true">
+                <h3>Gemiddelde sterrenhemel:</h3>
+                <p>Een gemiddelde sterrenhemel wordt aanbevolen voor Sedan, Station auto's: zoals Mercedes A-klasse,
+                    BMW</p>
+                <p class="prijs">Vanaf: <span></span></p>
+            </div>
+            <div class="sterrenhemel-box" id="grote-sterrenhemel" aria-disabled="true">
+                <h3>Grote sterrenhemel:</h3>
+                <p>Een grote sterrenhemel wordt eerder aanbevolen voor SUV, jeeps... zoals: mercedes G-klasse, Toyota
+                    RAV4...</p>
+                <p class="prijs">Vanaf: <span></span></p>
+            </div>
+            <div class="sterrenhemel-box" id="exclusieve-sterrenhemel" aria-disabled="true">
+                <h3>Exclusieve sterrenhemel:</h3>
+                <p>Heeft u zelf een idee (zoals een logo, een limo, een exotische auto...) dan bevalt dit zeker te
+                    bespreken. We zorgen dan ook voor een eerlijke prijs!</p>
+                <p class="prijs"><span></span></p>
+            </div>
+        </div>
+    </section>
+    <section id="opties">
+        <h2>Opties</h2>
+        <div class="flex-container">
+            <div class="opties-box" id="geen-optie" aria-disabled="false">
+                <h3>Nee, bedankt!</h3>
+            </div>
+            <div class="opties-box" id="twee-kleuren-optie" aria-disabled="true">
+                <h3>2 kleuren</h3>
+                <p>De optie zorgt ervoor dat er 2 verschillende kleuren tegelijkertijd kunnen worden getoond.</p>
+                <p class="prijs">Prijs: <span></span></p>
+            </div>
+            <div class="opties-box" id="meteorietenregen-optie" aria-disabled="true">
+                <h3>Meteorietenregen</h3>
+                <p>De optie zorgt ervoor dat er meteorietenregens om een instelbaar interval wordt getoond in de
+                    sterrenhemel.</p>
+                <p class="prijs">Prijs: <span></span></p>
+            </div>
+        </div>
+    </section>
+    <section id="configuratie">
+        <h2>Configuratie</h2>
+        <div class="flex-container">
+            <div id="configuratie-div">
+                <h3>Totaal: <span id="totaal-prijs"></span></h3>
+                <div id="configuratie-flex-container">
+                    <ul>
+                        <li>Sterrenhemel:</li>
+                        <li>Opties:</li>
+                    </ul>
+                    <ul id="insert-chosen-options">
+                        <li>Kleine Sterrenhemel</li>
+                        <li>Twee kleuren (+€50)</li>
+                        <li>Meteorietenregen (+€150)</li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <h2>Explore the stars!</h2>
-        <section class="gallery">
-            <div class="row">
-                <h3>Toyota Corolla (2005)</h3>
-
-                Make sure to only add horizontal pictures to this slideshow (the code will otherwise break) !!!
-                Also always try to add 16/9 aspect ratio pictures that way the width and height won't change that much witch gives it a better experience !!!
-
-                <div class="flex-container">
-                    <div class="horizontal-slideshow slideshow" id="toyota-corolla">
-                        <div class="slides">
-                            <div class="slide active" data-slideNumber="1">
-                                <img src="../assets/media/StockPhotos/ceiling5.png" alt="" title="">
-                            </div>
-                            <div class="slide non-active" data-slideNumber="2">
-                                <img src="../assets/media/StockPhotos/RollsRoyceStarCeiling.jpg" alt="" title="">
-                            </div>
-                            <button class="left">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
-                                </svg>
-                            </button>
-                            <button class="right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="slideshow-buttons">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <h3>Other car (2001)</h3>
-                <div class="flex-container">
-                    <div class="horizontal-slideshow slideshow" id="toyota-corolla-2 ">
-                        <div class="slides">
-                            <div class="slide active" data-slideNumber="1">
-                                <img src="../assets/media/StockPhotos/ceiling5.png" alt="" title="">
-                            </div>
-                            <div class="slide non-active" data-slideNumber="2">
-                                <img src="../assets/media/StockPhotos/RollsRoyceStarCeiling.jpg" alt="" title="">
-                            </div>
-                            <button class="left">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
-                                </svg>
-                            </button>
-                            <button class="right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="slideshow-buttons">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="extra-opties">
-            <div class="logo">
-
-            </div>
-            <div class="meteoren">
-
-            </div>
-            <div class="twinkel">
-
-            </div>
-            <div class="meerdere-kleuren">
-
-            </div>
-        </section>
+    </section>
 </main>
 </body>
 </html>

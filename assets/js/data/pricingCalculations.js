@@ -44,8 +44,8 @@ function determinePriceWithTwoDiscounts(extraOrBasicOptions, option) {
     if (allOptionKindOfDiscount === "gratis" || optionKindOfDiscount === "gratis") return "gratis";
     else if (allOptionKindOfDiscount === "digitDiscount" && optionKindOfDiscount === "digitDiscount") return option.defaultPrice - (extraOrBasicOptions.allOptions.digitDiscount + option.digitDiscount);
     else if (allOptionKindOfDiscount === "percentage" && optionKindOfDiscount === "percentage") {
-        if (_discountData.sortOfMultipleDiscount === "sum") return (option.defaultPrice - (option.defaultPrice * ((option.percentage / 100) + (extraOrBasicOptions.allOptions.percentage / 100))));
-        else if (_discountData.sortOfMultipleDiscount === "multiply") return (option.defaultPrice * ((1 - (option.percentage / 100)) * (1 - (extraOrBasicOptions.allOptions.percentage / 100))));
+        if (_priceConfig.sortOfMultipleDiscount === "sum") return (option.defaultPrice - (option.defaultPrice * ((option.percentage / 100) + (extraOrBasicOptions.allOptions.percentage / 100))));
+        else if (_priceConfig.sortOfMultipleDiscount === "multiply") return (option.defaultPrice * ((1 - (option.percentage / 100)) * (1 - (extraOrBasicOptions.allOptions.percentage / 100))));
     } else if (allOptionKindOfDiscount === "digitDiscount" && optionKindOfDiscount === "percentage") return percentageDiscountOfValue(option.defaultPrice,option.percentage) - extraOrBasicOptions.allOptions.digitDiscount;
     else if (allOptionKindOfDiscount === "percentage" && optionKindOfDiscount === "digitDiscount") return percentageDiscountOfValue(option.defaultPrice, extraOrBasicOptions.allOptions.percentage) - option.digitDiscount;
 

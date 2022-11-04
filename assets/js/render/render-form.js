@@ -18,29 +18,30 @@ function showFinalCheck(e) {
     let htmlTitle = ``;
     let htmlTxt = ``;
     for (let selectorsKey in selectors) {
-        if (selectorsKey === "Tweekleuren" || selectorsKey === "Meteorietenregen" || selectorsKey === "Logo"){
-            htmlTitle += getCheckBoxItemFinalCheck(selectorsKey,selectors,true);
-            htmlTxt += getCheckBoxItemFinalCheck(selectorsKey,selectors,false);
+        if (selectorsKey === "Tweekleuren" || selectorsKey === "Meteorietenregen" || selectorsKey === "Logo") {
+            htmlTitle += getCheckBoxItemFinalCheck(selectorsKey, selectors, true);
+            htmlTxt += getCheckBoxItemFinalCheck(selectorsKey, selectors, false);
         } else {
             htmlTitle += getValueListItemFinalCheck(selectorsKey, selectors, true);
-            htmlTxt += getValueListItemFinalCheck(selectorsKey, selectors);
+            htmlTxt += getValueListItemFinalCheck(selectorsKey, selectors,false);
         }
     }
-    document.querySelector(".final-check div ul:first-child").innerHTML = htmlTitle;
-    document.querySelector(".final-check div ul:last-child").innerHTML = htmlTxt;
+    document.querySelector(".final-check div ul.final-check-title").innerHTML = htmlTitle;
+    document.querySelector(".final-check div ul.final-check-input").innerHTML = htmlTxt;
 }
+
 let counter = 0;
-function getCheckBoxItemFinalCheck(selectorKey, selector,title=false) {
+
+function getCheckBoxItemFinalCheck(selectorKey, selector, title = false) {
     const checkboxValue = document.querySelector(`${selector[selectorKey]}`).checked;
     counter = counter + 1;
-    console.table({counter: counter, value: checkboxValue, title: title, selectorKey: selectorKey, selector: selector})
     if (checkboxValue) {
-        if (title){
+        if (title) {
             return `<li class="${selectorKey}">${selectorKey}</li>`;
         }
         return `<li class='${selectorKey} no-input'><input type="checkbox" checked disabled></li>`
     } else if (!checkboxValue) {
-        if (title){
+        if (title) {
             return `<li class="${selectorKey} no-input">${selectorKey}</li>`;
         }
         return `<li class="${selectorKey}"><input type="checkbox" disabled></li>`

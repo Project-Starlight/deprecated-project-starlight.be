@@ -1,0 +1,310 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .hidden {
+    display: none;
+}
+
+#contact .buttons button, #contact .button {
+    background-color: black;
+    border-radius: 0.5rem;
+    color: #fff;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    transition: text-shadow 400ms;
+}
+
+#contact .buttons button:hover, #contact .button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
+}
+
+#onze-gegevens, main {
+    height: 100%;
+}
+
+#onze-gegevens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#onze-gegevens p {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+#onze-gegevens .buttons {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#onze-gegevens .buttons button {
+    background-color: black;
+    border-radius: 0.5rem;
+    color: #fff;
+    border: solid white 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    transition: text-shadow 400ms;
+}
+
+#onze-gegevens .buttons button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px #fff;
+}
+
+#contactgegevens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contactgegevens .gegevens {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#contactgegevens svg {
+    fill: white;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+#contactgegevens svg:hover {
+    filter: drop-shadow(0 0 7px #fff);
+    cursor: pointer;
+}
+
+#contactgegevens p {
+    font-size: 2rem;
+}
+
+#contactgegevens .outer-wrapper-button {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-fieldset {
+    border: solid white 5px;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 70%);
+    margin-bottom: 5rem;
+}
+
+.contact-form-fieldset .bar {
+    flex: 1 1 auto;
+    height: 0.5rem;
+    background-color: gray;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.contact-form-fieldset .bar div {
+    border-radius: 1rem;
+    display: inline-block;
+    background-color: white;
+    width: 20%;
+    height: 0.5rem;
+    position: absolute;
+    left: 0;
+    right: 10%;
+}
+
+.contact-form-fieldset li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.1rem;
+}
+
+.contact-form-fieldset legend {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.contact-form-fieldset label {
+    font-size: 2.5rem;
+    width: 40%;
+    display: inline-block;
+}
+
+.contact-form-fieldset input {
+    color: white;
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid white 1px;
+    -moz-appearance: textfield;
+}
+
+.contact-form-fieldset input:focus {
+    outline: none;
+    border-bottom: solid white 3px;
+}
+
+.contact-form-fieldset .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.contact-form-fieldset#configuratie ul #no-configuratie-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-fieldset#configuratie ul li#configuratie-li {
+    justify-content: center;
+}
+.contact-form-fieldset#configuratie #configuratie-div{
+    border-radius: 1rem;
+    border: 3px solid white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+.contact-form-fieldset#configuratie h3{
+    text-align: center;
+}
+.contact-form-fieldset#configuratie #configuratie-flex-container{
+    display: flex;
+    gap: 1rem;
+}
+.contact-form-fieldset#configuratie #configuratie-flex-container li{
+    margin: 0.5rem 0;
+}
+/* Alles voor bar animatie */
+.contact-form-fieldset#persoonlijke-gegevens .bar div {
+    width: 20%;
+}
+
+.contact-form-fieldset#persoonlijke-gegevens .bar div.forward-bar-animation {
+    animation: barAnimation0to20 1s;
+}
+
+.contact-form-fieldset#persoonlijke-gegevens .bar div.backward-bar-animation {
+    animation: barAnimation20to40 reverse 1s;
+}
+
+
+.contact-form-fieldset#auto-gegevens .bar div {
+    width: 40%;
+}
+
+.contact-form-fieldset#auto-gegevens .bar div.forward-bar-animation {
+    animation: barAnimation20to40 1s;
+}
+
+.contact-form-fieldset#auto-gegevens .bar div.backward-bar-animation {
+    animation: barAnimation40to60 reverse 1s;
+}
+
+
+.contact-form-fieldset#configuratie .bar div {
+    width: 60%;
+}
+
+.contact-form-fieldset#configuratie .bar div.forward-bar-animation {
+    animation: barAnimation40to60 1s;
+}
+
+.contact-form-fieldset#configuratie .bar div.backward-bar-animation {
+    animation: barAnimation60to80 reverse 1s;
+}
+
+
+.contact-form-fieldset#bericht .bar div {
+    width: 80%;
+}
+
+.contact-form-fieldset#bericht .bar div.forward-bar-animation {
+    animation: barAnimation60to80 1s;
+}
+
+.contact-form-fieldset#bericht .bar div.backward-bar-animation {
+    animation: barAnimation80to100 reverse 1s;
+}
+
+.contact-form-fieldset#controle .bar div {
+    animation: barAnimation80to100 1s;
+    width: 100%;
+}
+
+
+.contact-form-fieldset#bericht textarea {
+    background-color: black;
+    color: white;
+    outline: none;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    height: 10rem;
+}
+
+@keyframes barAnimation0to20 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20%;
+    }
+}
+
+@keyframes barAnimation20to40 {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 40%;
+    }
+}
+
+@keyframes barAnimation40to60 {
+    from {
+        width: 40%;
+    }
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes barAnimation60to80 {
+    from {
+        width: 60%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes barAnimation80to100 {
+    from {
+        width: 80%;
+    }
+    to {
+        width: 100%;
+    }
+}
