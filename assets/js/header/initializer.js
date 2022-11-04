@@ -1,5 +1,5 @@
 "use strict";
-
+console.log("test")
 document.querySelector("header #icons").addEventListener('click', e => {
     social_navigation(e);
 });

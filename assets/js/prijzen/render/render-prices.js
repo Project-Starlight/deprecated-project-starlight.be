@@ -11,18 +11,6 @@ function renderPrices() {
         .innerHTML = `${_pricesAfterDiscount.exclusiveOption.price}`
 }
 
-function prettyPrice(price, extraOption = false) {
-    if (price === "gratis") {
-        return "gratis";
-    } else if (price === "Prijs op aanvraag"){
-        return price;
-    }else if (!extraOption) {
-        return `€${price}`;
-    } else if (extraOption) {
-        return `+€${price}`;
-    }
-}
-
 function getTotalPrice() {
     const selectedItems = getSelectedItemsObject();
     let totalPrice = 0;
