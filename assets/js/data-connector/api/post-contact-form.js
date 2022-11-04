@@ -12,22 +12,29 @@ function postContactForm(e) {
             "automodel": getValueForm(".product-informatie input[name='model']"),
             "autojaar": getValueForm(".product-informatie input[name='jaar']", true),
             "prijsoptie": getValueForm(".product-informatie select"),
-            "bericht": getValueForm(".bericht textarea")
+            "bericht": getValueForm(".bericht textarea"),
+            "tweekleuren": getValueForm(".product-informatie input[name='tweekleuren']",false,true),
+            "meteorietenregen": getValueForm(".product-informatie input[name='meteorietenregen']",false,true),
+            "logo": getValueForm(".product-informatie input[name='logo']",false,true)
         }
     fetchFromServer(_config.apiURL + "/message", "POST", body)
         .then(() => {
             navigateWithHidden("form", ".form-succes", e);
         })
-        .catch(error => {errorHandler(error)})
+        .catch(error => {
+            errorHandler(error)
+        })
 }
 
-function getValueForm(formSelector, number = false) {
+function getValueForm(formSelector, number = false, boolean = false) {
     const $selectorValue = document.querySelector(`${formSelector}`).value;
     if ($selectorValue === "kies-optie") {
         return null;
     } else if ($selectorValue) {
         if (number) {
-            return parseInt($selectorValue)
+            return parseInt($selectorValue);
+        } else if (boolean) {
+            return document.querySelector(`${formSelector}`).checked;
         } else {
             return $selectorValue;
         }

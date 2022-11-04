@@ -68,16 +68,16 @@ function header_icon(e) {
     e.preventDefault();
     switch (e.target.closest("svg").classList[0]) {
         case "instagram":
-            window.open(_local.instagramURL);
+            window.open(_contactAndSocialMedia.instagramURL);
             break;
         case "facebook":
-            window.open(_local.facebookURL);
+            window.open(_contactAndSocialMedia.facebookURL);
             break;
         case "phone":
-            window.location.href = `tel:${_local.tel}`;
+            window.location.href = `tel:${_contactAndSocialMedia.tel}`;
             break;
         case "mail":
-            window.location.href = `mailto:${_local.email}`;
+            window.location.href = `mailto:${_contactAndSocialMedia.email}`;
             break;
     }
 }

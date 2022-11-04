@@ -1,28 +1,137 @@
-#explore-the-stars .hidden{
+#explore-the-stars .hidden {
     display: none;
 }
 
-main{
-    width: 80%;
+html, body {
+    background-image: url("../media/starrySky.png");
+    background-size: 30%;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    margin-bottom: 5rem;
+    height: 70vh;
+}
+
+.slide img {
+    border-radius: 1rem;
+    filter: drop-shadow(0 0 5px white);
+}
+
+p {
+    font-size: 2rem;
+}
+
+.textAndPhoto {
     display: grid;
     grid-template-columns: 50% 50%;
 }
-main h1{
-    font-size: 3em;
-    padding-top: 3em;
+
+img {
+    width: 50em;
+    height: auto;
 }
-img{
-    width: 40em;
+
+img:first-of-type {
+    margin-bottom: 5em;
 }
-#textRow1{
+
+.textAndPhoto p {
+    margin-top: 5em;
     grid-column-start: 0;
-    grid-row-start: 0;
-    grid-column-end: 0;
-    grid-row-end: 0;
+    text-align: center;
 }
-#imageRow1{
-    grid-column-start: 2;
-    grid-row-start: 0;
-    grid-column-end: 2;
-    grid-row-end: 1;
+
+.slides {
+    position: relative;
+    width: 50vw;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.non-active {
+    display: none;
+}
+
+.slideshow-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slideshow-buttons button {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 1);
+    border: solid black 3px;
+    border-radius: 100%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-buttons button.selected::before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.slideshow-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slides button {
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+}
+
+.slides button:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px white);
+}
+
+.slides button svg {
+    fill: white;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(-90deg);
 }

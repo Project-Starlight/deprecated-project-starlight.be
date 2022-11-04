@@ -1,94 +1,93 @@
+#index .hidden {
+    display: none;
+}
 html, body {
     height: 100%;
 }
+@media only screen and (min-width: 901px){
+    nav a:nth-child(1) {
+        border-bottom: solid #fff 0.1rem;
+    }
 
-.hidden {
-    display: none;
-}
+    .bigger-format {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 5rem;
+    }
 
-nav a:nth-child(1) {
-    border-bottom: solid #fff 0.1rem;
-}
+    h2 {
+        font-size: 3.5rem;
+        margin: 2rem 0;
+        text-align: center;
+    }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 5rem;
-}
+    section{
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 
-h2 {
-    font-size: 3.5rem;
-    margin: 2rem 0;
-}
+    section .informatie {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+    }
+    .left-to-right-animation{
+        animation: left-to-right 2s;
+    }
+    .right-to-left-animation{
+        animation: right-to-left 2s;
+    }
+    section h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
 
-section:first-of-type {
-    height: 70vh;
-}
+    section p {
+        font-size: 2rem;
+    }
 
-section{
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+    section .button {
+        align-self: center;
+        color: white;
+        background-color: black;
+        border-radius: 0.5rem;
+        border: solid white 0.1rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        margin: 2rem 0;
+        width: inherit;
+    }
 
-section .informatie {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    text-align: center;
-}
-.left-to-right-animation{
-    animation: left-to-right 2s;
-}
-.right-to-left-animation{
-    animation: right-to-left 2s;
-}
-section h3 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
+    section .button:hover {
+        cursor: pointer;
+        text-shadow: 0 0 5px #fff;
+    }
 
-section p {
-    font-size: 2rem;
-}
+    section figure {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-section .button {
-    align-self: center;
-    color: white;
-    background-color: black;
-    border-radius: 0.5rem;
-    border: solid white 0.1rem;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    margin: 2rem 0;
-    width: inherit;
+    section figure img {
+        width: 100%;
+        box-shadow: 0 0 8px white;
+        border-radius: 1rem;
+    }
 }
-
-section .button:hover {
-    cursor: pointer;
-    text-shadow: 0 0 5px #fff;
-}
-
-section figure {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section figure img {
-    width: 100%;
-}
-
-@media only screen and (max-width: 1400px) {
+/*@media only screen and (max-width: 1400px) {
 
     section#kleuren{
         height: 40vh;
@@ -98,10 +97,56 @@ section figure img {
         height: 40vh;
     }
 }
+*/
 
 @media only screen and (max-width: 900px) {
-
+    section{
+        padding: 4rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid white;
+    }
+    section:first-of-type{
+        border-top: none;
+    }
+    .section-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    h2{
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    h3{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    figure{
+        display: flex;
+        justify-content: center;
+    }
+    figure img{
+        width: 80%;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px white;
+    }
+    p{
+        width: 80%;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    @supports(padding:max(0px)) {
+        body, header, footer {
+            padding-left: min(0vmin, env(safe-area-inset-left));
+            padding-right: min(0vmin, env(safe-area-inset-right));
+        }
+    }
 }
+
 @keyframes left-to-right {
     0% {
         opacity: 0.5;

@@ -1,38 +1,54 @@
-#prijs-pagina .hidden{
+#prijs-pagina .hidden {
     display: none;
 }
 
-header a:nth-child(3){
-    border-bottom: solid 0.1rem #fff;
-}
-
-#prijs-pagina main h1{
+#prijs-pagina main h1 {
     text-align: center;
     font-size: 3rem;
 }
 
-#prijs-pagina main .flex-container{
+#prijs-pagina main .flex-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 3rem;
     flex-wrap: wrap;
 }
 
-#prijs-pagina p:first-of-type{
-    margin-top: 1rem;
+#prijs-pagina #page-title p {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    margin: 1rem 3rem 0 3rem;
 }
 
-#prijs-pagina main div div{
-    margin: 2rem;
+#prijs-pagina main .outer-wrapper {
+    margin: 5rem 5rem 8rem 5rem;
+}
+
+#prijs-pagina main .outer-wrapper.extra-opties {
+    margin: 5rem 5rem 0 5rem;
+}
+
+#prijs-pagina main .outer-wrapper h2.container-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding-bottom: 5rem;
+}
+
+#prijs-pagina main div .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    justify-items: center;
+    width: 15rem;
     max-width: 15rem;
     border-radius: 1rem;
     height: 20rem;
     padding: 1rem;
 }
-#prijs-pagina div.button{
+
+#prijs-pagina div.button {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -40,7 +56,7 @@ header a:nth-child(3){
     margin-bottom: 2rem;
 }
 
-#prijs-pagina button{
+#prijs-pagina button {
     background-color: black;
     border-radius: 0.5rem;
     border: solid white 0.1rem;
@@ -49,54 +65,56 @@ header a:nth-child(3){
     margin: 2rem 0;
 }
 
-#prijs-pagina button a{
+#prijs-pagina button a {
     color: white;
     text-decoration: none;
     transition: text-shadow 400ms;
 }
 
-#prijs-pagina button a:hover{
+#prijs-pagina button a:hover {
     cursor: pointer;
     text-shadow: 0 0 5px #fff;
 }
 
-@media (pointer:coarse){
-    #prijs-pagina main div div{
-        background-image: url("../media/starrySky.png");
-        background-size: cover;
-        box-shadow: 0 0 4px #fff;
-    }
-}
-@media only screen and (max-width: 900px) {
-    #prijs-pagina main div div{
-        background-image: url("../media/starrySky.png");
-        background-size: cover;
-        box-shadow: 0 0 4px #fff;
-    }
+#prijs-pagina main div .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px #fff;
+    margin-bottom: 4rem;
 }
 
-#prijs-pagina main div div:hover{
-    background-image: url("../media/starrySky.png");
-    background-size: cover;
+#prijs-pagina main div .container:hover {
+    background-color: rgba(0, 0, 0, 1);
     cursor: pointer;
-    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 20px #fff;
 }
 
-#prijs-pagina main h2{
+#prijs-pagina main .container h2 {
     font-size: 2rem;
     text-align: center;
-    margin-top: 0.5rem;
 }
 
-#prijs-pagina main p{
+#prijs-pagina main .container p {
     text-align: center;
-    margin: 0 1rem;
     font-family: sans-serif;
     font-size: 1.1rem;
 }
 
-#prijs-pagina main h3{
+#prijs-pagina main h3 {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    #prijs-pagina main .outer-wrapper.basis-opties {
+        margin-bottom: 0;
+    }
+
+    #prijs-pagina main .outer-wrapper.extra-opties {
+        margin-top: 0;
+    }
+
+    #prijs-pagina main .outer-wrapper h2.container-title {
+        padding-bottom: 4rem;
+    }
 }

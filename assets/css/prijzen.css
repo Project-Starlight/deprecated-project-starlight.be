@@ -1,0 +1,136 @@
+section#sterrenhemel h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+section#sterrenhemel>p{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+section#sterrenhemel .flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+section#sterrenhemel .sterrenhemel-box {
+    border: solid white 3px;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: 20rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 15px white;
+}
+
+section#sterrenhemel div.sterrenhemel-box[aria-disabled="true"] {
+    border: solid gray 5px;
+    box-shadow: 0 0 15px gray;
+    color: gray;
+}
+
+section#sterrenhemel .sterrenhemel-box h3 {
+    font-size: 2rem;
+}
+
+section#sterrenhemel .sterrenhemel-box p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+section#sterrenhemel .sterrenhemel-box p.prijs {
+    font-size: 2rem;
+}
+
+section#opties h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+section#opties .flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+section#opties .opties-box {
+    width: 30rem;
+    border: solid white 3px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: black;
+    box-shadow: 0 0 15px white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}
+
+section#opties div.opties-box[aria-disabled="true"] {
+    border: solid gray 5px;
+    box-shadow: 0 0 15px gray;
+    color: gray;
+}
+
+section#opties .opties-box h3 {
+    font-size: 2rem;
+}
+
+section#opties .opties-box p {
+    font-size: 1.5rem;
+}
+
+section#opties .opties-box p.prijs {
+    font-size: 2rem;
+}
+
+section#configuratie {
+    margin-bottom: 5rem;
+}
+
+section#configuratie h2 {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 3rem;
+}
+
+section#configuratie .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#configuratie #configuratie-div {
+    border: solid white 1px;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: black;
+    box-shadow: 0 0 15px white;
+}
+
+section#configuratie #configuratie-div #configuratie-flex-container {
+    display: flex;
+    gap: 2rem;
+}
+section#configuratie #configuratie-flex-container ul{
+    margin: 2rem 0;
+}
+section#configuratie #configuratie-flex-container li {
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+@media only screen and (max-width: 500px) {
+    #configuratie-div{
+        transform: scale(90%);
+    }
+}
