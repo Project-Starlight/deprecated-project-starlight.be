@@ -23,3 +23,8 @@ function removeDisclaimerPopup() {
     document.querySelector(".popup").classList.add("hidden");
     saveToStorage("popup", true);
 }
+
+function navigateHomePageButtons(e){
+    const target = e.target.dataset.navigate + ".html";
+    navigateToDifferentHtmlPage(target);
+}

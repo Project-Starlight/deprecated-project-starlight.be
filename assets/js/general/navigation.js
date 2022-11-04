@@ -15,14 +15,6 @@ function navigateToDifferentHtmlPage(htmlPage) {
 
 }
 
-function navigateArrowForSmallerFormat(e) {
-    e.preventDefault();
-    const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
-    const $smallerFormatArrowClassList = document.querySelector(".smaller-format svg").classList;
-    switchHidden($smallerFormatNavClassList);
-    switchDirectionArrow($smallerFormatArrowClassList)
-}
-
 function switchHidden(hiddenSelectorClassList){
     if(hiddenSelectorClassList.contains("hidden")){
         hiddenSelectorClassList.remove("hidden");
@@ -43,10 +35,6 @@ function switchDirectionArrow(arrowSelectorClassList){
         arrowSelectorClassList.remove("down");
         arrowSelectorClassList.add("up");
     }
-    
+
 }
 
-function navigateHomePageButtons(e){
-    const target = e.target.dataset.navigate + ".html";
-    navigateToDifferentHtmlPage(target);
-}

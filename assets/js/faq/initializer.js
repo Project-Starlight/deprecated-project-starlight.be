@@ -17,3 +17,4 @@ function switchHiddenFaqAnswer($answerClassList) {
         $answerClassList.add("hidden");
     }
 }
+

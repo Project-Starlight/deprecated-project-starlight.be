@@ -30,3 +30,10 @@ function social_navigation(e) {
             break;
     }
 }
+function navigateArrowForSmallerFormat(e) {
+    e.preventDefault();
+    const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
+    const $smallerFormatArrowClassList = document.querySelector(".smaller-format svg").classList;
+    switchHidden($smallerFormatNavClassList);
+    switchDirectionArrow($smallerFormatArrowClassList)
+}

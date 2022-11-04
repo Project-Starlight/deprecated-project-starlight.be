@@ -22,23 +22,25 @@ function getTotalPrice() {
     if (_pricesAfterDiscount.meteorietenregen.price === "gratis") meteorietenregenPrijs = 0;
     else meteorietenregenPrijs = _pricesAfterDiscount.meteorietenregen.price;
 
-    switch (selectedItems.sterrenhemel) {
+    totalPrice = getSterrenhemelPrijs(selectedItems.sterrenhemel);
+    if (selectedItems.sterrenhemel === "exclusieve-sterrenhemel") return totalPrice;
+
+    if (selectedItems.extraOpties.length === 2) return totalPrice + (tweeKleurenPrijs + meteorietenregenPrijs);
+    else if (selectedItems.extraOpties[0] === "twee-kleuren-optie") return totalPrice + tweeKleurenPrijs;
+    else if (selectedItems.extraOpties[0] === "meteorietenregen-optie") return totalPrice + meteorietenregenPrijs;
+}
+
+function getSterrenhemelPrijs(sterrenhemel) {
+    switch (sterrenhemel) {
         case "kleine-sterrenhemel":
-            totalPrice = _pricesAfterDiscount.smallOption.price;
-            break;
+            return _pricesAfterDiscount.smallOption.price;
         case "gemiddelde-sterrenhemel":
-            totalPrice = _pricesAfterDiscount.mediumOption.price;
-            break;
+            return _pricesAfterDiscount.mediumOption.price;
         case "grote-sterrenhemel":
-            totalPrice = _pricesAfterDiscount.largeOption.price;
-            break;
+            return _pricesAfterDiscount.largeOption.price;
         case "exclusieve-sterrenhemel":
             return _pricesAfterDiscount.exclusiveOption.price;
     }
-    if (selectedItems.extraOpties.length === 2) return totalPrice += (tweeKleurenPrijs + meteorietenregenPrijs);
-    else if (selectedItems.extraOpties[0] === "twee-kleuren-optie") return totalPrice += tweeKleurenPrijs;
-    else if (selectedItems.extraOpties[0] === "meteorietenregen-optie") return totalPrice += meteorietenregenPrijs;
-    return totalPrice;
 }
 
 function renderTotalPrice() {
