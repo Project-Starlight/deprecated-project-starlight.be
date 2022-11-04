@@ -1,2 +1,2 @@
-# Starlight M&A
- The creation of the M&A Starlight
+# Project-Starlight
+The creation of the project-starlight website and all it's features!
