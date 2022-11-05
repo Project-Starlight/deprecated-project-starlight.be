@@ -3,7 +3,7 @@ const configuratieHelper = new ConfiguratieHelper();
 
 
 function saveConfigurationToStorage() {
-    saveToStorage("configuratie", getSelectedItemsObjectExtended());
+    saveToStorage("configuratie", getConfiguratieObjectExtended());
 }
 
 function renderConfigurationBox() {
@@ -13,7 +13,7 @@ function renderConfigurationBox() {
 
 
 function renderChosenConfig() {
-    const selectedItems = getSelectedItemsObject();
+    const selectedItems = getConfiguratieObject();
     document.querySelector("#insert-chosen-options")
         .innerHTML = getConfigurationHtml(selectedItems);
 }
@@ -46,22 +46,3 @@ function toggleExtraOpties(optiesBox) {
     }
 }
 
-function getSelectedItemsObject() {
-    let res = {
-        sterrenhemel: null,
-        extraOpties: []
-    }
-    if (document.querySelectorAll("#sterrenhemel .sterrenhemel-box[aria-disabled='false']").length === 1) {
-        res.sterrenhemel = document.querySelector("#sterrenhemel .sterrenhemel-box[aria-disabled='false']").getAttribute("id");
-    }
-    document.querySelectorAll("#opties .opties-box[aria-disabled='false']").forEach(optiesBox => {
-        res.extraOpties.push(optiesBox.getAttribute("id"))
-    })
-    return res;
-}
-
-function getSelectedItemsObjectExtended() {
-    let res = getSelectedItemsObject();
-    res.totalPrice = getTotalPrice();
-    return res;
-}

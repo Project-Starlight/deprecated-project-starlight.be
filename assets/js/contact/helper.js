@@ -9,7 +9,7 @@ function showConfiguration(){
             $configuratieDiv.remove("hidden");
         }
         document.querySelector("#no-configuratie-li button").innerHTML = "Configureer configuratie!";
-        document.querySelector("#totaal-prijs").innerHTML = prettyPrice(getTotalPrice());
+        document.querySelector("#totaal-prijs").innerHTML = prettyPrice(configuratie.totalPrice);
         document.querySelector("fieldset.contact-form-fieldset#configuratie #insert-chosen-options")
             .innerHTML = getConfigurationHtml(configuratie);
     }

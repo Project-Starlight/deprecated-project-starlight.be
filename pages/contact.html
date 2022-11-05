@@ -28,13 +28,16 @@
     <script src="../assets/js/data/pricing-calculations.js"></script>
     <script src="../assets/js/data/socials.js"></script>
     <script src="../assets/js/data/pricing.js"></script>
-    <script src="../assets/js/prijzen/configuratie-helper-class.js"></script>
-    <script src="../assets/js/prijzen/helper.js"></script>
-    <script src="../assets/js/prijzen/render/render-prices.js"></script>
+
     <script src="../assets/js/data-connector/local-storage-abstractor.js"></script>
+
     <script src="../assets/js/general/navigation.js"></script>
     <script src="../assets/js/general/helper.js"></script>
+    <script src="../assets/js/general/configuratie.js"></script>
+
     <script src="../assets/js/contact/helper.js"></script>
+    <script src="../assets/js/contact/form-object-build.js"></script>
+
     <script src="../assets/js/header/initializer.js" defer></script>
     <script src="../assets/js/contact/initializer.js" defer></script>
 </head>
@@ -164,19 +167,19 @@
                 </li>
                 <li>
                     <label for="voornaam">Voornaam</label>
-                    <input type="text" id="voornaam">
+                    <input name="voornaam" type="text" id="voornaam">
                 </li>
                 <li>
                     <label for="achternaam">Achternaam</label>
-                    <input type="text" id="achternaam">
+                    <input name="achternaam" type="text" id="achternaam">
                 </li>
                 <li>
                     <label for="email">E-mail</label>
-                    <input type="email" id="email">
+                    <input name="email" type="email" id="email">
                 </li>
                 <li>
                     <label for="tel">Telefoon</label>
-                    <input type="tel" id="tel">
+                    <input name="tel" type="tel" id="tel">
                 </li>
             </ul>
             <div class="buttons">
@@ -194,15 +197,15 @@
                 </li>
                 <li>
                     <label for="merk">Merk</label>
-                    <input type="text" id="merk">
+                    <input name="merk" type="text" id="merk">
                 </li>
                 <li>
                     <label for="model">Model</label>
-                    <input type="text" id="model">
+                    <input name="model" type="text" id="model">
                 </li>
                 <li>
                     <label for="jaar">Jaar</label>
-                    <input type="number" id="jaar">
+                    <input name="jaar" type="number" id="jaar">
                 </li>
             </ul>
             <div class="buttons">
@@ -266,7 +269,7 @@
             </ul>
             <div class="buttons">
                 <button type="button" name="terug">Terug</button>
-                <button type="submit" name="submit">Verstuur!</button>
+                <button type="button" name="submit">Verstuur!</button>
             </div>
         </fieldset>
     </form>

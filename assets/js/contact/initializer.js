@@ -2,6 +2,7 @@
 if (loadFromStorage("queryToBeShown") !== null){
     navigateWithHiddenWithoutEvent("#onze-gegevens",loadFromStorage("queryToBeShown"));
     showConfiguration();
+    saveToStorage("queryToBeShown",null);
 }
 document.querySelector("#onze-gegevens button[name='contactgegevens']")
     .addEventListener("click", (e) => {
@@ -69,7 +70,8 @@ document.querySelector("#controle button[name='terug']")
         navigateWithHidden("#controle", "#bericht", e);
         addClassForBarAnimation("#bericht .bar div", "backward");
     });
-document.querySelector("#controle button[type='submit']")
+document.querySelector("#controle button[name='submit']")
     .addEventListener("click", (e) => {
         //TODO: submit form
+        console.table(getBodyForm());
     });

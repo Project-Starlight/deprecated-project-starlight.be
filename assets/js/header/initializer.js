@@ -6,7 +6,6 @@ document.querySelector("header #smaller-format-icons").addEventListener('click',
     social_navigation(e);
 });
 document.querySelector("header h1").addEventListener('click', () => {
-    console.log("test")
     navigateToDifferentHtmlPage("../index.html");
 });
 document.querySelector(".smaller-format svg").addEventListener("click", (e) => {

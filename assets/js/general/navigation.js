@@ -19,24 +19,17 @@ function navigateToDifferentHtmlPage(htmlPage) {
 }
 
 function switchHidden(hiddenSelectorClassList){
-    if(hiddenSelectorClassList.contains("hidden")){
-        hiddenSelectorClassList.remove("hidden");
-    }
-    else if (!hiddenSelectorClassList.contains("hidden")){
-        hiddenSelectorClassList.add("hidden");
-    }
+    hiddenSelectorClassList.toggle("hidden");
 }
 
 function switchDirectionArrow(arrowSelectorClassList){
     if (arrowSelectorClassList.contains("up"))
     {
-        arrowSelectorClassList.remove("up");
-        arrowSelectorClassList.add("down")
+        arrowSelectorClassList.replace("up","down");
     }
     else if(arrowSelectorClassList.contains("down"))
     {
-        arrowSelectorClassList.remove("down");
-        arrowSelectorClassList.add("up");
+        arrowSelectorClassList.replace("down","up");
     }
 
 }
