@@ -15,7 +15,7 @@ function getBodyForm() {
             "sterrenhemelPrijs": `${getSterrenhemelPrijs(getSterrenhemel())}`,
             "tweekleurenPrijs": _pricesAfterDiscount.tweeKleuren.price,
             "meteorietenregenPrijs": _pricesAfterDiscount.tweeKleuren.price,
-            "totalePrijs": `${getTotalPrice()}`
+            "totaalPrijs": `${getTotalPrice()}`
         };
 }
 

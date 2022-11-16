@@ -64,14 +64,15 @@ document.querySelector("#bericht button[name='volgende']")
     .addEventListener("click", (e) => {
         navigateWithHidden("#bericht", "#controle", e);
         addClassForBarAnimation("#controle .bar div", "forward")
+        renderControleerGegevens();
     });
 document.querySelector("#controle button[name='terug']")
     .addEventListener("click", (e) => {
         navigateWithHidden("#controle", "#bericht", e);
         addClassForBarAnimation("#bericht .bar div", "backward");
+        controlIfRequiredInputsAreFilledIn();
     });
 document.querySelector("#controle button[name='submit']")
     .addEventListener("click", (e) => {
         //TODO: submit form
-        console.table(getBodyForm());
     });

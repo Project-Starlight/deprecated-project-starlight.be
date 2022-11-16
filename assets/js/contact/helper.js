@@ -31,12 +31,14 @@ function addClassForBarAnimation(selectors,direction){
         if (classList.contains("forward-bar-animation")) classList.replace("forward-bar-animation","backward-bar-animation");
     }
 }
+function controlIfRequiredInputsAreFilledIn(){
+    
+}
 
 function showNoConfigurationYet() {
     const $configuratieDiv = document.querySelector("#configuratie-div").classList
     if (!$configuratieDiv.contains("hidden")){
         $configuratieDiv.add("hidden");
     }
-    //TODO: Show screen when there is no configuration yet
 }
 
