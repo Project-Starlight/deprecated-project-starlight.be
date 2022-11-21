@@ -1,6 +1,7 @@
 "use strict";
 class ConfiguratieHelper{
     constructor() {
+      // TODO document why this constructor is empty
     }
 
     toggleAriaDisabled(sterrenhemelBoxOrOptieBox){

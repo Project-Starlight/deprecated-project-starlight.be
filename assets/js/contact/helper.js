@@ -1,11 +1,11 @@
 "use strict";
-function showConfiguration(){
+function showConfiguration() {
     const configuratie = loadFromStorage("configuratie");
-    if (configuratie === null){
+    if (configuratie === null) {
         showNoConfigurationYet();
     } else {
         const $configuratieDiv = document.querySelector("#configuratie-div").classList
-        if ($configuratieDiv.contains("hidden")){
+        if ($configuratieDiv.contains("hidden")) {
             $configuratieDiv.remove("hidden");
         }
         document.querySelector("#no-configuratie-li button").innerHTML = "Configureer configuratie!";
@@ -32,7 +32,7 @@ function addClassForBarAnimation(selectors,direction){
     }
 }
 function controlIfRequiredInputsAreFilledIn(){
-    
+    //TODO
 }
 
 function showNoConfigurationYet() {

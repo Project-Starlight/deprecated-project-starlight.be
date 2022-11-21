@@ -21,10 +21,10 @@ document.querySelectorAll("#opties .opties-box")
     });
 document.querySelector("button[name='contact']").addEventListener("click",(e)=>{
     if(loadFromStorage("byContactButton") === true){
-        navigateToDifferentHtmlPage("contact.html");
+        navigateToDifferentHtmlPage("../contact/index.html");
         saveToStorage("queryToBeShown","#configuratie");
     } else {
-        navigateToDifferentHtmlPage("contact.html");
+        navigateToDifferentHtmlPage("../contact/index.html");
         saveToStorage("queryToBeShown","#persoonlijke-gegevens")
     }
 })

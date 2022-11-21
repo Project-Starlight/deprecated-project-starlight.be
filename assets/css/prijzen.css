@@ -16,6 +16,7 @@ section#sterrenhemel .flex-container {
 }
 
 section#sterrenhemel .sterrenhemel-box {
+    cursor: pointer;
     border: solid white 3px;
     border-radius: 1rem;
     padding: 1rem;
@@ -61,6 +62,7 @@ section#opties .flex-container {
 }
 
 section#opties .opties-box {
+    cursor: pointer;
     width: 30rem;
     border: solid white 3px;
     padding: 1rem;

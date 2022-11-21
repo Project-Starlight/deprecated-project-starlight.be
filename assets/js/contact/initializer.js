@@ -18,6 +18,7 @@ document.querySelector("#contactgegevens button[name='terug']")
 document.querySelector("#onze-gegevens button[name='formulier']")
     .addEventListener("click", (e) => {
         navigateWithHidden("#onze-gegevens", "#persoonlijke-gegevens", e);
+        addClassForBarAnimation("#persoonlijke-gegevens .bar div","forward");
     });
 document.querySelector("#persoonlijke-gegevens button[name='terug']")
     .addEventListener("click", (e) => {
@@ -43,7 +44,7 @@ document.querySelector("#auto-gegevens button[name='volgende']")
 document.querySelector("#configuratie #no-configuratie-li button[name='configuratie']")
     .addEventListener("click", (e) => {
         saveToStorage("byContactButton",true);
-        navigateToDifferentHtmlPage("prijzen.html");
+        navigateToDifferentHtmlPage("index.html");
     });
 document.querySelector("#configuratie button[name='terug']")
     .addEventListener("click", (e) => {
@@ -74,5 +75,6 @@ document.querySelector("#controle button[name='terug']")
     });
 document.querySelector("#controle button[name='submit']")
     .addEventListener("click", (e) => {
-        //TODO: submit form
+        e.preventDefault();
+        postContactForm2();
     });

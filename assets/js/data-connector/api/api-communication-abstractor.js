@@ -1,6 +1,6 @@
 "use strict";
 
-function fetchFromServer(url, httpVerb, requestBody){
+function fetchFromServer(url, httpVerb, requestBody) {
     const options = buildOptions(httpVerb, requestBody);
     return fetch(url, options)
         .then(res => res.json())
@@ -13,19 +13,19 @@ function fetchFromServer(url, httpVerb, requestBody){
         });
 }
 
-    function buildOptions(method, body) {
-        const options = {};
+function buildOptions(method, body) {
+    const options = {};
 
-        options.method = method;
-        options.headers = {
-            "Content-Type": "application/json"
-        };
+    options.method = method;
+    options.headers = {
+        "Content-Type": "application/json"
+    };
 
-        if (body) {
-            options.body = JSON.stringify(body);
-        }
-
-        return options;
+    if (body) {
+        options.body = JSON.stringify(body);
     }
+
+    return options;
+}
 
 
