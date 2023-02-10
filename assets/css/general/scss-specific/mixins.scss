@@ -1,0 +1,25 @@
+@use "colors";
+
+@mixin button{
+  color: colors.$white;
+  background-color: colors.$black;
+
+  border-radius: 0.5rem;
+  border: solid colors.$white 0.1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+@mixin center-flex(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex($flex-direction: row, $justify-content: flex-start,$align-items: normal,$gap: 0){
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap + rem;
+}

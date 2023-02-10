@@ -1,0 +1,45 @@
+@media only screen and (max-width: 900px) {
+  main .smaller-format section {
+    p {
+      width: 80%;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    border-top: 1px solid white;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 80%;
+        border-radius: 1rem;
+        box-shadow: 0 0 5px white;
+      }
+    }
+
+    .section-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  @supports (padding:max(0px)) {
+    body, header, footer {
+      padding-left: min(0vmin, env(safe-area-inset-left));
+      padding-right: min(0vmin, env(safe-area-inset-right));
+    }
+  }
+}

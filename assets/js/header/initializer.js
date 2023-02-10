@@ -1,11 +1,8 @@
 "use strict";
-document.querySelector("header #icons").addEventListener('click', e => {
-    social_navigation(e);
-});
-document.querySelector("header #smaller-format-icons").addEventListener('click', e => {
-    social_navigation(e);
-});
-document.querySelector("header h1").addEventListener('click', () => {
+addEventListenerAllClick("header #icons",social_navigation);
+addEventListenerAllClick("header #smaller-format-icons",social_navigation);
+
+document.querySelector("header nav img").addEventListener('click', () => {
     navigateToDifferentHtmlPage("../index.html");
 });
 document.querySelector(".smaller-format svg").addEventListener("click", (e) => {
@@ -29,10 +26,23 @@ function social_navigation(e) {
             break;
     }
 }
+
 function navigateArrowForSmallerFormat(e) {
     e.preventDefault();
     const $smallerFormatNavClassList = document.querySelector("#smaller-format-nav").classList;
     const $smallerFormatArrowClassList = document.querySelector(".smaller-format svg").classList;
+    popupDivSwitch();
     switchHidden($smallerFormatNavClassList);
     switchDirectionArrow($smallerFormatArrowClassList)
+}
+
+function popupDivSwitch(){
+    const $navPopup = document.querySelector(".nav-popup");
+    if ($navPopup == null){
+        const navPopupElement = document.createElement("div");
+        navPopupElement.classList.add('nav-popup');
+        document.body.insertBefore(navPopupElement,document.querySelector("header"));
+    } else {
+        $navPopup.remove();
+    }
 }

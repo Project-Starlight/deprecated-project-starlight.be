@@ -1,0 +1,290 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+body, html {
+  background-color: rgb(0, 0, 0);
+  background-size: 30%;
+  color: rgb(255, 255, 255);
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.smaller-format {
+  display: none;
+}
+
+header nav[aria-label=main-menu] a[href="#"] {
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+  .smaller-format {
+    display: block;
+  }
+  .bigger-format {
+    display: none;
+  }
+}
+@media only screen and (min-width: 901px) {
+  header nav {
+    padding: 2rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0rem;
+  }
+  header nav img {
+    height: 7rem;
+    width: auto;
+  }
+  header nav img:hover {
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+    cursor: pointer;
+  }
+  header nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  header nav a:hover {
+    text-shadow: 0 0 7px rgb(255, 255, 255);
+    border-bottom: 0.1rem solid rgb(255, 255, 255);
+  }
+  header nav #icons {
+    display: inline-grid;
+  }
+  header nav #icons .phone {
+    transform: rotate(90deg);
+  }
+  header nav #icons svg {
+    fill: rgb(255, 255, 255);
+    width: 2rem;
+    height: 2rem;
+    margin: 0.2rem;
+    transition: text-shadow 400ms;
+    text-align: center;
+  }
+  header nav #icons svg:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+  }
+}
+@media only screen and (max-width: 900px) {
+  .nav-popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+  }
+  header .smaller-format.hidden {
+    display: none;
+  }
+  header .smaller-format h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  header .smaller-format p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  header .smaller-format #picture-and-menu-bars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  header .smaller-format #picture-and-menu-bars img {
+    margin: 1rem 0;
+    height: 10rem;
+    width: auto;
+  }
+  header .smaller-format #picture-and-menu-bars #smaller-format-menu-svg {
+    width: 2rem;
+    height: auto;
+    fill: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  header .smaller-format #smaller-format-nav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .smaller-format #smaller-format-nav.hidden {
+    display: none;
+  }
+  header .smaller-format #smaller-format-nav a {
+    margin: 1rem 0;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  header .smaller-format #smaller-format-nav a:hover {
+    border-bottom: solid rgb(255, 255, 255) 0.1rem;
+  }
+  header .smaller-format #smaller-format-nav #smaller-format-icons {
+    display: flex;
+    justify-content: center;
+  }
+  header .smaller-format #smaller-format-nav #smaller-format-icons svg {
+    margin: 1rem 0.5rem 0 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    fill: rgb(255, 255, 255);
+  }
+  header .smaller-format #smaller-format-nav #smaller-format-icons svg.phone {
+    transform: rotate(90deg);
+  }
+  header .smaller-format #smaller-format-nav #smaller-format-icons svg:hover {
+    cursor: pointer;
+  }
+}
+@keyframes menuRotationAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.popup {
+  display: hidden; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.stop-scrolling {
+  overflow: hidden;
+}
+
+.popup-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 50px white;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.popup-content h2 {
+  font-size: 3rem;
+  margin: 0 0 20px 0;
+}
+.popup-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.popup-content button {
+  color: white;
+  background-color: black;
+  border-radius: 0.5rem;
+  border: solid white 0.1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.popup-content button:hover {
+  text-shadow: 0 0 5px white;
+  cursor: pointer;
+}
+
+#disclaimer {
+  position: relative;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 2;
+}
+#disclaimer p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*general files to add*/
+/*bigger format*/
+/*smaller format*/
+/*remove this line when out of beta!*/
+
+/*# sourceMappingURL=explore-the-stars.css.map */

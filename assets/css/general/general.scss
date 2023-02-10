@@ -1,0 +1,30 @@
+@use 'scss-specific/colors';
+
+body, html {
+  background-color: colors.$black;
+  background-size: 30%;
+  color: colors.$white;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.smaller-format {
+  display: none;
+}
+
+header nav[aria-label="main-menu"] a[href="#"] {
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+  .smaller-format {
+    display: block;
+  }
+
+  .bigger-format {
+    display: none;
+  }
+}

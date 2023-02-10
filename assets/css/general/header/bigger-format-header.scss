@@ -1,0 +1,57 @@
+@use "../scss-specific/colors";
+@use "../scss-specific/mixins";
+
+@media only screen and (min-width: 901px) {
+
+  header {
+    nav {
+      padding: 2rem 1rem 0 1rem;
+
+      @include mixins.flex(row, space-around, center, 0);
+
+      img {
+        height: 7rem;
+        width: auto;
+
+        &:hover {
+          filter: drop-shadow(0px 0px 5px colors.$white);
+          cursor: pointer;
+        }
+      }
+
+      a {
+        color: colors.$white;
+        text-decoration: none;
+        font-size: 2rem;
+
+        &:hover {
+          text-shadow: 0 0 7px colors.$white;
+          border-bottom: 0.1rem solid colors.$white;
+        }
+      }
+
+      #icons {
+        display: inline-grid;
+
+        .phone {
+          transform: rotate(90deg);
+        }
+
+        svg {
+          fill: colors.$white;
+          width: 2rem;
+          height: 2rem;
+          margin: 0.2rem;
+
+          &:hover {
+            cursor: pointer;
+            filter: drop-shadow(0 0 5px colors.$white);
+          }
+
+          transition: text-shadow 400ms;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

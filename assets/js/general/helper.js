@@ -12,6 +12,7 @@ function prettyPrice(price, extraOption = false) {
         return `+€${price}`;
     }
 }
+
 function getExtraOptionPrice(option) {
     switch (option) {
         case "twee-kleuren-optie":
@@ -39,4 +40,12 @@ function getConfigurationHtml(configuratie) {
         html += `<li>${optie} (${prettyPrice(getExtraOptionPrice(optie), true)})</li>`;
     })
     return html;
+}
+
+function addEventListenerAllClick(query, functionName) {
+    document.querySelectorAll(query).forEach((element) => {
+        element.addEventListener("click", (e) => {
+            functionName(e);
+        });
+    });
 }

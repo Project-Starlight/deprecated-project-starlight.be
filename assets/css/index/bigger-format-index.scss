@@ -1,0 +1,89 @@
+/*add scss files that only consist out of css*/
+@use "../general/header/bigger-format-header";
+
+/*add scss files that only consist of css that you can use on different places*/
+@use '../general/scss-specific/mixins';
+@use "../general/scss-specific/colors";
+
+/*add scss files that only consist out of keyframes*/
+@use "keyframes";
+
+/*file specific scss*/
+@media only screen and (min-width: 901px) {
+  main {
+    color: colors.$white;
+    width: 90%;
+    margin: auto;
+
+    section {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .informatie {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      .button {
+        align-self: center;
+        color: white;
+        background-color: black;
+        border-radius: 0.5rem;
+        border: solid white 0.1rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+
+        margin: 2rem 0;
+        width: inherit;
+        transition: text-shadow 400ms;
+
+        &:hover {
+          cursor: pointer;
+          text-shadow: 0 0 5px #fff;
+        }
+      }
+
+      figure {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          box-shadow: 0 0 8px white;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.left-to-right-animation {
+  animation: left-to-right 2s;
+}
+
+.right-to-left-animation {
+  animation: right-to-left 2s;
+
+}

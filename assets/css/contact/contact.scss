@@ -1,0 +1,14 @@
+/*general files to add*/
+@use "../general/reset";
+@use '../general/general';
+
+/*bigger format*/
+@use '../general/header/bigger-format-header';
+
+/*smaller format*/
+@use '../general/header/smaller-format-header';
+
+/*remove this line when out of beta!*/
+@use '../general/beta';
+
+@use "screen";

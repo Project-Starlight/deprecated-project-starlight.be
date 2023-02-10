@@ -1,0 +1,105 @@
+@use "../scss-specific/colors";
+
+@media only screen and (max-width: 900px) {
+  .nav-popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  header {
+
+    .smaller-format {
+      &.hidden{
+        display: none;
+      }
+      h2{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      #picture-and-menu-bars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        img {
+          margin: 1rem 0;
+          height: 10rem;
+          width: auto;
+        }
+
+        #smaller-format-menu-svg {
+          width: 2rem;
+          height: auto;
+          fill: colors.$white;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      #smaller-format-nav {
+        &.hidden {
+          display: none;
+        }
+
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          margin: 1rem 0;
+          color: colors.$white;
+          text-decoration: none;
+          font-size: 2rem;
+
+          &:hover {
+            border-bottom: solid colors.$white 0.1rem;
+          }
+        }
+
+        #smaller-format-icons {
+          display: flex;
+          justify-content: center;
+          svg {
+            &.phone{
+              transform: rotate(90deg);
+            }
+            margin: 1rem 0.5rem 0 0.5rem;
+            width: 2rem;
+            height: 2rem;
+            fill: colors.$white;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes menuRotationAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+
+}

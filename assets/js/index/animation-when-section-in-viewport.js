@@ -6,7 +6,6 @@ function addAnimationClasses(entry) {
 
     const leftToRightClassName = "left-to-right-animation";
     const rightToLeftClassName = "right-to-left-animation"
-
     if (target.querySelector(".links")) {
         informatieClassList.add(leftToRightClassName);
         figureClassList.add(rightToLeftClassName);

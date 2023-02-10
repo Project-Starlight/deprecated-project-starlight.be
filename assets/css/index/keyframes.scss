@@ -1,0 +1,21 @@
+@keyframes left-to-right {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-to-left {
+  0% {
+    opacity: 0.5;
+    transform: translateX(+50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

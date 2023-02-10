@@ -1,0 +1,20 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "The creation of the project-starlight website and all it's features!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michielez/Starlight-M-A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michielez/Starlight-M-A/issues"
+  },
+  "homepage": "https://github.com/Michielez/Starlight-M-A#readme"
+}

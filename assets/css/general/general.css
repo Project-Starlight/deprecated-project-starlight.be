@@ -1,29 +1,29 @@
 body, html {
-    background-color: black;
-    background-image: url("../../media/starrySky.png");
-    background-size: 30%;
-    color: white;
-    height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-size: 30%;
+  color: rgb(255, 255, 255);
+  height: 100%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .smaller-format {
-    display: none;
+  display: none;
 }
 
-header nav[aria-label="main-menu"] a[href="#"] {
-    border-bottom: 1px solid white;
+header nav[aria-label=main-menu] a[href="#"] {
+  border-bottom: 1px solid white;
 }
 
 @media only screen and (max-width: 900px) {
-    .smaller-format {
-        display: block;
-    }
-
-    .bigger-format {
-        display: none;
-    }
+  .smaller-format {
+    display: block;
+  }
+  .bigger-format {
+    display: none;
+  }
 }
+
+/*# sourceMappingURL=general.css.map */

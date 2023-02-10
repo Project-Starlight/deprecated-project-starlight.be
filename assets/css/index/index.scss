@@ -1,0 +1,14 @@
+/*general files to add*/
+@use "../general/reset";
+@use '../general/general';
+
+/*bigger format*/
+@use 'bigger-format-index';
+@use 'bigger-format-index-header';
+
+/*smaller format*/
+@use 'smaller-format-index';
+@use 'smaller-format-index-header';
+
+/*remove this line when out of beta!*/
+@use '../general/beta';
