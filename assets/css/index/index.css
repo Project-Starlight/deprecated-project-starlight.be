@@ -1,3 +1,4 @@
+/*general files to add*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -61,6 +62,7 @@ body, html {
   background-size: 30%;
   color: rgb(255, 255, 255);
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .hidden {
@@ -71,7 +73,7 @@ body, html {
   display: none;
 }
 
-header nav[aria-label=main-menu] a[href="#"] {
+header nav a[href="#"] {
   border-bottom: 1px solid white;
 }
 
@@ -83,6 +85,8 @@ header nav[aria-label=main-menu] a[href="#"] {
     display: none;
   }
 }
+/*bigger format*/
+/*add scss files that only consist out of css*/
 @media only screen and (min-width: 901px) {
   header nav {
     padding: 2rem 1rem 0 1rem;
@@ -128,6 +132,8 @@ header nav[aria-label=main-menu] a[href="#"] {
     filter: drop-shadow(0 0 5px rgb(255, 255, 255));
   }
 }
+/*add scss files that only consist of css that you can use on different places*/
+/*add scss files that only consist out of keyframes*/
 @keyframes left-to-right {
   0% {
     opacity: 0.5;
@@ -148,9 +154,6 @@ header nav[aria-label=main-menu] a[href="#"] {
     transform: translateX(0);
   }
 }
-/*add scss files that only consist out of css*/
-/*add scss files that only consist of css that you can use on different places*/
-/*add scss files that only consist out of keyframes*/
 /*file specific scss*/
 @media only screen and (min-width: 901px) {
   main {
@@ -249,6 +252,7 @@ header nav[aria-label=main-menu] a[href="#"] {
     display: inline;
   }
 }
+/*smaller format*/
 @media only screen and (max-width: 900px) {
   main .smaller-format section {
     border-top: 1px solid white;
@@ -382,6 +386,7 @@ header nav[aria-label=main-menu] a[href="#"] {
     transform: rotate(180deg);
   }
 }
+/*remove this line when out of beta!*/
 .popup {
   display: hidden; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -447,10 +452,5 @@ header nav[aria-label=main-menu] a[href="#"] {
   text-align: center;
   font-size: 2rem;
 }
-
-/*general files to add*/
-/*bigger format*/
-/*smaller format*/
-/*remove this line when out of beta!*/
 
 /*# sourceMappingURL=index.css.map */

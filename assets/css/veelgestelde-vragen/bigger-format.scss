@@ -2,20 +2,39 @@
   display: none;
 }
 
-nav:first-of-type a[href="#"] {
-  border-bottom: 1px solid white;
-}
-
 h2 {
   text-align: center;
   font-size: 3.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+#subject-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a {
+    margin: 1rem 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid white;
+    transition: all 0.5s linear;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+  }
 }
 
 section {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 2rem;
 
   h3 {
     text-align: center;

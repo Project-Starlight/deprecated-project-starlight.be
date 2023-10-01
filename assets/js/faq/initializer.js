@@ -1,16 +1,16 @@
 "use strict";
 loadQuestions();
-
-function navigateArrowForFaqPage(e) {
-    e.preventDefault();
-    let $faqArrowClassList;
-    if (e.target.closest("svg") == null) {
-        $faqArrowClassList = e.currentTarget.querySelector("svg").classList;
-    } else {
-        $faqArrowClassList = e.target.closest("svg").classList;
-    }
-    switchDirectionArrow($faqArrowClassList);
-    e.target.closest(".outer-wrapper").querySelector(".antwoord").classList.toggle("hidden");
+function loadQuestions() {
+    const faq = fetchQuestions();
+    faq.then((data) => {
+        for (const product of data.producten) {
+            createProductSections(product);
+            createNavElement(product);
+        }
+        makeQuestionsClickable();
+    }).catch((error) => {
+        console.log(error);
+    });
 }
 
 async function fetchQuestions() {
@@ -19,9 +19,9 @@ async function fetchQuestions() {
     return await response.json();
 }
 
-function createQuestionElement(product) {
-    const id = product.naam.replace(/\s+/g, '_').toLowerCase();
-    let productHTML = `<section id="${id}"><div class="section-wrapper"><h3>${product.naam}</h3>`
+function createProductSections(product) {
+    const id = getProductIdFromName(product);
+    let productHTML = `<section id="section-${id}"><div class="section-wrapper"><h3>${product.naam}</h3>`
 
     for (const vraag of product.vragen) {
         productHTML += `
@@ -38,20 +38,18 @@ function createQuestionElement(product) {
         </div>`;
     }
     productHTML += "</div></section>";
-    return productHTML;
+    document.querySelector("main").insertAdjacentHTML("beforeend", productHTML);
 }
 
-function loadQuestions() {
-    const faq = fetchQuestions();
-    faq.then((data) => {
-        const mainElement = document.querySelector("main");
-        for (const product of data.producten) {
-            mainElement.insertAdjacentHTML("beforeend", createQuestionElement(product));
-        }
-        makeQuestionsClickable();
-    }).catch((error) => {
-        console.log(error);
-    });
+function createNavElement(product){
+    const id = getProductIdFromName(product);
+    const navHTML = `<a href="#section-${id}">${product.naam}</a>`;
+    document.querySelector("#subject-selector").insertAdjacentHTML("beforeend", navHTML);
+
+}
+
+function getProductIdFromName(product) {
+    return product.naam.replace(/\s+/g, '_').toLowerCase();
 }
 
 function makeQuestionsClickable() {
@@ -60,4 +58,16 @@ function makeQuestionsClickable() {
             navigateArrowForFaqPage(e);
         });
     });
+}
+
+function navigateArrowForFaqPage(e) {
+    e.preventDefault();
+    let $faqArrowClassList;
+    if (e.target.closest("svg") == null) {
+        $faqArrowClassList = e.currentTarget.querySelector("svg").classList;
+    } else {
+        $faqArrowClassList = e.target.closest("svg").classList;
+    }
+    switchDirectionArrow($faqArrowClassList);
+    e.target.closest(".outer-wrapper").querySelector(".antwoord").classList.toggle("hidden");
 }

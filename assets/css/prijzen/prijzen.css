@@ -1,3 +1,4 @@
+/*general files to add*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -61,6 +62,7 @@ body, html {
   background-size: 30%;
   color: rgb(255, 255, 255);
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .hidden {
@@ -71,7 +73,7 @@ body, html {
   display: none;
 }
 
-header nav[aria-label=main-menu] a[href="#"] {
+header nav a[href="#"] {
   border-bottom: 1px solid white;
 }
 
@@ -83,6 +85,7 @@ header nav[aria-label=main-menu] a[href="#"] {
     display: none;
   }
 }
+/*bigger format*/
 section#sterrenhemel h2 {
   font-size: 3rem;
   text-align: center;
@@ -291,6 +294,7 @@ button.button:hover {
     filter: drop-shadow(0 0 5px rgb(255, 255, 255));
   }
 }
+/*smaller format*/
 @media only screen and (max-width: 900px) {
   .nav-popup {
     position: absolute;
@@ -379,6 +383,7 @@ button.button:hover {
     transform: rotate(180deg);
   }
 }
+/*remove this line when out of beta!*/
 .popup {
   display: hidden; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -444,10 +449,5 @@ button.button:hover {
   text-align: center;
   font-size: 2rem;
 }
-
-/*general files to add*/
-/*bigger format*/
-/*smaller format*/
-/*remove this line when out of beta!*/
 
 /*# sourceMappingURL=prijzen.css.map */
