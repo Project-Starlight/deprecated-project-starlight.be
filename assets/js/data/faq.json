@@ -1,0 +1,62 @@
+{
+  "producten": [
+    {
+      "naam": "Sterrenhemel",
+      "vragen": [
+        {
+          "vraag": "Hoe kan je de sterrenhemel bedienen?",
+          "antwoord": "De sterren kunnen aan-en uitgeschakeld worden via de afstandsbediening of app op uw telefoon. Ze kunnen worden geregeld in kleur, helderheid en snelheid van het twinkle effect. Ook zijn deze aan het contact verbonden van de auto en zal dit dus automatisch aan-en uitgaan wanneer u de sleutel van uw auto omdraait."
+        },
+        {
+          "vraag": "Blijft het originele dak behouden?",
+          "antwoord": "Ja, het originele dak blijft behouden, de installatie wordt hierboven geïnstalleerd en is dus uit het zicht."
+        },
+        {
+          "vraag": "Hoe zit dat met de garantie?",
+          "antwoord": "Wij bieden volledige garantie op de sterrenhemel en lossen alle eventuele defecten kosteloos op. Over de garantie van de auto bij de garage kunnen wij ons echter niet uitspreken, dit staat in de overeenkomst van de verkoop. Dit zijn dezelfde regels voor als u uw auto laat tunen of bij een andere garage laat repareren."
+        },
+        {
+          "vraag": "Zijn de sterren zichtbaar wanneer ze niet oplichten?",
+          "antwoord": "Dit hang vooral af van de kleur van het dak, bij een donker interieur zijn ze praktisch onzichtbaar. Bij een lichter kleur kunnen de sterren eventueel licht zichtbaar zijn bij daglicht. Als u de sterrenhemel laat aan staan zijn ze bijna in alle omstandigheden onzichtbaar."
+        },
+        {
+          "vraag": "Is het mogelijk om een installatie te bekijken op voorhand?",
+          "antwoord": "Het is zeker mogelijk om op voorhand eens samen te komen zodat u een reeds geïnstalleerde sterrenhemel kunt bekijken. Dit is zeker niet verplicht maar biedt misschien wat meer zekerheid."
+        },
+        {
+          "vraag": "Wat is een twinkle effect?",
+          "antwoord": "Met dit effect zullen de sterren individueel variëren in helderheid en een veel dynamischer effect geven."
+        },
+        {
+          "vraag": "Is het mogelijk om een logo te integreren in het dak?",
+          "antwoord": "Het is zeker mogelijk om een custom logo in het dak te verwerken, dit kan besproken worden bij de voorbereiding van de installatie."
+        },
+        {
+          "vraag": "Wat is een meteoriet?",
+          "antwoord": "Dit is een reeks sterren die in 1 lijn geplaatst staan en zo een vallende ster/meteoor voorstellen. De frequentie waarop dit effect verschijnt kan zelf geregeld worden."
+        },
+        {
+          "vraag": "Zal mijn dak hierdoor warmer komen?",
+          "antwoord": "Doordat wij met fiber optic kabels werken wordt het licht aan het begin van de kabel doorgegeven naar het einde van de kabel. De sterren geven dus geen warmte af en kunnen worden aangeraakt met uw hand. De driver met het licht kan wel wat warmer komen, maar deze proberen we weg te werken in het dak en als dit niet mogelijk is dan blijft de driver in de koffer. De driver neemt dus weinig tot geen plaats in beslag."
+        },
+        {
+          "vraag": "Kan ik later de sterrenhemel laten verwijderen?",
+          "antwoord": "Dit hangt af welke auto u heeft en of wij nog een dak kunnen opnieuw aankopen. Als dit wel het geval is kunnen wij terug een orgineel dak terug steken zonder sterrenhemel, maar dit is niet altijd mogelijk."
+        }
+      ]
+    },
+    {
+      "naam": "Ambient Lighting",
+      "vragen": [
+        {
+          "vraag": "Hoe kan ik de ambient lighting bedienen?",
+          "antwoord": "U kunt de ambient lighting bedienen via een app op uw smartphone. Het systeem onthoudt automatisch uw laatst opgeslagen instelling. Dus wanneer u de auto opnieuw start, zal het de eerder ingestelde configuratie toepassen."
+        },
+        {
+          "vraag": "Hoe lang duurd de installatie?",
+          "antwoord": "De installatietijd van ambient lighting is 1-2 dagen afhankelijk van uw wagen. Stuur ons gerust een bericht met uw wagen en wij zullen u meer details geven."
+        }
+      ]
+    }
+  ]
+}

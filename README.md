@@ -1,2 +1,6 @@
-# Project-Starlight
-The creation of the project-starlight website and all it's features!
+# Project Starlight - Front-end
+
+## Project setup
+```
+npm install
+```

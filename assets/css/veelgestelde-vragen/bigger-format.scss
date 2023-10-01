@@ -1,66 +1,80 @@
-#faq .hidden{
+#faq .hidden {
   display: none;
 }
-nav:first-of-type a[href="#"]{
+
+nav:first-of-type a[href="#"] {
   border-bottom: 1px solid white;
 }
-h2{
+
+h2 {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 5rem;
 }
-section{
+
+section {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-section div#section-wrapper{
-  background-color: rgba(0,0,0,0.7);
-  border-radius: 1rem;
-  box-shadow: 0 0 5px white;
-  width: 50%;
-  padding: 2rem;
-  margin-bottom: 5rem;
-}
-section div div.outer-wrapper{
-  margin-bottom: 1rem;
-}
-section .vraag{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid white;
-}
-section .vraag h3{
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-section .vraag svg{
-  fill: white;
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  transition: transform 1s linear;
-}
-section .vraag svg.down{
-  transform: rotate(0deg);
-}
-section .vraag svg.up{
-  transform: rotate(180deg);
-}
-section .antwoord{
-  margin: 2rem 0;
-}
-section .antwoord p{
-  font-size: 1.5rem;
-}
-@media only screen and (max-width: 850px) {
-  section .vraag h3{
-    font-size: 1.5rem;
+
+  h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
   }
-  section .antwoord p{
-    font-size: 1rem;
+  div.section-wrapper {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    box-shadow: 0 0 5px white;
+    width: 80%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  div div.outer-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .vraag {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid white;
+
+    svg {
+      fill: white;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: transform 1s linear;
+
+      &.down {
+        transform: rotate(0deg);
+      }
+
+      &.up {
+        transform: rotate(180deg);
+      }
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .antwoord {
+    margin: 2rem 0;
+    p {
+      font-size: 1.5rem;
+    }
   }
 }

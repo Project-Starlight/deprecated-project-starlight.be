@@ -1,3 +1,4 @@
+/*general files to add*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -83,6 +84,7 @@ header nav[aria-label=main-menu] a[href="#"] {
     display: none;
   }
 }
+/*bigger format*/
 #faq .hidden {
   display: none;
 }
@@ -102,20 +104,23 @@ section {
   align-items: center;
   flex-direction: column;
 }
-
-section div#section-wrapper {
+section h3 {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+section div.section-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   box-shadow: 0 0 5px white;
-  width: 50%;
+  width: 80%;
   padding: 2rem;
   margin-bottom: 5rem;
 }
-
 section div div.outer-wrapper {
   margin-bottom: 1rem;
 }
-
 section .vraag {
   width: 100%;
   display: flex;
@@ -124,12 +129,6 @@ section .vraag {
   padding-bottom: 0.7rem;
   border-bottom: 1px solid white;
 }
-
-section .vraag h3 {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
 section .vraag svg {
   fill: white;
   width: 2rem;
@@ -137,31 +136,26 @@ section .vraag svg {
   cursor: pointer;
   transition: transform 1s linear;
 }
-
 section .vraag svg.down {
   transform: rotate(0deg);
 }
-
 section .vraag svg.up {
   transform: rotate(180deg);
 }
-
+section .vraag h4 {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+section .vraag:hover {
+  cursor: pointer;
+}
 section .antwoord {
   margin: 2rem 0;
 }
-
 section .antwoord p {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 850px) {
-  section .vraag h3 {
-    font-size: 1.5rem;
-  }
-  section .antwoord p {
-    font-size: 1rem;
-  }
-}
 @media only screen and (min-width: 901px) {
   header nav {
     padding: 2rem 1rem 0 1rem;
@@ -207,6 +201,7 @@ section .antwoord p {
     filter: drop-shadow(0 0 5px rgb(255, 255, 255));
   }
 }
+/*smaller format*/
 @media only screen and (max-width: 900px) {
   .nav-popup {
     position: absolute;
@@ -295,6 +290,7 @@ section .antwoord p {
     transform: rotate(180deg);
   }
 }
+/*remove this line when out of beta!*/
 .popup {
   display: hidden; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -360,10 +356,5 @@ section .antwoord p {
   text-align: center;
   font-size: 2rem;
 }
-
-/*general files to add*/
-/*bigger format*/
-/*smaller format*/
-/*remove this line when out of beta!*/
 
 /*# sourceMappingURL=veelgestelde-vragen.css.map */
