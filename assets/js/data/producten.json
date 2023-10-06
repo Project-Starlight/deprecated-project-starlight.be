@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Sterrenhemel",
+    "description": "Bij ons staan we vooral bekend om onze prachtige sterrenhemels. Elke sterrenhemel die we creëren wordt zorgvuldig op maat gemaakt, afgestemd op de wensen van onze klanten. Wij streven ernaar om telkens opnieuw de hoogste kwaliteit te leveren, zodat u kunt genieten van een adembenemend stukje hemel in uw eigen wagen.",
+    "images": [{
+      "src": "assets/media/realfotos/horizontal/IMG_9367.png",
+      "alt": "roze sterrenhemel"
+    }]
+  },
+  {
+    "title": "Sfeerverlichting",
+    "description": "Sfeerverlichting in wagens verrijkt de rijervaring door een unieke ambiance te creëren. Onze verlichting past naadloos in elk interieur en biedt een scala aan kleuropties die uw stijl weerspiegelen. Combineer design met functionaliteit en voeg een vleugje luxe toe aan uw wagen met onze hoogwaardige sfeerverlichting.",
+    "images": [{
+      "src": "assets/media/realfotos/horizontal/IMG_9368.png",
+      "alt": ""
+    }]
+  },
+  {
+    "title": "Underglow",
+    "description": "Underglow-verlichting geeft wagens een onderscheidende en dynamische uitstraling. Onze underglow kits zijn ontworpen voor duurzaamheid en stijl, en bieden een spectrum aan kleuren om elke rit spectaculair te maken. Breng een mix van esthetiek en innovatie naar uw voertuig met onze premium underglow-verlichting.",
+    "images": [{
+      "src": "assets/media/realfotos/horizontal/IMG_9369.png",
+      "alt": ""
+    }]
+  },
+  {
+    "title": "Hemel herbekleding",
+    "description": "Herbekleding van dakhemels is de perfecte manier om de binnenkant van uw wagen een frisse en vernieuwde uitstraling te geven. Onze specialisten zorgen voor een naadloze afwerking, met een keuze uit hoogwaardige materialen die passen bij uw persoonlijke stijl. Laat uw wagen weer stralen van binnenuit met onze professionele herbekleding van dakhemels.",
+    "images": [{
+      "src": "assets/media/realfotos/horizontal/IMG_9370.png",
+      "alt": ""
+    }]
+  }
+]

@@ -25,19 +25,6 @@
     <!-- End of Favicon! -->
 </head>
 <body>
-<!-- remove code until next comment when out of beta!-->
-<div class="popup hidden">
-    <div class="popup-content">
-        <h2>Disclaimer:</h2>
-        <p>De website is nog in beta versie. Hierdoor kunnen bepaalde features nog niet geïmplementeerd zijn of niet
-            soepel lopen!</p>
-        <button>Doorgaan</button>
-    </div>
-</div>
-<div id="disclaimer">
-    <p>Disclaimer: De website is nog in development. Er kunnen zich nog bugs bevinden!</p>
-</div>
-<!-- end of what you should remove for the beta! -->
 <header>
     <div class="bigger-format">
         <nav>
@@ -71,10 +58,10 @@
             </div>
         </nav>
         <section>
-            <h1>Wij installeren uw sterrenhemel op maat!</h1>
+            <h1>Wij upgraden uw interieur op maat!</h1>
             <ul>
                 <li>Lage prijs / hoge kwaliteit -&nbsp;</li>
-                <li>1 dag installatie -&nbsp;</li>
+                <li>snelle installatie -&nbsp;</li>
                 <li>verschillende opties</li>
             </ul>
         </section>
@@ -89,8 +76,8 @@
                 <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
             </svg>
         </div>
-        <h2>Wij installeren uw sterrenhemel op maat!</h2>
-        <p>Lage prijs / hoge kwaliteit - 1 dag installatie - verschillende opties</p>
+        <h2>Wij upgraden uw interieur op maat!</h2>
+        <p>Lage prijs / hoge kwaliteit - snelle installatie - verschillende opties</p>
         <nav aria-label="smaller-format-main-menu" id="smaller-format-nav" class="hidden">
             <a href="#">Home</a>
             <a href="explore-the-stars/index.html">Explore the stars</a>
@@ -192,99 +179,34 @@
         </section>
     </div>
     <div class="bigger-format">
-        <section class="kleuren">
-            <div class="wrapper animate-in-viewport">
-                <div class="informatie links">
-                    <h3>Kleuren</h3>
-                    <p>U kunt de sterrenhemel elke kleur naar wens geven. Er is ook de mogelijkheid om de kleuren
-                        automatisch te
-                        laten wisselen.</p>
-                    <button data-navigate="contact" class="button">Contacteer ons</button>
+        <template id="template-product-section-links">
+            <section>
+                <div class="wrapper animate-in-viewport">
+                    <div class="informatie links">
+                        <h3></h3>
+                        <p></p>
+                        <button data-navigate="" class="button"></button>
+                    </div>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9367.png" alt="" title="">
-                </figure>
-            </div>
-        </section>
-        <section class="dimbaar">
-            <div class="wrapper animate-in-viewport">
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9368.png" alt="" title="">
-                </figure>
-                <div class="informatie rechts">
-                    <h3>Dimbaar</h3>
-                    <p>De helderheid van de sterrenhemel is volledig verstelbaar. Had u liever een wat heldere
-                        sterrenhemel,
-                        dan
-                        kunnen wij deze ook steken!</p>
-                    <button data-navigate="contact" class="button">Contacteer ons</button>
+            </section>
+        </template>
+        <template id="template-product-section-rechts">
+            <section>
+                <div class="wrapper animate-in-viewport">
+                    <figure>
+                        <img src="assets/media/realfotos/horizontal/IMG_9368.png" alt="" title="">
+                    </figure>
+                    <div class="informatie rechts">
+                        <h3></h3>
+                        <p></p>
+                        <button data-navigate="" class="button"></button>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="twinkle-effect">
-            <div class="wrapper animate-in-viewport">
-                <div class="informatie links">
-                    <h3>Twinkel effect</h3>
-                    <p>Al onze sterrenhemels zijn uitgerust met een "twinkel" effect. Hierdoor komen de sterren tot
-                        leven.</p>
-                    <button data-navigate="contact" class="button">Contacteer ons</button>
-                </div>
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9398.png" alt="" title="">
-                </figure>
-            </div>
-        </section>
-        <section class="twee-kleuren">
-            <div class="wrapper animate-in-viewport">
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9368.png" alt="">
-                </figure>
-                <div class="informatie rechts">
-                    <h3>Twee kleuren (optie)</h3>
-                    <p>Met de twee kleuren optie kan je 2 verschillende kleuren tegelijkertijd aantonen, dit zorgt voor
-                        een mooier effect!</p>
-                    <button data-navigatie="contact" class="button">Contacteer ons</button>
-                </div>
-            </div>
-        </section>
-        <section class="meteorietenregen">
-            <div class="wrapper animate-in-viewport">
-                <div class="informatie links">
-                    <h3>Meteorietenregen (optie)</h3>
-                    <p>Met de meteorietenregen optie krijgt u het effect alsof er vallende sterren door uw sterrenhemel
-                        gaan!</p>
-                    <button data-navigatie="contact" class="button">Contacteer ons</button>
-                </div>
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9408.png" alt="">
-                </figure>
-            </div>
-        </section>
-        <section class="logo">
-            <div class="wrapper animate-in-viewport">
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9389.png" alt="">
-                </figure>
-                <div class="informatie rechts">
-                    <h3>Logo (optie)</h3>
-                    <p>Heeft u een logo die u graag in uw sterrenhemel heeft verwerkt dan kijken we graag samen mee of
-                        dit mogelijk is!</p>
-                    <button data-navigatie="contact" class="button">Contacteer ons</button>
-                </div>
-            </div>
-        </section>
-        <section class="nog-niet-overtuigd">
-            <div class="wrapper animate-in-viewport">
-                <div class="informatie links">
-                    <h3>Nog niet overtuigd?</h3>
-                    <p>Bekijk zeker onze "explore the stars" pagina! Hier kunt u onze verschillende projecten zien!</p>
-                    <button data-navigate="exploreTheStars" class="button">Explore the stars</button>
-                </div>
-                <figure>
-                    <img src="assets/media/realfotos/horizontal/IMG_9408.png" alt="" title="">
-                </figure>
-            </div>
-        </section>
+            </section>
+        </template>
     </div>
 </main>
 </body>
