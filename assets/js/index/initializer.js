@@ -5,7 +5,13 @@ async function fetchProducts() {
     return response.json();
 }
 
-function makeProductTemplate(product, linksOfRechts) {
+function makeBiggerFormatProductTemplate(product,index) {
+    let linksOfRechts;
+    if (index % 2 === 0) {
+        linksOfRechts = "links";
+    } else {
+        linksOfRechts = "rechts";
+    }
     const $template = document.querySelector(`#template-product-section-${linksOfRechts}`);
     const template = $template.content.cloneNode(true);
     template.querySelector("h3").innerText = product.title;
@@ -17,16 +23,24 @@ function makeProductTemplate(product, linksOfRechts) {
     return template;
 }
 
+function makeSmallerFormatProductTemplate(product) {
+    const $template = document.querySelector("#template-product-section-smaller-format");
+    const template = $template.content.cloneNode(true);
+    template.querySelector("h3").innerText = product.title;
+    template.querySelector("img").src = product.images[0].src;
+    template.querySelector("img").alt = product.images[0].alt;
+    template.querySelector("p").innerText = product.description;
+    template.querySelector("button").innerText = "Meer informatie";
+    return template;
+}
+
 function loadProducts() {
     fetchProducts().then((products) => {
         products.forEach((product, index) => {
-            let template;
-            if (index % 2 === 0) {
-                template = makeProductTemplate(product, "links");
-            } else {
-                template = makeProductTemplate(product, "rechts");
-            }
-            document.querySelector("main .bigger-format").appendChild(template);
+            const biggerFormatTemplate = makeBiggerFormatProductTemplate(product, index);
+            const smallerFormatTemplate = makeSmallerFormatProductTemplate(product);
+            document.querySelector("main .bigger-format").appendChild(biggerFormatTemplate);
+            document.querySelector("main .smaller-format").appendChild(smallerFormatTemplate);
         });
         animateSectionWhenInViewport();
     });
