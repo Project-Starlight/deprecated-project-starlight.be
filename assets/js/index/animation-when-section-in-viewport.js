@@ -48,7 +48,6 @@ function animateSectionWhenInViewport() {
     const callback = buildCallback();
     let observer = new IntersectionObserver(callback);
     const animationSections = document.querySelectorAll(".animate-in-viewport");
-    console.log(animationSections);
     animationSections.forEach(section => {
         observer.observe(section);
     })

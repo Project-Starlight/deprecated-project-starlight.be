@@ -18,6 +18,8 @@ function makeBiggerFormatProductTemplate(product,index) {
 
 function createProductSection($template, product) {
     const template = $template.content.cloneNode(true);
+    const productId = createProductId(product);
+    template.querySelector("section").classList.add(productId);
     template.querySelector("h3").innerText = product.title;
     template.querySelector("img").src = product.images[0].src;
     template.querySelector("img").alt = product.images[0].alt;
@@ -26,6 +28,9 @@ function createProductSection($template, product) {
     return template;
 }
 
+function createProductId(product) {
+    return product.title.toLowerCase().replace(" ", "-");
+}
 
 function makeSmallerFormatProductTemplate(product) {
     const $template = document.querySelector("#template-product-section-smaller-format");
@@ -39,6 +44,7 @@ function loadProducts() {
             const smallerFormatTemplate = makeSmallerFormatProductTemplate(product);
             document.querySelector("main .bigger-format").appendChild(biggerFormatTemplate);
             document.querySelector("main .smaller-format").appendChild(smallerFormatTemplate);
+            new carousel(`main .smaller-format .${createProductId(product)}`);
         });
         animateSectionWhenInViewport();
     });
