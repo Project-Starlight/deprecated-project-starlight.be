@@ -1,11 +1,12 @@
 "use strict";
 loadProducts();
+
 async function fetchProducts() {
     const response = await fetch("../assets/js/data/producten.json");
     return response.json();
 }
 
-function makeBiggerFormatProductTemplate(product,index) {
+function makeBiggerFormatProductTemplate(product, index) {
     let linksOfRechts;
     if (index % 2 === 0) {
         linksOfRechts = "links";
@@ -21,8 +22,6 @@ function createProductSection($template, product) {
     const productId = createProductId(product);
     template.querySelector("section").classList.add(productId);
     template.querySelector("h3").innerText = product.title;
-    template.querySelector("img").src = product.images[0].src;
-    template.querySelector("img").alt = product.images[0].alt;
     template.querySelector("p").innerText = product.description;
     template.querySelector("button").innerText = "Meer informatie";
     return template;
@@ -34,7 +33,19 @@ function createProductId(product) {
 
 function makeSmallerFormatProductTemplate(product) {
     const $template = document.querySelector("#template-product-section-smaller-format");
-    return createProductSection($template, product);
+    const template = createProductSection($template, product);
+    product.images.forEach((image) => {
+        const div = document.createElement("div");
+        div.classList.add("slider-single");
+
+        const img = document.createElement("img");
+        img.classList.add("slider-single-image");
+        img.src = image.src;
+        img.alt = image.alt;
+        div.appendChild(img);
+        template.querySelector(`.slider-content`).appendChild(div);
+    });
+    return template;
 }
 
 function loadProducts() {
@@ -44,9 +55,9 @@ function loadProducts() {
             const smallerFormatTemplate = makeSmallerFormatProductTemplate(product);
             document.querySelector("main .bigger-format").appendChild(biggerFormatTemplate);
             document.querySelector("main .smaller-format").appendChild(smallerFormatTemplate);
-            new carousel(`main .smaller-format .${createProductId(product)}`);
         });
         animateSectionWhenInViewport();
+        const swiper = new Swiper('.mySwiper',{});
     });
 }
 

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Michielez/Starlight-M-A/issues"
   },
-  "homepage": "https://github.com/Michielez/Starlight-M-A#readme"
+  "homepage": "https://github.com/Michielez/Starlight-M-A#readme",
+  "dependencies": {
+    "swiper": "^10.3.1"
+  }
 }

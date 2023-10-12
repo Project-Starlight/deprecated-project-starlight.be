@@ -5,7 +5,11 @@
     "images": [{
       "src": "assets/media/realfotos/horizontal/IMG_9367.png",
       "alt": "roze sterrenhemel"
-    }]
+    },{
+      "src": "assets/media/realfotos/horizontal/IMG_9368.png",
+      "alt": ""
+    }
+    ]
   },
   {
     "title": "Sfeerverlichting",
