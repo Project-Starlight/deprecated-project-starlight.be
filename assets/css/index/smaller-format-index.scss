@@ -1,5 +1,37 @@
+/*add scss files that only consist of css that you can use on different places*/
+@use '../general/scss-specific/mixins';
+@use "../general/scss-specific/colors";
+
 @media only screen and (max-width: 900px) {
   main .smaller-format section {
+    border-top: 1px solid white;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .smaller-format-swiper {
+      max-width: 100%;
+      .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img{
+          width: 80%;
+          box-shadow: white 0 0 10px;
+          margin: 1rem 1rem 2rem 1rem;
+          border-radius: 0.6rem;
+        }
+      }
+      .swiper-pagination-bullet {
+        background: colors.$white;
+        opacity: 0.5;
+      }
+      .swiper-pagination-bullet-active {
+        background: colors.$white;
+        opacity: 1;
+      }
+    }
     p {
       width: 80%;
       margin-top: 2rem;
@@ -7,33 +39,21 @@
       text-align: center;
     }
 
-    border-top: 1px solid white;
-    padding: 4rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     h3 {
       font-size: 3rem;
       margin-bottom: 2rem;
     }
 
-    figure {
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 80%;
-        border-radius: 1rem;
-        box-shadow: 0 0 5px white;
-      }
-    }
-
     .section-wrapper {
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      button {
+        @include mixins.button;
+        margin-top: 2rem;
+      }
     }
   }
   @supports (padding:max(0px)) {

@@ -161,6 +161,18 @@ header nav a[href="#"] {
     width: 90%;
     margin: auto;
   }
+  main .bigger-format-swiper {
+    width: 100%;
+  }
+  main .bigger-format-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main .bigger-format-swiper .swiper-slide img {
+    width: 100%;
+  }
   main section {
     height: 70vh;
     display: flex;
@@ -253,6 +265,7 @@ header nav a[href="#"] {
   }
 }
 /*smaller format*/
+/*add scss files that only consist of css that you can use on different places*/
 @media only screen and (max-width: 900px) {
   main .smaller-format section {
     border-top: 1px solid white;
@@ -260,6 +273,29 @@ header nav a[href="#"] {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  main .smaller-format section .smaller-format-swiper {
+    max-width: 100%;
+  }
+  main .smaller-format section .smaller-format-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main .smaller-format section .smaller-format-swiper .swiper-slide img {
+    width: 80%;
+    box-shadow: white 0 0 10px;
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 0.6rem;
+  }
+  main .smaller-format section .smaller-format-swiper .swiper-pagination-bullet {
+    background: rgb(255, 255, 255);
+    opacity: 0.5;
+  }
+  main .smaller-format section .smaller-format-swiper .swiper-pagination-bullet-active {
+    background: rgb(255, 255, 255);
+    opacity: 1;
   }
   main .smaller-format section p {
     width: 80%;
@@ -271,20 +307,21 @@ header nav a[href="#"] {
     font-size: 3rem;
     margin-bottom: 2rem;
   }
-  main .smaller-format section figure {
-    display: flex;
-    justify-content: center;
-  }
-  main .smaller-format section figure img {
-    width: 80%;
-    border-radius: 1rem;
-    box-shadow: 0 0 5px white;
-  }
   main .smaller-format section .section-wrapper {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
+  main .smaller-format section .section-wrapper button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    border: solid rgb(255, 255, 255) 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
   @supports (padding: max(0px)) {
     body, header, footer {
