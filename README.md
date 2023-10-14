@@ -5,6 +5,10 @@
 npm install
 ```
 
+## Wat gebruikt dit project?
+
+- [SwiperJS](https://swiperjs.com/)
+
 ## Toevoegen van een nieuw product aan de hoofdpagina:
 
 Ga naar volgende JSON file: [producten.json](assets/js/data/producten.json)
