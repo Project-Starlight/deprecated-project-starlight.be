@@ -13,7 +13,7 @@ npm install
 
 Ga naar volgende JSON file: [producten.json](assets/js/data/producten.json)
 
-Voeg vervolgends in de array het volgende toe met natuurlijk je eigen nieuwe waarden
+Voeg vervolgends in de array het volgende toe met natuurlijk je eigen nieuwe waarden.
 
 ```json
 {
@@ -31,6 +31,12 @@ Voeg vervolgends in de array het volgende toe met natuurlijk je eigen nieuwe waa
   ]
 }
 ```
+
+**KNOWN BUGS:**
+
+- Zorg ervoor dat je meer dan 1 foto toevoegd of de mobile versie zal niet correct werken!
+- Zorg ervoor dat je momenteel enkel horizontale foto's toevoegd!
+- In verband met het uploaden van foto's,zorg ervoor dat ze het juiste formaat (jpg, png, ...) hebben!
 
 ## Toevoegen van media (momenteel enkel foto's)
 

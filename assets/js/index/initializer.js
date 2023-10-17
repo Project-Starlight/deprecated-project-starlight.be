@@ -76,6 +76,13 @@ function loadProducts() {
         const biggerFormatSwiper = new Swiper('.bigger-format-swiper',{
             autoplay:{
                 delay: 3000,
+            },
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             }
         });
         const smallerFormatSwiper = new Swiper('.smaller-format-swiper',{

@@ -172,6 +172,23 @@ header nav a[href="#"] {
   }
   main .bigger-format-swiper .swiper-slide img {
     width: 100%;
+    box-shadow: white 0 0 10px;
+    border-radius: 1rem;
+    margin: 1rem 4rem;
+  }
+  main .bigger-format-swiper .swiper-pagination-bullet {
+    background: rgb(255, 255, 255);
+    opacity: 0.5;
+  }
+  main .bigger-format-swiper .swiper-pagination-bullet-active {
+    background: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  main .bigger-format-swiper .swiper-button-next {
+    color: rgb(255, 255, 255);
+  }
+  main .bigger-format-swiper .swiper-button-prev {
+    color: rgb(255, 255, 255);
   }
   main section {
     height: 70vh;
