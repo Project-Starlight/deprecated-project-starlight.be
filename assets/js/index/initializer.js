@@ -74,9 +74,9 @@ function loadProducts() {
         });
         //animateSectionWhenInViewport();
         const biggerFormatSwiper = new Swiper('.bigger-format-swiper',{
-            autoplay:{
+            /*autoplay:{
                 delay: 3000,
-            },
+            },*/
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
@@ -86,9 +86,9 @@ function loadProducts() {
             }
         });
         const smallerFormatSwiper = new Swiper('.smaller-format-swiper',{
-            autoplay:{
+            /*autoplay:{
                 delay: 3000,
-            },
+            },*/
             pagination: {
                 el: ".swiper-pagination",
             }
